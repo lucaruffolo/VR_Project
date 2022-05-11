@@ -1806,7 +1806,7 @@ MonoBehaviour:
   - {fileID: 428220975}
   - {fileID: 924843939}
   - {fileID: 877144628}
-  motorPower: 500
+  motorPower: 100
   steerPower: 15
   centerOfMass: {fileID: 1753432068}
   rb: {fileID: 0}
@@ -1820,9 +1820,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1739320949}
   serializedVersion: 2
-  m_Mass: 1000
-  m_Drag: 0.001
-  m_AngularDrag: 0.05
+  m_Mass: 300
+  m_Drag: 0.1
+  m_AngularDrag: 0.8
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -1852,7 +1852,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1753432068}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.501, z: 0}
+  m_LocalPosition: {x: 0, y: -0.14, z: -0.361}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1739320950}
@@ -1903,7 +1903,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 0da0a37a38c2106489f2e4d6f7266e43, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.467
+      value: -0.093
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 0da0a37a38c2106489f2e4d6f7266e43, type: 3}
       propertyPath: m_LocalPosition.z

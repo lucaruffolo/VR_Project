@@ -27,8 +27,11 @@ public class carController : MonoBehaviour
         //rightWheel.GetComponent<Transform>().rotation = new Quaternion(0, 0, 0, 1);
 
         foreach (var wheel in wheels) {
-            wheel.motorTorque = Input.GetAxis("Vertical") * ((motorPower * 5) / 4);
-
+            if (Input.GetAxis("Vertical") >= 1)
+                wheel.motorTorque = Input.GetAxis("Vertical") * ((motorPower * 5) / 4);
+            else if(Input.GetAxis("Vertical") < 1)
+                wheel.motorTorque = Input.GetAxis("Vertical") * ((motorPower * 10) / 4);
+            Debug.Log(Input.GetAxis("Vertical"));
         }
 
         for (int i = 0; i < wheels.Length; i++) {
