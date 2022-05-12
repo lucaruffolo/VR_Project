@@ -4,40 +4,59 @@ using UnityEngine;
 
 public class carController : MonoBehaviour
 {
-    public WheelCollider[] wheels;
-    public float motorPower = 100;
-    public float steerPower = 100;
+    private const int FRONT_LEFT = 0;
+    private const int FRONT_RIGHT = 1;
+    private const int REAR_LEFT = 2;
+    private const int REAR_RIGHT = 3;
 
-    public GameObject centerOfMass;
-    public Rigidbody rb;
+    [SerializeField] WheelCollider[] wheelsColliders;
+    [SerializeField] Transform[] wheelsObjTransforms;
 
-    public GameObject leftWheel;
-    public GameObject rightWheel;
-    void Start()
-    {
-        rb = GetComponent<Rigidbody>();
-        rb.centerOfMass = centerOfMass.transform.localPosition;
+    public float acceleration = 500f;
+    public float breakingForce = 300f;
+    public float maxTurnAngle = 15f;
 
+    private float currentAcceleration = 0f;
+    private float currentBreakForce = 0f;
+    private float currentTurnAngle = 0f;
+
+    private void FixedUpdate() {
+        currentAcceleration = acceleration * Input.GetAxis("Vertical");
+        
+        if (Input.GetKey(KeyCode.Space))
+            currentBreakForce = breakingForce;
+        else
+            currentBreakForce = 0f;
+
+        //accellerazione ruote frontali
+        wheelsColliders[FRONT_LEFT].motorTorque = currentAcceleration;
+        wheelsColliders[FRONT_RIGHT].motorTorque = currentAcceleration;
+
+        //freno a tutte e 4 le ruote
+        foreach (WheelCollider i in wheelsColliders){
+            i.brakeTorque = currentBreakForce;
+        }
+
+        //sterzo
+        currentTurnAngle = maxTurnAngle * Input.GetAxis("Horizontal");
+
+        wheelsColliders[FRONT_LEFT].steerAngle = currentTurnAngle;
+        wheelsColliders[FRONT_RIGHT].steerAngle = currentTurnAngle;
+
+        // Aggiorno movimento grafico di ogni singola ruota
+        for (int i = 0; i < wheelsColliders.Length; i++){
+            UpdateWheel(wheelsColliders[i], wheelsObjTransforms[i]);
+        }            
+
+        //Debug.Log(currentAcceleration);
     }
 
-    // Update is called once per frame
-    void Update() {
-
-        //leftWheel.GetComponent<Transform>().rotation = new Quaternion(0, 0, 0, 1);
-        //rightWheel.GetComponent<Transform>().rotation = new Quaternion(0, 0, 0, 1);
-
-        foreach (var wheel in wheels) {
-            if (Input.GetAxis("Vertical") >= 1)
-                wheel.motorTorque = Input.GetAxis("Vertical") * ((motorPower * 5) / 4);
-            else if(Input.GetAxis("Vertical") < 1)
-                wheel.motorTorque = Input.GetAxis("Vertical") * ((motorPower * 10) / 4);
-            Debug.Log(Input.GetAxis("Vertical"));
-        }
-
-        for (int i = 0; i < wheels.Length; i++) {
-            if (i < 2) {
-                wheels[i].steerAngle = Input.GetAxis("Horizontal") * steerPower;                
-            }
-        }
+    void UpdateWheel(WheelCollider col, Transform transform) {
+        Vector3 pos;
+        Quaternion rot;
+        col.GetWorldPose(out pos, out rot);
+        transform.position = pos;
+        transform.rotation = rot;
     }
 }
+
