@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class gameControl : MonoBehaviour {
 
-    Vector3 start = new Vector3(82.89f, 5.156f, 70.6f);
+    public Vector3 restart;
     // Start is called before the first frame update
     void Start() {
-
+       restart = new Vector3(82.89f, 5.156f, 70.6f);
     }
 
     // Update is called once per frame
     void Update() {
         if (Input.GetKeyDown(KeyCode.R)) {
-            transform.position = start;
+            transform.position = restart;
             transform.rotation = new Quaternion(0f,0f,0f,1);
         }
     }

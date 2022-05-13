@@ -56,9 +56,10 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Script\carController.cs" />
     <Compile Include="Assets\Script\cameraControl.cs" />
+    <Compile Include="Assets\Script\carController.cs" />
     <Compile Include="Assets\Script\gameControl.cs" />
+    <Compile Include="Assets\Script\checkPoint.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\BEDRILL\Modular_Track_Free\Readme.txt" />
