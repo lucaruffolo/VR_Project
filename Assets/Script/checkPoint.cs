@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class checkPoint : MonoBehaviour
 {
-
+    public GameObject player;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,8 +19,11 @@ public class checkPoint : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        //Debug.Log(other);
-        Vector3 cp = new Vector3(100, 5, 70);
-        GetComponent<gameControl>().restart = cp;
+        Vector3 cp = transform.position;
+        Vector3 poseRespawn = new Vector3(cp.x, cp.y-2, cp.z);
+        Quaternion rotation = transform.rotation;
+        player.GetComponent<gameControl>().restart = poseRespawn;
+        player.GetComponent<gameControl>().rotation = rotation;
+        //Debug.Log(GetComponent<gameControl>().restart);
     }
 }
