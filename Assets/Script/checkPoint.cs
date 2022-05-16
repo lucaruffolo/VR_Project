@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class checkPoint : MonoBehaviour
 {
-    Vector3 cp;
 
     // Start is called before the first frame update
     void Start()
     {
-        cp = transform.position;
+        //Debug.Log(transform.position);
     }
 
     // Update is called once per frame
@@ -20,7 +19,8 @@ public class checkPoint : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(cp);
+        //Debug.Log(other);
+        Vector3 cp = new Vector3(100, 5, 70);
         GetComponent<gameControl>().restart = cp;
     }
 }
