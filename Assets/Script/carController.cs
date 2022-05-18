@@ -15,6 +15,8 @@ public class carController : MonoBehaviour
     public float acceleration = 500f;
     public float breakingForce = 300f;
     public float maxTurnAngle = 15f;
+    public bool fourXFour = false;
+    public float differential = 5.0f;
 
     private float currentAcceleration = 0f;
     private float currentBreakForce = 0f;
@@ -32,18 +34,32 @@ public class carController : MonoBehaviour
         wheelsColliders[FRONT_LEFT].motorTorque = currentAcceleration;
         wheelsColliders[FRONT_RIGHT].motorTorque = currentAcceleration;
 
+        if (fourXFour) {
+            wheelsColliders[REAR_LEFT].motorTorque = currentAcceleration;
+            wheelsColliders[REAR_RIGHT].motorTorque = currentAcceleration;
+        }
         //freno a tutte e 4 le ruote
         foreach (WheelCollider i in wheelsColliders){
             i.brakeTorque = currentBreakForce;
         }
 
         //sterzo
-        currentTurnAngle = maxTurnAngle * Input.GetAxis("Horizontal");
-
+        currentTurnAngle = maxTurnAngle * Input.GetAxis("Horizontal");        
         wheelsColliders[FRONT_LEFT].steerAngle = currentTurnAngle;
         wheelsColliders[FRONT_RIGHT].steerAngle = currentTurnAngle;
+        if (currentTurnAngle >= 15) {
+            wheelsColliders[FRONT_LEFT].motorTorque = currentAcceleration * differential;
+        } else {
+            wheelsColliders[FRONT_LEFT].motorTorque = currentAcceleration;
+        }
+        if (currentTurnAngle <= -15) {
+            wheelsColliders[FRONT_RIGHT].motorTorque = currentAcceleration * differential;
+        } else {
+            wheelsColliders[FRONT_RIGHT].motorTorque = currentAcceleration;
+        }
+        Debug.Log("Angolo di sterzo: " + currentTurnAngle + " Velocità ruota sx:  " + wheelsColliders[FRONT_LEFT].motorTorque + " dx:  " + wheelsColliders[FRONT_RIGHT].motorTorque);
 
-        // Aggiorno movimento grafico di ogni singola ruota
+            // Aggiorno movimento grafico di ogni singola ruota
         for (int i = 0; i < wheelsColliders.Length; i++){
             UpdateWheel(wheelsColliders[i], wheelsObjTransforms[i]);
         }            
