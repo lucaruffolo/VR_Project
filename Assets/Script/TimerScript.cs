@@ -22,12 +22,19 @@ public class TimerScript : MonoBehaviour
     {
         //timer sessione
         float t = startTime - Time.time;
+        float delta = Time.time - startTimeRace;
         if (!finishSession)
         {
             string minutes = ((int)t / 60).ToString();
             string seconds = (t % 60).ToString("f0");
+
+
+            //timer gara
+            string minutesRace = ((int)delta / 60).ToString();
+            string secondsRace = (delta % 60).ToString("f2");
+            timeRace.text = minutesRace + ":" + secondsRace;
             //Debug.Log(seconds);
-            if((t % 60) <= 9)
+            if ((t % 60) <= 9)
             {
                 timer.text = minutes + ":0" + seconds;
             }
@@ -39,23 +46,18 @@ public class TimerScript : MonoBehaviour
             {
                 timer.color = Color.red;
             }
-        }
         
-        if(t < 0)
-        {
-            finishSession = true;
-            Destroy(GetComponent<TimerScript>().timer);
-            GetComponent<TimerScript>().timer = null;
+        
+            if(t < 0)
+            {
+                finishSession = true;
+                Destroy(GetComponent<TimerScript>().timer);
+                GetComponent<TimerScript>().timer = null;
             
-            Destroy(GetComponent<TimerScript>().timeRace);
-            GetComponent<TimerScript>().timeRace = null;
-            //Debug.Log("fine");
+                Destroy(GetComponent<TimerScript>().timeRace);
+                GetComponent<TimerScript>().timeRace = null;
+                //Debug.Log("fine");
+            }
         }
-       
-        //timer gara
-        float delta = Time.time - startTimeRace;
-        string minutesRace = ((int)delta / 60).ToString();
-        string secondsRace = (delta % 60).ToString("f2");
-        timeRace.text = minutesRace + ":" + secondsRace;
     }
 }
