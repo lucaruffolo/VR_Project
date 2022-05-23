@@ -10,7 +10,7 @@ public class gameControl : MonoBehaviour {
     public Vector3 restart;
     public Quaternion rotation;
     public int position;
-    
+    public bool arrived = false;
 
     // Start is called before the first frame update
 
@@ -36,6 +36,32 @@ public class gameControl : MonoBehaviour {
             transform.rotation = replayRotation;
             rb.Sleep();
             rb.velocity.Set(0.0f, 0.0f, 0.0f);//reset velocità
+            Reset();
         }
+
+        if (arrived == true)
+        {
+            //animazioni varie
+            Debug.Log("serie b");
+            Restart();
+        }
+    }
+
+    private void Reset()
+    {
+        restart = replay;
+        rotation = replayRotation;
+
+        GetComponent<TimerScript>().delta = 0f;
+    }
+
+    private void Restart()
+    {
+        transform.position = replay;
+        transform.rotation = replayRotation;
+        rb.Sleep();
+        rb.velocity.Set(0.0f, 0.0f, 0.0f);//reset velocità
+        Reset();
+        arrived = false;
     }
 }

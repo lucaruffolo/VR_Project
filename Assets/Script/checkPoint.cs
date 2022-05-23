@@ -9,9 +9,7 @@ public class checkPoint : MonoBehaviour
     public GameObject timeCheck;
     private Color visibile = new Color(0, 0, 0, 200);
     private Color invisibile = new Color(0, 0, 0, 0);
-    private float duration = 3f;
-    private float timer;
-    private bool cooldown = false;
+    private float timer = 4f;
 
     // Start is called before the first frame update
     void Start()
@@ -22,11 +20,16 @@ public class checkPoint : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (timer > 0.5)
+        if (timer < 3)
         {
-            timer -= Time.deltaTime;
-            Debug.Log(timer);
-            
+            timer += Time.deltaTime;
+            //Debug.Log(timer);
+            timeCheck.GetComponent<Text>().color = visibile;
+        }
+        else
+        {
+            //Debug.Log("we");
+            timeCheck.GetComponent<Text>().color = invisibile;
         }
     }
 
@@ -37,12 +40,11 @@ public class checkPoint : MonoBehaviour
         Quaternion rotation = transform.rotation;
         player.GetComponent<gameControl>().restart = poseRespawn;
         player.GetComponent<gameControl>().rotation = rotation;
-        timeCheck.GetComponent<Text>().color = visibile;
         ResetTimer();
     }
 
     private void ResetTimer()
     {
-        timer = 3f;
+        timer = 0f;
     }
 }
