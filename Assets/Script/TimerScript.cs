@@ -7,14 +7,18 @@ public class TimerScript : MonoBehaviour
 {
     public Text timer;
     public Text timeRace;
+    public Text timeCheck;
     private float startTime;
-    private float startTimeRace;
-    private bool finishSession = false;
+    public bool finishSession = false;
+    //private float startTimeRace;
+
+    public float delta = 0.0f;
+
     // Start is called before the first frame update
     void Start()
     {
-        startTime = 20.00f; //10 min = 600.00f
-        startTimeRace = Time.time;
+        startTime = 600.00f; //10 min = 600.00f
+        //startTimeRace = Time.time;
     }
 
     // Update is called once per frame
@@ -22,7 +26,8 @@ public class TimerScript : MonoBehaviour
     {
         //timer sessione
         float t = startTime - Time.time;
-        float delta = Time.time - startTimeRace;
+        //delta = Time.time - startTimeRace;
+        delta += Time.deltaTime;
         if (!finishSession)
         {
             string minutes = ((int)t / 60).ToString();
@@ -58,6 +63,8 @@ public class TimerScript : MonoBehaviour
                 GetComponent<TimerScript>().timeRace = null;
                 //Debug.Log("fine");
             }
+
+            timeCheck.text = GetComponent<gameControl>().position.ToString() + "° \n" + timeRace.text;
         }
     }
 }
