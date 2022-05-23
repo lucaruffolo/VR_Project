@@ -15,7 +15,7 @@ public class TimerScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        startTime = 20.00f; //10 min = 600.00f
+        startTime = 600.00f; //10 min = 600.00f
         startTimeRace = Time.time;
     }
 

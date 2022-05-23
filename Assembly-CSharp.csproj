@@ -62,6 +62,7 @@
     <Compile Include="Assets\Script\gameControl.cs" />
     <Compile Include="Assets\Script\checkPoint.cs" />
     <Compile Include="Assets\Script\speedometer.cs" />
+    <Compile Include="Assets\Script\Cycle.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\BEDRILL\Modular_Track_Free\Readme.txt" />
