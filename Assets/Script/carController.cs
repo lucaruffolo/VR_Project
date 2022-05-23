@@ -57,7 +57,7 @@ public class carController : MonoBehaviour
         } else {
             wheelsColliders[FRONT_RIGHT].motorTorque = currentAcceleration;
         }
-        Debug.Log("Angolo di sterzo: " + currentTurnAngle + " Velocità ruota sx:  " + wheelsColliders[FRONT_LEFT].motorTorque + " dx:  " + wheelsColliders[FRONT_RIGHT].motorTorque);
+        //Debug.Log("Angolo di sterzo: " + currentTurnAngle + " Velocità ruota sx:  " + wheelsColliders[FRONT_LEFT].motorTorque + " dx:  " + wheelsColliders[FRONT_RIGHT].motorTorque);
 
             // Aggiorno movimento grafico di ogni singola ruota
         for (int i = 0; i < wheelsColliders.Length; i++){

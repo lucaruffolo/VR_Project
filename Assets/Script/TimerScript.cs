@@ -7,9 +7,11 @@ public class TimerScript : MonoBehaviour
 {
     public Text timer;
     public Text timeRace;
+    public Text timeCheck;
     private float startTime;
     private float startTimeRace;
     private bool finishSession = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -58,6 +60,8 @@ public class TimerScript : MonoBehaviour
                 GetComponent<TimerScript>().timeRace = null;
                 //Debug.Log("fine");
             }
+
+            timeCheck.text = GetComponent<gameControl>().position.ToString() + "° \n" + timeRace.text;
         }
     }
 }

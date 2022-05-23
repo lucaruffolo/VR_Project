@@ -9,11 +9,13 @@ public class gameControl : MonoBehaviour {
     private Rigidbody rb;
     public Vector3 restart;
     public Quaternion rotation;
+    public int position;
     
 
     // Start is called before the first frame update
 
     void Start() {
+        position = 1;
         rb = GetComponent<Rigidbody>();
         replay = new Vector3(82.89f, 5.156f, 70.6f);
         restart = new Vector3(82.89f, 5.156f, 70.6f);
