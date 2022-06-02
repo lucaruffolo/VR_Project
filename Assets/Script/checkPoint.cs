@@ -10,6 +10,7 @@ public class checkPoint : MonoBehaviour
     private Color visibile = new Color(0, 0, 0, 200);
     private Color invisibile = new Color(0, 0, 0, 0);
     private float timer = 4f;
+    public CounterCp cp;
 
     // Start is called before the first frame update
     void Start()
@@ -35,12 +36,17 @@ public class checkPoint : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        //riposizionamento
         Vector3 cp = transform.position;
         Vector3 poseRespawn = new Vector3(cp.x, cp.y-2, cp.z);
         Quaternion rotation = transform.rotation;
         player.GetComponent<gameControl>().restart = poseRespawn;
         player.GetComponent<gameControl>().rotation = rotation;
+
+        //getione timer
         ResetTimer();
+
+        //controllo cp+destroty
     }
 
     private void ResetTimer()

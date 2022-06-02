@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class TimerScript : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class TimerScript : MonoBehaviour
     public Text timeCheck;
     private float startTime;
     public bool finishSession = false;
+    public float finishTime;
     //private float startTimeRace;
 
     public float delta = 0.0f;
@@ -17,7 +19,8 @@ public class TimerScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        startTime = 600.00f; //10 min = 600.00f
+        startTime = 100.00f; //10 min = 600.00f
+        finishTime = 999.0f;
         //startTimeRace = Time.time;
     }
 
@@ -28,7 +31,11 @@ public class TimerScript : MonoBehaviour
         float t = startTime - Time.time;
         //delta = Time.time - startTimeRace;
         delta += Time.deltaTime;
-        if (!finishSession)
+        if (finishSession == true)
+        {
+            SceneManager.LoadScene("EndSession"); //qualcosa da rivedere qui
+        }
+        else if (!finishSession)
         {
             string minutes = ((int)t / 60).ToString();
             string seconds = (t % 60).ToString("f0");

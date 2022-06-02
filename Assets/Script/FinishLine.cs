@@ -20,7 +20,12 @@ public class FinishLine : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         //fare i controlli che hai preso tutti i cp
-
+        Debug.Log(player.GetComponent<TimerScript>().delta);
+        if(player.GetComponent<TimerScript>().delta < player.GetComponent<TimerScript>().finishTime)
+        {
+            player.GetComponent<TimerScript>().finishTime = player.GetComponent<TimerScript>().delta;
+            //scena medaglie
+        }
         player.GetComponent<gameControl>().arrived = true;
     }
 }
