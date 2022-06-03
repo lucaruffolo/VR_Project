@@ -9,8 +9,7 @@ public class checkPoint : MonoBehaviour
     public GameObject timeCheck;
     private Color visibile = new Color(0, 0, 0, 200);
     private Color invisibile = new Color(0, 0, 0, 0);
-    private float timer = 4f;
-    public CounterCp cp;
+    //private float timer = 4f;
 
     // Start is called before the first frame update
     void Start()
@@ -21,17 +20,7 @@ public class checkPoint : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (timer < 3)
-        {
-            timer += Time.deltaTime;
-            //Debug.Log(timer);
-            timeCheck.GetComponent<Text>().color = visibile;
-        }
-        else
-        {
-            //Debug.Log("we");
-            timeCheck.GetComponent<Text>().color = invisibile;
-        }
+        
     }
 
     private void OnTriggerEnter(Collider other)
@@ -51,6 +40,14 @@ public class checkPoint : MonoBehaviour
 
     private void ResetTimer()
     {
-        timer = 0f;
+        //timer = 0f;
+        /*while (timer < 3)
+        {
+            timer += 0.1f;
+            Debug.Log("qui");
+            timeCheck.GetComponent<Text>().color = visibile;
+        }
+        //Debug.Log("we");
+        timeCheck.GetComponent<Text>().color = invisibile;*/
     }
 }
