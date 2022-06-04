@@ -11,6 +11,7 @@ public class gameControl : MonoBehaviour {
     public Quaternion rotation;
     public int position;
     public bool arrived = false;
+    public GameObject cp;
 
     // Start is called before the first frame update
 
@@ -53,6 +54,8 @@ public class gameControl : MonoBehaviour {
         rotation = replayRotation;
 
         GetComponent<TimerScript>().delta = 0f;
+        cp.GetComponent<CounterCp>().cpTaken = 0;
+        cp.GetComponent<CounterCp>().resetOneClick();
     }
 
     private void Restart()

@@ -7,8 +7,10 @@ public class checkPoint : MonoBehaviour
 {
     public GameObject player;
     public GameObject timeCheck;
+    public GameObject counter;
     private Color visibile = new Color(0, 0, 0, 200);
     private Color invisibile = new Color(0, 0, 0, 0);
+    public bool oneclick = false;
     //private float timer = 4f;
 
     // Start is called before the first frame update
@@ -35,7 +37,13 @@ public class checkPoint : MonoBehaviour
         //getione timer
         ResetTimer();
 
-        //controllo cp+destroty
+        //controllo cp
+        if (oneclick == false)
+        {
+            counter.GetComponent<CounterCp>().cpTaken += 1;
+            oneclick = true;
+        }
+        
     }
 
     private void ResetTimer()
