@@ -27,11 +27,18 @@ public class FinishLine : MonoBehaviour
             if (player.GetComponent<TimerScript>().delta < player.GetComponent<TimerScript>().finishTime)
             {
                 player.GetComponent<TimerScript>().finishTime = player.GetComponent<TimerScript>().delta;
-                //scena medaglie
             }
+
+            AggiornaClassifica();
+
             cp.GetComponent<CounterCp>().cpTaken = 0;
             cp.GetComponent<CounterCp>().resetOneClick();
             player.GetComponent<gameControl>().arrived = true;
         }
+    }
+
+    void AggiornaClassifica()
+    {
+
     }
 }
