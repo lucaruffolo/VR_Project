@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class cameraControl : MonoBehaviour
 {
+
     [SerializeField] Camera cameraInFirst;
     [SerializeField] Camera cameraInThird;
 
@@ -11,7 +12,7 @@ public class cameraControl : MonoBehaviour
     void Start()
     {
         cameraInFirst.enabled = false;
-        cameraInThird.enabled = true;        
+        cameraInThird.enabled = true;       
     }
 
     // Update is called once per frame
