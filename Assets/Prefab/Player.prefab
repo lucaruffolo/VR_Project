@@ -409,6 +409,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81bd641ee67b03141a4e8bb2313ea5d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   contakhm: {fileID: 2022144523057345986}
   fari: {fileID: 3852490126451058937}
 --- !u!114 &2401260716497407612

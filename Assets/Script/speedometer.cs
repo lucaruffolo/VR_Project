@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Mirror;
 
-public class speedometer : MonoBehaviour
+public class speedometer : NetworkBehaviour
 {
     [SerializeField] Text contakhm;
     [SerializeField] Light fari;
@@ -14,20 +15,29 @@ public class speedometer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        float vel = rb.velocity.magnitude * 0.5f;
-        int v = (int) vel;
-        contakhm.text = v.ToString();
-        if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.DownArrow)) {
-            fari.enabled = true;
-        }else {
-            fari.enabled = false;
+        if (this.isLocalPlayer)
+        {
+            float vel = rb.velocity.magnitude * 0.5f;
+            int v = (int)vel;
+            contakhm.text = v.ToString();
+            if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.DownArrow))
+            {
+                fari.enabled = true;
+            }
+            else
+            {
+                fari.enabled = false;
+            }
         }
     }
+
+
 
 }
