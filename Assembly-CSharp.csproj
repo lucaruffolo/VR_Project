@@ -63,6 +63,7 @@
     <Compile Include="Assets\Script\gameControl.cs" />
     <Compile Include="Assets\Script\checkPoint.cs" />
     <Compile Include="Assets\Script\speedometer.cs" />
+    <Compile Include="Assets\Menu.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Mirror\Plugins\Mono.Cecil\Mono.CecilX.dll" />
