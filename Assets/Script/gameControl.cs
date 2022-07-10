@@ -11,11 +11,13 @@ public class gameControl : MonoBehaviour {
     public Quaternion rotation;
     public int position;
     public bool arrived = false;
-    public GameObject cp;
+    public GameObject checkPoint;
+    public int cpTaken;
 
     // Start is called before the first frame update
 
     void Start() {
+        cpTaken = 0;
         position = 1;
         rb = GetComponent<Rigidbody>();
         replay = new Vector3(82.89f, 5.156f, 70.6f);
@@ -43,9 +45,10 @@ public class gameControl : MonoBehaviour {
         if (arrived == true)
         {
             //animazioni varie
-            Debug.Log("serie b");
+            //Debug.Log("serie b");
             Restart();
         }
+        Debug.Log(cpTaken);
     }
 
     private void Reset()
@@ -54,8 +57,8 @@ public class gameControl : MonoBehaviour {
         rotation = replayRotation;
 
         GetComponent<TimerScript>().delta = 0f;
-        cp.GetComponent<CounterCp>().cpTaken = 0;
-        cp.GetComponent<CounterCp>().resetOneClick();
+        cpTaken = 0;
+        checkPoint.GetComponent<CounterCp>().resetOneClick();
     }
 
     private void Restart()

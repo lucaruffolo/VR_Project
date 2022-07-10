@@ -1131,9 +1131,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01853044b0fd3a24487b85423cf41688, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 3852490125201012595, guid: 8a1bb5f654df49240a2c94a69e67d8b2, type: 3}
   timeCheck: {fileID: 2106026218}
-  counter: {fileID: 931680722}
   oneclick: 0
 --- !u!1 &645085098
 GameObject:
@@ -1520,7 +1519,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   childsG: []
-  cpTaken: 0
   numCp: 0
 --- !u!1 &1040002112
 GameObject:
@@ -2121,9 +2119,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01853044b0fd3a24487b85423cf41688, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 3852490125201012595, guid: 8a1bb5f654df49240a2c94a69e67d8b2, type: 3}
   timeCheck: {fileID: 2106026218}
-  counter: {fileID: 931680722}
   oneclick: 0
 --- !u!65 &1257830325
 BoxCollider:

@@ -374,11 +374,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d194140559dd8c04eb2a22f1deed325f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  restart: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 0, z: 0, w: 0}
+  restart: {x: 82.88493, y: 5.3322906, z: 82.90929}
+  rotation: {x: -0, y: -0, z: -0, w: 1}
   position: 0
   arrived: 0
-  cp: {fileID: 0}
+  checkPoint: {fileID: 0}
+  cpTaken: 0
 --- !u!114 &3852490125201012605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -386,7 +387,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3852490125201012595}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0d49bc567fd2a5a43adc6fc3e0fc5c9c, type: 3}
   m_Name: 
@@ -404,7 +405,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3852490125201012595}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 81bd641ee67b03141a4e8bb2313ea5d7, type: 3}
   m_Name: 

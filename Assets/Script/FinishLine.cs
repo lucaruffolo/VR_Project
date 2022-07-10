@@ -22,7 +22,7 @@ public class FinishLine : MonoBehaviour
     {
         //fare i controlli che hai preso tutti i cp
         Debug.Log(player.GetComponent<TimerScript>().delta);
-        if (cp.GetComponent<CounterCp>().cpTaken == cp.GetComponent<CounterCp>().numCp)
+        if (player.GetComponent<gameControl>().cpTaken == cp.GetComponent<CounterCp>().numCp)
         {
             if (player.GetComponent<TimerScript>().delta < player.GetComponent<TimerScript>().finishTime)
             {
@@ -31,7 +31,7 @@ public class FinishLine : MonoBehaviour
 
             AggiornaClassifica();
 
-            cp.GetComponent<CounterCp>().cpTaken = 0;
+            player.GetComponent<gameControl>().cpTaken = 0;
             cp.GetComponent<CounterCp>().resetOneClick();
             player.GetComponent<gameControl>().arrived = true;
         }

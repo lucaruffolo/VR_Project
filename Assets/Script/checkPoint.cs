@@ -7,7 +7,6 @@ public class checkPoint : MonoBehaviour
 {
     public GameObject player;
     public GameObject timeCheck;
-    public GameObject counter;
     private Color visibile = new Color(0, 0, 0, 200);
     private Color invisibile = new Color(0, 0, 0, 0);
     public bool oneclick = false;
@@ -40,7 +39,8 @@ public class checkPoint : MonoBehaviour
         //controllo cp
         if (oneclick == false)
         {
-            counter.GetComponent<CounterCp>().cpTaken += 1;
+            //Debug.Log("trig");
+            player.GetComponent<gameControl>().cpTaken += 1;
             oneclick = true;
         }
         
