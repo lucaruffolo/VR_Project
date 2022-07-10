@@ -28,11 +28,11 @@ public class CounterCp : MonoBehaviour
         
     }
 
-    public void resetOneClick()
+    /*public void resetOneClick()
     {
         for (int i = 0; i<numCp; i++)
         {
             childsG[i].GetComponent<checkPoint>().oneclick = false;
         }
-    }
+    }*/
 }

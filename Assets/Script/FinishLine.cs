@@ -20,7 +20,7 @@ public class FinishLine : MonoBehaviour
             AggiornaClassifica();
 
             player.GetComponent<gameControl>().cpTaken = 0;
-            cp.GetComponent<CounterCp>().resetOneClick();
+            player.GetComponent<gameControl>().listOfCpTaken.Clear();
             player.GetComponent<gameControl>().arrived = true;
         }
     }

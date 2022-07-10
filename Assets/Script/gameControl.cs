@@ -58,7 +58,7 @@ public class gameControl : MonoBehaviour {
 
         GetComponent<TimerScript>().delta = 0f;
         cpTaken = 0;
-        checkPoint.GetComponent<CounterCp>().resetOneClick();
+        listOfCpTaken.Clear();
     }
 
     private void Restart()
