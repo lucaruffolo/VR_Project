@@ -4,22 +4,10 @@ using UnityEngine;
 
 public class FinishLine : MonoBehaviour
 {
-    public GameObject player;
     public GameObject cp;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void OnTriggerEnter(Collider other)
     {
+        GameObject player = other.gameObject.transform.parent.transform.parent.gameObject;
         //fare i controlli che hai preso tutti i cp
         Debug.Log(player.GetComponent<TimerScript>().delta);
         if (player.GetComponent<gameControl>().cpTaken == cp.GetComponent<CounterCp>().numCp)

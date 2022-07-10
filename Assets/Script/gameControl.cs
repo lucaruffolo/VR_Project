@@ -12,11 +12,13 @@ public class gameControl : MonoBehaviour {
     public int position;
     public bool arrived = false;
     public GameObject checkPoint;
-    public int cpTaken;
+    public int cpTaken = 0;
+    public List<string> listOfCpTaken;
 
     // Start is called before the first frame update
 
     void Start() {
+        listOfCpTaken = new List<string>();
         cpTaken = 0;
         position = 1;
         rb = GetComponent<Rigidbody>();
@@ -44,11 +46,9 @@ public class gameControl : MonoBehaviour {
 
         if (arrived == true)
         {
-            //animazioni varie
-            //Debug.Log("serie b");
             Restart();
         }
-        Debug.Log(cpTaken);
+        //Debug.Log(cpTaken);
     }
 
     private void Reset()
@@ -69,5 +69,10 @@ public class gameControl : MonoBehaviour {
         rb.velocity.Set(0.0f, 0.0f, 0.0f);//reset velocità
         Reset();
         arrived = false;
+    }
+
+    public void addCpList (string cpName)
+    {
+        listOfCpTaken.Add(cpName);
     }
 }

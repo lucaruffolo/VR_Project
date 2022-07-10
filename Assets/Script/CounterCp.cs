@@ -17,6 +17,9 @@ public class CounterCp : MonoBehaviour
             childsG[i] = child.gameObject;
             i++;
         }
+
+        
+
     }
 
     // Update is called once per frame
