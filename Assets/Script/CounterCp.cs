@@ -5,8 +5,7 @@ using UnityEngine;
 public class CounterCp : MonoBehaviour
 {
     public GameObject[] childsG;
-    public int cpTaken = 0;
-    public  int numCp;
+    public int numCp;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,19 +17,22 @@ public class CounterCp : MonoBehaviour
             childsG[i] = child.gameObject;
             i++;
         }
+
+
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
-    public void resetOneClick()
+    /*public void resetOneClick()
     {
         for (int i = 0; i<numCp; i++)
         {
             childsG[i].GetComponent<checkPoint>().oneclick = false;
         }
-    }
+    }*/
 }

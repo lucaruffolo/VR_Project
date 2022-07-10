@@ -5,31 +5,18 @@ using UnityEngine.UI;
 
 public class checkPoint : MonoBehaviour
 {
-    public GameObject player;
     public GameObject timeCheck;
-    public GameObject counter;
     private Color visibile = new Color(0, 0, 0, 200);
     private Color invisibile = new Color(0, 0, 0, 0);
     public bool oneclick = false;
     //private float timer = 4f;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        //Debug.Log(transform.position);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void OnTriggerEnter(Collider other)
     {
+        GameObject player = other.gameObject.transform.parent.transform.parent.gameObject;
         //riposizionamento
         Vector3 cp = transform.position;
-        Vector3 poseRespawn = new Vector3(cp.x, cp.y-2, cp.z);
+        Vector3 poseRespawn = new Vector3(cp.x, cp.y - 2, cp.z);
         Quaternion rotation = transform.rotation;
         player.GetComponent<gameControl>().restart = poseRespawn;
         player.GetComponent<gameControl>().rotation = rotation;
@@ -38,12 +25,23 @@ public class checkPoint : MonoBehaviour
         ResetTimer();
 
         //controllo cp
-        if (oneclick == false)
+        bool yetTaken = false;
+        foreach (string i in player.GetComponent<gameControl>().listOfCpTaken)
         {
-            counter.GetComponent<CounterCp>().cpTaken += 1;
-            oneclick = true;
+            if (i == name)
+                yetTaken = true;
         }
-        
+
+        if (!yetTaken)
+        {
+            oneclick = false;
+            if (oneclick == false)
+            {
+                player.GetComponent<gameControl>().cpTaken += 1;
+                player.GetComponent<gameControl>().addCpList(name);
+                oneclick = true;
+            }
+        }
     }
 
     private void ResetTimer()

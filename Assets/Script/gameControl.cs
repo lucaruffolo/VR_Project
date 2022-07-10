@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class gameControl : MonoBehaviour {
+public class gameControl : MonoBehaviour
+{
 
     private Vector3 replay;
     private Quaternion replayRotation;
@@ -11,11 +12,16 @@ public class gameControl : MonoBehaviour {
     public Quaternion rotation;
     public int position;
     public bool arrived = false;
-    public GameObject cp;
+    public GameObject checkPoint;
+    public int cpTaken = 0;
+    public List<string> listOfCpTaken;
 
     // Start is called before the first frame update
 
-    void Start() {
+    void Start()
+    {
+        listOfCpTaken = new List<string>();
+        cpTaken = 0;
         position = 1;
         rb = GetComponent<Rigidbody>();
         replay = new Vector3(82.89f, 5.156f, 70.6f);
@@ -25,14 +31,17 @@ public class gameControl : MonoBehaviour {
     }
 
     // Update is called once per frame
-    void Update() {
-        if (Input.GetKeyDown(KeyCode.Backspace)) {
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Backspace))
+        {
             transform.position = restart;
             transform.rotation = rotation;
             rb.Sleep();
             rb.velocity.Set(0.0f, 0.0f, 0.0f); //reset velocità
         }
-        if (Input.GetKeyDown(KeyCode.Return)) {
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
             transform.position = replay;
             transform.rotation = replayRotation;
             rb.Sleep();
@@ -42,10 +51,9 @@ public class gameControl : MonoBehaviour {
 
         if (arrived == true)
         {
-            //animazioni varie
-            Debug.Log("serie b");
             Restart();
         }
+        //Debug.Log(cpTaken);
     }
 
     private void Reset()
@@ -54,8 +62,8 @@ public class gameControl : MonoBehaviour {
         rotation = replayRotation;
 
         GetComponent<TimerScript>().delta = 0f;
-        cp.GetComponent<CounterCp>().cpTaken = 0;
-        cp.GetComponent<CounterCp>().resetOneClick();
+        cpTaken = 0;
+        listOfCpTaken.Clear();
     }
 
     private void Restart()
@@ -66,5 +74,10 @@ public class gameControl : MonoBehaviour {
         rb.velocity.Set(0.0f, 0.0f, 0.0f);//reset velocità
         Reset();
         arrived = false;
+    }
+
+    public void addCpList(string cpName)
+    {
+        listOfCpTaken.Add(cpName);
     }
 }

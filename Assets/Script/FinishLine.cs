@@ -4,25 +4,13 @@ using UnityEngine;
 
 public class FinishLine : MonoBehaviour
 {
-    public GameObject player;
     public GameObject cp;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void OnTriggerEnter(Collider other)
     {
+        GameObject player = other.gameObject.transform.parent.transform.parent.gameObject;
         //fare i controlli che hai preso tutti i cp
         Debug.Log(player.GetComponent<TimerScript>().delta);
-        if (cp.GetComponent<CounterCp>().cpTaken == cp.GetComponent<CounterCp>().numCp)
+        if (player.GetComponent<gameControl>().cpTaken == cp.GetComponent<CounterCp>().numCp)
         {
             if (player.GetComponent<TimerScript>().delta < player.GetComponent<TimerScript>().finishTime)
             {
@@ -31,8 +19,8 @@ public class FinishLine : MonoBehaviour
 
             AggiornaClassifica();
 
-            cp.GetComponent<CounterCp>().cpTaken = 0;
-            cp.GetComponent<CounterCp>().resetOneClick();
+            player.GetComponent<gameControl>().cpTaken = 0;
+            player.GetComponent<gameControl>().listOfCpTaken.Clear();
             player.GetComponent<gameControl>().arrived = true;
         }
     }
