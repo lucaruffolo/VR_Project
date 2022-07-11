@@ -21,18 +21,4 @@ public class CounterCp : MonoBehaviour
 
 
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
-    /*public void resetOneClick()
-    {
-        for (int i = 0; i<numCp; i++)
-        {
-            childsG[i].GetComponent<checkPoint>().oneclick = false;
-        }
-    }*/
 }

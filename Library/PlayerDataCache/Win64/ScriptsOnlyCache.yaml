@@ -5,6 +5,7 @@ ScriptsOnlyBuild:
     - Cycle
     - FinishLine
     - FollowCamera
+    - Menu
     - TimerScript
     - carController
     - checkPoint
@@ -34,6 +35,7 @@ ScriptsOnlyBuild:
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
+    - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
@@ -187,6 +189,55 @@ ScriptsOnlyBuild:
     - Class: 213
       Script: {instanceID: 0}
     - Class: 218
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    Assets/Scenes/Menu.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 1454}
+    - Class: 114
+      Script: {instanceID: 1456}
+    - Class: 114
+      Script: {instanceID: 2194}
+    - Class: 114
+      Script: {instanceID: 2578}
+    - Class: 114
+      Script: {instanceID: 2726}
+    - Class: 114
+      Script: {instanceID: 3176}
+    - Class: 114
+      Script: {instanceID: 3290}
+    - Class: 114
+      Script: {instanceID: 5472}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
       Script: {instanceID: 0}
     - Class: 222
       Script: {instanceID: 0}
@@ -521,7 +572,7 @@ ScriptsOnlyBuild:
     className: PlayerMovement
   - hash:
       serializedVersion: 2
-      Hash: 258b40718af7bfec05541a204f4558dd
+      Hash: 240024820a67fe1882ae10af0f16dc59
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CounterCp
@@ -887,7 +938,7 @@ ScriptsOnlyBuild:
     className: ContentSizeFitter
   - hash:
       serializedVersion: 2
-      Hash: cce5ada1d665462ae959d7d2122bfcb7
+      Hash: 97aeef4a9c0d7a329a331fc2e96e516e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: FinishLine
@@ -1031,7 +1082,7 @@ ScriptsOnlyBuild:
     className: AudioPlayableAsset
   - hash:
       serializedVersion: 2
-      Hash: e90c78b165850d23dd88b49e48a5dd5f
+      Hash: a4261ec4f3fbe8dedd9afb93b2f2ed5d
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: gameControl
@@ -1043,7 +1094,7 @@ ScriptsOnlyBuild:
     className: CanvasUI
   - hash:
       serializedVersion: 2
-      Hash: abddf5efb95c10dde7f51c98dc190674
+      Hash: 620acb7ecd0c542842fbb1c4c51939e2
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: checkPoint
@@ -1515,8 +1566,15 @@ ScriptsOnlyBuild:
     assemblyName: Mirror.Examples.dll
     namespaceName: Mirror.Examples.NetworkRoom
     className: NetworkRoomPlayerExt
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Menu
   platform: 19
   scenePathNames:
+  - Assets/Scenes/Menu.unity
   - Assets/Scenes/Game.unity
   - Assets/Scenes/EndSession.unity
-  playerPath: C:/Users/Luca24/VR_Project/VR_Project/Build/VR_Project.exe
+  playerPath: C:/Users/PIERPY/Documents/GitHub/VR_Project/Build/VR_Project.exe

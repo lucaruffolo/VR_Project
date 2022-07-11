@@ -16,10 +16,11 @@ public class checkPoint : MonoBehaviour
         GameObject player = other.gameObject.transform.parent.transform.parent.gameObject;
         //riposizionamento
         Vector3 cp = transform.position;
-        Vector3 poseRespawn = new Vector3(cp.x, cp.y - 2, cp.z);
+        Vector3 posRespawn = new Vector3(cp.x, cp.y - 2, cp.z);
         Quaternion rotation = transform.rotation;
-        player.GetComponent<gameControl>().restart = poseRespawn;
+        player.GetComponent<gameControl>().restart = posRespawn;
         player.GetComponent<gameControl>().rotation = rotation;
+        Debug.Log(rotation);
 
         //getione timer
         ResetTimer();
