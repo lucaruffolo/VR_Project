@@ -215,7 +215,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3852490125201012595}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 82.89, y: 5.156, z: 70.6}
+  m_LocalPosition: {x: 268, y: 32.74, z: 53.32}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3852490125318314912}
@@ -868,6 +868,38 @@ PrefabInstance:
     - target: {fileID: 400002, guid: 0da0a37a38c2106489f2e4d6f7266e43, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400006, guid: 0da0a37a38c2106489f2e4d6f7266e43, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.186
+      objectReference: {fileID: 0}
+    - target: {fileID: 400006, guid: 0da0a37a38c2106489f2e4d6f7266e43, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 400008, guid: 0da0a37a38c2106489f2e4d6f7266e43, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.18599802
+      objectReference: {fileID: 0}
+    - target: {fileID: 400008, guid: 0da0a37a38c2106489f2e4d6f7266e43, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.3200008
+      objectReference: {fileID: 0}
+    - target: {fileID: 400010, guid: 0da0a37a38c2106489f2e4d6f7266e43, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.18599793
+      objectReference: {fileID: 0}
+    - target: {fileID: 400010, guid: 0da0a37a38c2106489f2e4d6f7266e43, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.7784493
+      objectReference: {fileID: 0}
+    - target: {fileID: 400012, guid: 0da0a37a38c2106489f2e4d6f7266e43, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.18599793
+      objectReference: {fileID: 0}
+    - target: {fileID: 400012, guid: 0da0a37a38c2106489f2e4d6f7266e43, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.7784476
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 0da0a37a38c2106489f2e4d6f7266e43, type: 3}
       propertyPath: m_ReceiveShadows
