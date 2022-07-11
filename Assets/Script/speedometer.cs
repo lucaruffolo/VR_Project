@@ -15,15 +15,16 @@ public class speedometer : NetworkBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
         rb = GetComponent<Rigidbody>();
+        contakhm.enabled = false;
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (this.isLocalPlayer)
         {
+            contakhm.enabled = true;
             float vel = rb.velocity.magnitude * 0.5f;
             int v = (int)vel;
             contakhm.text = v.ToString();
