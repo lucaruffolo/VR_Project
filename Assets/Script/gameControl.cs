@@ -12,11 +12,9 @@ public class gameControl : MonoBehaviour
     public Quaternion rotation;
     public int position;
     public bool arrived = false;
-    public GameObject checkPoint;
     public int cpTaken = 0;
     public List<string> listOfCpTaken;
-
-    // Start is called before the first frame update
+    //public GameObject checkPoint;
 
     void Start()
     {
@@ -30,7 +28,6 @@ public class gameControl : MonoBehaviour
         replayRotation = new Quaternion(0f, 0f, 0f, 1);
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Backspace))
@@ -61,7 +58,7 @@ public class gameControl : MonoBehaviour
         restart = replay;
         rotation = replayRotation;
 
-        GetComponent<TimerScript>().delta = 0f;
+        GetComponent<Timer>().lapTime = 0f;//reset timer
         cpTaken = 0;
         listOfCpTaken.Clear();
     }

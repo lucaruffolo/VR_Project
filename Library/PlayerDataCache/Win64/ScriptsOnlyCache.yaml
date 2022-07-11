@@ -6,6 +6,7 @@ ScriptsOnlyBuild:
     - FinishLine
     - FollowCamera
     - Menu
+    - Timer
     - TimerScript
     - carController
     - checkPoint
@@ -170,6 +171,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 5982}
     - Class: 114
       Script: {instanceID: 6284}
+    - Class: 114
+      Script: {instanceID: 20854}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1082,7 +1085,7 @@ ScriptsOnlyBuild:
     className: AudioPlayableAsset
   - hash:
       serializedVersion: 2
-      Hash: a4261ec4f3fbe8dedd9afb93b2f2ed5d
+      Hash: d23d961e93c55baa3ae18cb48d5a6667
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: gameControl
@@ -1572,9 +1575,15 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Menu
+  - hash:
+      serializedVersion: 2
+      Hash: 7b6f1bef12c81ad1fcc09a70b6fcdb8b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Timer
   platform: 19
   scenePathNames:
   - Assets/Scenes/Menu.unity
   - Assets/Scenes/Game.unity
   - Assets/Scenes/EndSession.unity
-  playerPath: C:/Users/Luca24/VR_Project/VR_Project/Build/VR_Project.exe
+  playerPath: C:/Users/PIERPY/Documents/GitHub/VR_Project/Build/VR_Project.exe

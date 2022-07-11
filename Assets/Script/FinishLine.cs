@@ -8,8 +8,7 @@ public class FinishLine : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         GameObject player = other.gameObject.transform.parent.transform.parent.gameObject;
-        //fare i controlli che hai preso tutti i cp
-        Debug.Log(player.GetComponent<TimerScript>().delta);
+        //Debug.Log(player.GetComponent<TimerScript>().delta);
         if (player.GetComponent<gameControl>().cpTaken == cp.GetComponent<CounterCp>().numCp)
         {
             if (player.GetComponent<TimerScript>().delta < player.GetComponent<TimerScript>().finishTime)
