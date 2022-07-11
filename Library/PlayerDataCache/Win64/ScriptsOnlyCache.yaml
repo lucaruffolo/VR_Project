@@ -6,6 +6,7 @@ ScriptsOnlyBuild:
     - FinishLine
     - FollowCamera
     - Menu
+    - StartingCountDown
     - Timer
     - TimerScript
     - carController
@@ -120,59 +121,61 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1456}
     - Class: 114
-      Script: {instanceID: 2422}
+      Script: {instanceID: 1468}
     - Class: 114
-      Script: {instanceID: 3034}
+      Script: {instanceID: 2082}
     - Class: 114
-      Script: {instanceID: 3146}
+      Script: {instanceID: 2196}
     - Class: 114
-      Script: {instanceID: 3302}
+      Script: {instanceID: 2352}
     - Class: 114
-      Script: {instanceID: 3442}
+      Script: {instanceID: 2492}
     - Class: 114
-      Script: {instanceID: 3446}
+      Script: {instanceID: 2496}
     - Class: 114
-      Script: {instanceID: 3492}
+      Script: {instanceID: 2542}
     - Class: 114
-      Script: {instanceID: 3530}
+      Script: {instanceID: 2580}
     - Class: 114
-      Script: {instanceID: 3602}
+      Script: {instanceID: 2652}
+    - Class: 114
+      Script: {instanceID: 2664}
+    - Class: 114
+      Script: {instanceID: 2730}
+    - Class: 114
+      Script: {instanceID: 2806}
+    - Class: 114
+      Script: {instanceID: 2822}
+    - Class: 114
+      Script: {instanceID: 3100}
+    - Class: 114
+      Script: {instanceID: 3180}
+    - Class: 114
+      Script: {instanceID: 3200}
+    - Class: 114
+      Script: {instanceID: 3316}
+    - Class: 114
+      Script: {instanceID: 3404}
+    - Class: 114
+      Script: {instanceID: 3520}
     - Class: 114
       Script: {instanceID: 3678}
     - Class: 114
-      Script: {instanceID: 3754}
+      Script: {instanceID: 3908}
     - Class: 114
-      Script: {instanceID: 3770}
+      Script: {instanceID: 3918}
     - Class: 114
-      Script: {instanceID: 4046}
+      Script: {instanceID: 4706}
     - Class: 114
-      Script: {instanceID: 4126}
+      Script: {instanceID: 4792}
     - Class: 114
-      Script: {instanceID: 4260}
+      Script: {instanceID: 4890}
     - Class: 114
-      Script: {instanceID: 4348}
+      Script: {instanceID: 5034}
     - Class: 114
-      Script: {instanceID: 4462}
+      Script: {instanceID: 5044}
     - Class: 114
-      Script: {instanceID: 4620}
-    - Class: 114
-      Script: {instanceID: 4850}
-    - Class: 114
-      Script: {instanceID: 4860}
-    - Class: 114
-      Script: {instanceID: 5646}
-    - Class: 114
-      Script: {instanceID: 5732}
-    - Class: 114
-      Script: {instanceID: 5830}
-    - Class: 114
-      Script: {instanceID: 5974}
-    - Class: 114
-      Script: {instanceID: 5982}
-    - Class: 114
-      Script: {instanceID: 6284}
-    - Class: 114
-      Script: {instanceID: 20854}
+      Script: {instanceID: 5346}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -221,17 +224,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1456}
     - Class: 114
-      Script: {instanceID: 3146}
+      Script: {instanceID: 2196}
     - Class: 114
-      Script: {instanceID: 3530}
+      Script: {instanceID: 2580}
     - Class: 114
-      Script: {instanceID: 3678}
+      Script: {instanceID: 2730}
     - Class: 114
-      Script: {instanceID: 4126}
+      Script: {instanceID: 3180}
     - Class: 114
-      Script: {instanceID: 4240}
+      Script: {instanceID: 3296}
     - Class: 114
-      Script: {instanceID: 6416}
+      Script: {instanceID: 5478}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -635,6 +638,12 @@ ScriptsOnlyBuild:
     className: CinemachineVirtualCamera
   - hash:
       serializedVersion: 2
+      Hash: 7b6f1bef12c81ad1fcc09a70b6fcdb8b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Timer
+  - hash:
+      serializedVersion: 2
       Hash: 2792936179724025482dc04d68a47ca7
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
@@ -833,6 +842,12 @@ ScriptsOnlyBuild:
     className: TMP_SubMesh
   - hash:
       serializedVersion: 2
+      Hash: e7352257b31f2ad31ec99db9a7888291
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: StartingCountDown
+  - hash:
+      serializedVersion: 2
       Hash: 26d5c4d3aa5e668e2a134fd27c936004
     assemblyName: Mirror.Examples.dll
     namespaceName: Mirror.Examples.MultipleMatch
@@ -983,7 +998,7 @@ ScriptsOnlyBuild:
     className: PlayerQuitHandler
   - hash:
       serializedVersion: 2
-      Hash: 57ad4662400c4ef8bcdf3c0e90ea61c4
+      Hash: e433a5cda3a0c6316f70866a20501a60
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: carController
@@ -1575,12 +1590,6 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Menu
-  - hash:
-      serializedVersion: 2
-      Hash: 7b6f1bef12c81ad1fcc09a70b6fcdb8b
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Timer
   platform: 19
   scenePathNames:
   - Assets/Scenes/Menu.unity

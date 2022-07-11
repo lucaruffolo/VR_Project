@@ -36,6 +36,12 @@ public class gameControl : MonoBehaviour
             transform.rotation = rotation;
             rb.Sleep();
             rb.velocity.Set(0.0f, 0.0f, 0.0f); //reset velocità
+            if (listOfCpTaken.Count == 0)
+            {
+                GetComponent<Timer>().lapTime = 0f;
+                //far ripartire countdown
+            }
+                
         }
         if (Input.GetKeyDown(KeyCode.Return))
         {
@@ -59,6 +65,9 @@ public class gameControl : MonoBehaviour
         rotation = replayRotation;
 
         GetComponent<Timer>().lapTime = 0f;//reset timer
+        GetComponent<carController>().enabledMovement = false;
+        GetComponent<StartingCountDown>().timerOn = true;
+        GetComponent<StartingCountDown>().timeLeft = 3.0f;
         cpTaken = 0;
         listOfCpTaken.Clear();
     }
@@ -69,6 +78,9 @@ public class gameControl : MonoBehaviour
         transform.rotation = replayRotation;
         rb.Sleep();
         rb.velocity.Set(0.0f, 0.0f, 0.0f);//reset velocità
+        GetComponent<carController>().enabledMovement = false;
+        GetComponent<StartingCountDown>().timerOn = true;
+        GetComponent<StartingCountDown>().timeLeft = 3.0f;
         Reset();
         arrived = false;
     }

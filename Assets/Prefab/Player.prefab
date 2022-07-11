@@ -284,6 +284,7 @@ GameObject:
   - component: {fileID: 8109704339445540489}
   - component: {fileID: 4877609414769696592}
   - component: {fileID: 4769093784026171759}
+  - component: {fileID: 3493502602780526892}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -504,8 +505,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  lapTime: 0
   timerIsRunning: 0
   timeRacePlayer: {fileID: 6228954156982712943}
+--- !u!114 &3493502602780526892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3852490125201012595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39eeb54c455d8c34b894af8303b8bf18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3852490125778034444
 GameObject:
   m_ObjectHideFlags: 0

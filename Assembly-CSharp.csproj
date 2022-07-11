@@ -60,6 +60,7 @@
     <Compile Include="Assets\Script\FollowCamera.cs" />
     <Compile Include="Assets\Script\CounterCp.cs" />
     <Compile Include="Assets\Script\TimerScript.cs" />
+    <Compile Include="Assets\Script\Timer.cs" />
     <Compile Include="Assets\Script\Cycle.cs" />
     <Compile Include="Assets\Script\FinishLine.cs" />
     <Compile Include="Assets\Script\carController.cs" />
@@ -67,7 +68,7 @@
     <Compile Include="Assets\Script\checkPoint.cs" />
     <Compile Include="Assets\Script\speedometer.cs" />
     <Compile Include="Assets\Script\Menu.cs" />
-    <Compile Include="Assets\Script\Timer.cs" />
+    <Compile Include="Assets\StartingCountDown.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Mirror\Plugins\Mono.Cecil\Mono.CecilX.dll" />

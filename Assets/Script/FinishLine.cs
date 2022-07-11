@@ -18,8 +18,10 @@ public class FinishLine : MonoBehaviour
 
             AggiornaClassifica();
 
+            
             player.GetComponent<gameControl>().cpTaken = 0;
             player.GetComponent<gameControl>().listOfCpTaken.Clear();
+           
             player.GetComponent<gameControl>().arrived = true;
         }
     }
