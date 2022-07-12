@@ -39,7 +39,9 @@ public class gameControl : MonoBehaviour
             if (listOfCpTaken.Count == 0)
             {
                 GetComponent<Timer>().lapTime = 0f;
-                //far ripartire countdown
+                GetComponent<carController>().enabledMovement = false;
+                GetComponent<StartingCountDown>().timerOn = true;
+                GetComponent<StartingCountDown>().timeLeft = 3.0f;
             }
                 
         }

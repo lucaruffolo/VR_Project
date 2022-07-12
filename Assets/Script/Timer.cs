@@ -12,7 +12,7 @@ public class Timer : NetworkBehaviour
     [SerializeField] public Text timeRacePlayer;
     private void Start()
     {
-        timerIsRunning = true;
+        timerIsRunning = false;
         timeRacePlayer.enabled = false;
     }
     void Update()

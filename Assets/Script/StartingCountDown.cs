@@ -28,7 +28,8 @@ public class StartingCountDown : NetworkBehaviour
             if (timeLeft > 0)
             {
                 countDown.enabled = true;
-                if(timeLeft < 0.99)
+                GetComponent<Timer>().timerIsRunning = false;
+                if (timeLeft < 0.99)
                 {
                     countDown.text = "VIA";
                 }
@@ -45,6 +46,7 @@ public class StartingCountDown : NetworkBehaviour
                 timerOn = false;
                 GetComponent<carController>().enabledMovement = true;
                 countDown.enabled = false;
+                GetComponent<Timer>().timerIsRunning = true;
             }
         }
         //} 
