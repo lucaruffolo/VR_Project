@@ -273,7 +273,7 @@ public class VehicleControl : NetworkBehaviour
 
     void Awake()
     {
-
+        
         if (carSetting.automaticGear) NeutralGear = false;
 
         myRigidbody = transform.GetComponent<Rigidbody>();
