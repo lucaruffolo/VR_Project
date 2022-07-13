@@ -7,7 +7,6 @@ using Mirror;
 public class speedometer : NetworkBehaviour
 {
     [SerializeField] Text contakhm;
-    [SerializeField] Light fari;
     private Rigidbody rb;
     private Color white = Color.white;
     private Color red = Color.red;
@@ -28,14 +27,6 @@ public class speedometer : NetworkBehaviour
             float vel = rb.velocity.magnitude * 0.5f;
             int v = (int)vel;
             contakhm.text = v.ToString();
-            if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.DownArrow))
-            {
-                fari.enabled = true;
-            }
-            else
-            {
-                fari.enabled = false;
-            }
         }
     }
 

@@ -54,10 +54,14 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Assets\Script\cameraControl.cs" />
+    <Compile Include="Assets\RCK 2.3\Scripts\VehicleControl.cs" />
     <Compile Include="Assets\Script\FollowCamera.cs" />
+    <Compile Include="Assets\RCK 2.3\Skidmarks\WheelSkidmarks.cs" />
     <Compile Include="Assets\Script\CounterCp.cs" />
     <Compile Include="Assets\Script\TimerScript.cs" />
+    <Compile Include="Assets\RCK 2.3\Scripts\VehicleDamage.cs" />
     <Compile Include="Assets\Script\Timer.cs" />
+    <Compile Include="Assets\RCK 2.3\Scripts\CarSwitch.cs" />
     <Compile Include="Assets\Script\StartingCountDown.cs" />
     <Compile Include="Assets\Script\Cycle.cs" />
     <Compile Include="Assets\Script\FinishLine.cs" />
@@ -66,14 +70,10 @@
     <Compile Include="Assets\Script\gameControl.cs" />
     <Compile Include="Assets\Script\checkPoint.cs" />
     <Compile Include="Assets\Script\speedometer.cs" />
-    <Compile Include="Assets\Script\Menu.cs" />
-    <Compile Include="Assets\RCK 2.3\Scripts\VehicleCamera.cs" />
-    <Compile Include="Assets\RCK 2.3\Skidmarks\Skidmarks Essentials\Skidmarks.cs" />
-    <Compile Include="Assets\RCK 2.3\Skidmarks\WheelSkidmarks.cs" />
-    <Compile Include="Assets\RCK 2.3\Scripts\CarSwitch.cs" />
     <Compile Include="Assets\RCK 2.3\Scripts\PoliceLights.cs" />
-    <Compile Include="Assets\RCK 2.3\Scripts\VehicleControl.cs" />
-    <Compile Include="Assets\RCK 2.3\Scripts\VehicleDamage.cs" />
+    <Compile Include="Assets\RCK 2.3\Skidmarks\Skidmarks Essentials\Skidmarks.cs" />
+    <Compile Include="Assets\RCK 2.3\Scripts\VehicleCamera.cs" />
+    <Compile Include="Assets\Script\Menu.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Mirror\Plugins\Mono.Cecil\Mono.CecilX.dll" />

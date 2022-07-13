@@ -12,11 +12,9 @@ public class gameControl : MonoBehaviour
     public Quaternion rotation;
     public int position;
     public bool arrived = false;
-    public GameObject checkPoint;
     public int cpTaken = 0;
     public List<string> listOfCpTaken;
-
-    // Start is called before the first frame update
+    //public GameObject checkPoint;
 
     void Start()
     {
@@ -30,7 +28,6 @@ public class gameControl : MonoBehaviour
         replayRotation = new Quaternion(0f, 0f, 0f, 1);
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Backspace))
@@ -39,6 +36,14 @@ public class gameControl : MonoBehaviour
             transform.rotation = rotation;
             rb.Sleep();
             rb.velocity.Set(0.0f, 0.0f, 0.0f); //reset velocità
+            if (listOfCpTaken.Count == 0)
+            {
+                GetComponent<Timer>().lapTime = 0f;
+                GetComponent<carController>().enabledMovement = false;
+                GetComponent<StartingCountDown>().timerOn = true;
+                GetComponent<StartingCountDown>().timeLeft = 3.0f;
+            }
+                
         }
         if (Input.GetKeyDown(KeyCode.Return))
         {
@@ -61,7 +66,10 @@ public class gameControl : MonoBehaviour
         restart = replay;
         rotation = replayRotation;
 
-        GetComponent<TimerScript>().delta = 0f;
+        GetComponent<Timer>().lapTime = 0f;//reset timer
+        GetComponent<carController>().enabledMovement = false;
+        GetComponent<StartingCountDown>().timerOn = true;
+        GetComponent<StartingCountDown>().timeLeft = 3.0f;
         cpTaken = 0;
         listOfCpTaken.Clear();
     }
@@ -72,6 +80,9 @@ public class gameControl : MonoBehaviour
         transform.rotation = replayRotation;
         rb.Sleep();
         rb.velocity.Set(0.0f, 0.0f, 0.0f);//reset velocità
+        GetComponent<carController>().enabledMovement = false;
+        GetComponent<StartingCountDown>().timerOn = true;
+        GetComponent<StartingCountDown>().timeLeft = 3.0f;
         Reset();
         arrived = false;
     }

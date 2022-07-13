@@ -6,7 +6,7 @@ public class CounterCp : MonoBehaviour
 {
     public GameObject[] childsG;
     public int numCp;
-    // Start is called before the first frame update
+
     void Start()
     {
         numCp = transform.childCount;

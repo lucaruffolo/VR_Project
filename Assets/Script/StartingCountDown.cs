@@ -15,7 +15,7 @@ public class StartingCountDown : NetworkBehaviour
         timeLeft = 3.0f;
         timerOn = true;
         countDown.enabled = true;
-   //     GetComponent<carController>().enabledMovement = false;
+  //      GetComponent<carController>().enabledMovement = false;
     }
 
     // Update is called once per frame
@@ -44,7 +44,7 @@ public class StartingCountDown : NetworkBehaviour
                 Debug.Log("Fine tempo");
                 timeLeft = 0;
                 timerOn = false;
-     //           GetComponent<carController>().enabledMovement = true;
+      //          GetComponent<carController>().enabledMovement = true;
                 countDown.enabled = false;
                 GetComponent<Timer>().timerIsRunning = true;
             }
