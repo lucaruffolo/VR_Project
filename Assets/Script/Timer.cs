@@ -10,6 +10,8 @@ public class Timer : NetworkBehaviour
     public bool timerIsRunning = false;
 
     [SerializeField] public Text timeRacePlayer;
+    public string TimeShowCp;
+    
     private void Start()
     {
         timerIsRunning = false;
@@ -26,6 +28,8 @@ public class Timer : NetworkBehaviour
                 string minutes = ((int)lapTime / 60).ToString();
                 string seconds = (lapTime % 60).ToString("f2");
                 timeRacePlayer.text = minutes + ":" + seconds;
+
+                
             }
         }
     }

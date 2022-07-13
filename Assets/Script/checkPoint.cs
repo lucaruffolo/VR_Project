@@ -4,9 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class checkPoint : MonoBehaviour
-{
-    public GameObject timeCheck; 
+{ 
     public bool oneclick = false;
+    //public GameObject timeCheck; 
     //private Color visibile = new Color(0, 0, 0, 200);
     //private Color invisibile = new Color(0, 0, 0, 0);
 
@@ -40,5 +40,9 @@ public class checkPoint : MonoBehaviour
                 oneclick = true;
             }
         }
+
+        //timerOnCp
+        player.GetComponent<TimeOnCheckPoint>().timerOnCp = true;
+        player.GetComponent<TimeOnCheckPoint>().timeLeftCp = 3.0f;
     }
 }
