@@ -22,8 +22,8 @@ public class gameControl : MonoBehaviour
         cpTaken = 0;
         position = 1;
         rb = GetComponent<Rigidbody>();
-        replay = new Vector3(82.89f, 5.156f, 70.6f);
-        restart = new Vector3(82.89f, 5.156f, 70.6f);
+        replay = new Vector3(264.26f, 32.6f, 61.45f);
+        restart = new Vector3(264.26f, 32.6f, 61.45f);
         rotation = new Quaternion(0f, 0f, 0f, 1);
         replayRotation = new Quaternion(0f, 0f, 0f, 1);
     }
@@ -39,7 +39,7 @@ public class gameControl : MonoBehaviour
             if (listOfCpTaken.Count == 0)
             {
                 GetComponent<Timer>().lapTime = 0f;
-                GetComponent<carController>().enabledMovement = false;
+                GetComponent<VehicleControl>().enabledMovement = false;
                 GetComponent<StartingCountDown>().timerOn = true;
                 GetComponent<StartingCountDown>().timeLeft = 3.0f;
             }
@@ -67,7 +67,7 @@ public class gameControl : MonoBehaviour
         rotation = replayRotation;
 
         GetComponent<Timer>().lapTime = 0f;//reset timer
-        GetComponent<carController>().enabledMovement = false;
+        GetComponent<VehicleControl>().enabledMovement = false;
         GetComponent<StartingCountDown>().timerOn = true;
         GetComponent<StartingCountDown>().timeLeft = 3.0f;
         cpTaken = 0;
@@ -80,7 +80,7 @@ public class gameControl : MonoBehaviour
         transform.rotation = replayRotation;
         rb.Sleep();
         rb.velocity.Set(0.0f, 0.0f, 0.0f);//reset velocità
-        GetComponent<carController>().enabledMovement = false;
+        GetComponent<VehicleControl>().enabledMovement = false;
         GetComponent<StartingCountDown>().timerOn = true;
         GetComponent<StartingCountDown>().timeLeft = 3.0f;
         Reset();
