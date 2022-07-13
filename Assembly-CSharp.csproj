@@ -67,6 +67,13 @@
     <Compile Include="Assets\Script\checkPoint.cs" />
     <Compile Include="Assets\Script\speedometer.cs" />
     <Compile Include="Assets\Script\Menu.cs" />
+    <Compile Include="Assets\RCK 2.3\Scripts\VehicleCamera.cs" />
+    <Compile Include="Assets\RCK 2.3\Skidmarks\Skidmarks Essentials\Skidmarks.cs" />
+    <Compile Include="Assets\RCK 2.3\Skidmarks\WheelSkidmarks.cs" />
+    <Compile Include="Assets\RCK 2.3\Scripts\CarSwitch.cs" />
+    <Compile Include="Assets\RCK 2.3\Scripts\PoliceLights.cs" />
+    <Compile Include="Assets\RCK 2.3\Scripts\VehicleControl.cs" />
+    <Compile Include="Assets\RCK 2.3\Scripts\VehicleDamage.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Mirror\Plugins\Mono.Cecil\Mono.CecilX.dll" />
@@ -83,6 +90,7 @@
     <None Include="Assets\Mirror\Notice.txt" />
     <None Include="Assets\Mirror\Plugins\Mono.Cecil\License.txt" />
     <None Include="Assets\ScriptTemplates\55-Mirror__Network Room Player-NewNetworkRoomPlayer.cs.txt" />
+    <None Include="Assets\RCK 2.3\Standard Assets\Projectors\Sources\Shaders\Projector Multiply.shader" />
     <None Include="Assets\ScriptTemplates\53-Mirror__Custom Interest Management-CustomInterestManagement.cs.txt" />
     <None Include="Assets\ScriptTemplates\50-Mirror__Network Manager-NewNetworkManager.cs.txt" />
     <None Include="Assets\ScriptTemplates\54-Mirror__Network Room Manager-NewNetworkRoomManager.cs.txt" />

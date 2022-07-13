@@ -6,6 +6,8 @@ TagManager:
   tags:
   - CheckPoint
   - CameraFirst
+  - Grass
+  - Street
   layers:
   - Default
   - TransparentFX

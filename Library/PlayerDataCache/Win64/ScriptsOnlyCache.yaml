@@ -6,13 +6,9 @@ ScriptsOnlyBuild:
     - FinishLine
     - FollowCamera
     - Menu
-    - StartingCountDown
-    - Timer
-    - TimerScript
-    - carController
+    - VehicleControl
     - checkPoint
     - gameControl
-    - speedometer
     Cinemachine.dll:
     - Cinemachine.Cinemachine3rdPersonFollow
     - Cinemachine.CinemachineBrain
@@ -110,6 +106,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 89
       Script: {instanceID: 0}
     - Class: 104
@@ -131,15 +131,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2490}
     - Class: 114
-      Script: {instanceID: 2494}
-    - Class: 114
       Script: {instanceID: 2540}
     - Class: 114
       Script: {instanceID: 2578}
     - Class: 114
       Script: {instanceID: 2650}
-    - Class: 114
-      Script: {instanceID: 2662}
     - Class: 114
       Script: {instanceID: 2728}
     - Class: 114
@@ -151,38 +147,36 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3178}
     - Class: 114
-      Script: {instanceID: 3198}
-    - Class: 114
       Script: {instanceID: 3314}
     - Class: 114
       Script: {instanceID: 3402}
     - Class: 114
       Script: {instanceID: 3518}
     - Class: 114
-      Script: {instanceID: 3676}
+      Script: {instanceID: 3908}
     - Class: 114
-      Script: {instanceID: 3906}
+      Script: {instanceID: 3918}
     - Class: 114
-      Script: {instanceID: 3916}
+      Script: {instanceID: 4706}
     - Class: 114
-      Script: {instanceID: 4704}
+      Script: {instanceID: 4890}
     - Class: 114
-      Script: {instanceID: 4790}
+      Script: {instanceID: 5034}
     - Class: 114
-      Script: {instanceID: 4888}
+      Script: {instanceID: 5044}
     - Class: 114
-      Script: {instanceID: 5032}
+      Script: {instanceID: 5346}
     - Class: 114
-      Script: {instanceID: 5042}
-    - Class: 114
-      Script: {instanceID: 5344}
+      Script: {instanceID: 18836}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 119
+      Script: {instanceID: 0}
+    - Class: 121
       Script: {instanceID: 0}
     - Class: 128
       Script: {instanceID: 0}
-    - Class: 136
-      Script: {instanceID: 0}
-    - Class: 146
+    - Class: 134
       Script: {instanceID: 0}
     - Class: 154
       Script: {instanceID: 0}
@@ -191,6 +185,10 @@ ScriptsOnlyBuild:
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 198
+      Script: {instanceID: 0}
+    - Class: 199
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
@@ -201,6 +199,12 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
+      Script: {instanceID: 0}
+    - Class: 241
+      Script: {instanceID: 0}
+    - Class: 243
+      Script: {instanceID: 0}
+    - Class: 245
       Script: {instanceID: 0}
     Assets/Scenes/Menu.unity:
     - Class: 1
@@ -234,7 +238,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3294}
     - Class: 114
-      Script: {instanceID: 5476}
+      Script: {instanceID: 5478}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -638,7 +642,7 @@ ScriptsOnlyBuild:
     className: CinemachineVirtualCamera
   - hash:
       serializedVersion: 2
-      Hash: 7b6f1bef12c81ad1fcc09a70b6fcdb8b
+      Hash: 2a6e57d840a9ec0485eab3af4947edaa
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Timer
@@ -842,7 +846,7 @@ ScriptsOnlyBuild:
     className: TMP_SubMesh
   - hash:
       serializedVersion: 2
-      Hash: e7352257b31f2ad31ec99db9a7888291
+      Hash: 0fbc85665aff5ec93ff26d3733af1619
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: StartingCountDown
@@ -998,7 +1002,7 @@ ScriptsOnlyBuild:
     className: PlayerQuitHandler
   - hash:
       serializedVersion: 2
-      Hash: e433a5cda3a0c6316f70866a20501a60
+      Hash: 57ad4662400c4ef8bcdf3c0e90ea61c4
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: carController
@@ -1088,6 +1092,12 @@ ScriptsOnlyBuild:
     className: PositionAsUV1
   - hash:
       serializedVersion: 2
+      Hash: 815d9396a4fa1f53d28d55024906e625
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TimeOnCheckPoint
+  - hash:
+      serializedVersion: 2
       Hash: 265cf1537361bce87401ba1fba27baf3
     assemblyName: Mirror.Components.dll
     namespaceName: Mirror.Experimental
@@ -1100,7 +1110,7 @@ ScriptsOnlyBuild:
     className: AudioPlayableAsset
   - hash:
       serializedVersion: 2
-      Hash: d23d961e93c55baa3ae18cb48d5a6667
+      Hash: a4261ec4f3fbe8dedd9afb93b2f2ed5d
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: gameControl
@@ -1590,9 +1600,51 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Menu
+  - hash:
+      serializedVersion: 2
+      Hash: f15be9b3a32ba9ac9b0c4a11b1034826
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: VehicleCamera
+  - hash:
+      serializedVersion: 2
+      Hash: e031cee791e7d0fbbe8aae8caf61a441
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Skidmarks
+  - hash:
+      serializedVersion: 2
+      Hash: cfea6dbeb3eb5e9aa5af2594914311e9
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: WheelSkidmarks
+  - hash:
+      serializedVersion: 2
+      Hash: 01652848e47dbe259d8d34ca4af9fd7d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CarSwitch
+  - hash:
+      serializedVersion: 2
+      Hash: 6c4ad08b99dc97aa3ca504aafcd96fe5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PoliceLights
+  - hash:
+      serializedVersion: 2
+      Hash: 0e9dbcb4be9825e375bf13e8e728e1d9
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: VehicleControl
+  - hash:
+      serializedVersion: 2
+      Hash: 2d095d8ae80971ab504e9c03cbabab05
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: VehicleDamage
   platform: 19
   scenePathNames:
   - Assets/Scenes/Menu.unity
   - Assets/Scenes/Game.unity
   - Assets/Scenes/EndSession.unity
-  playerPath: C:/Users/PIERPY/Documents/GitHub/VR_Project/Build/VR_Project.exe
+  playerPath: C:/Users/Luca24/VR_Project/VR_Project/Build/VR_Project.exe
