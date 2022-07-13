@@ -18,6 +18,8 @@ ScriptsOnlyBuild:
     Mirror.Components.dll:
     - Mirror.Experimental.NetworkRigidbody
     - Mirror.NetworkTransform
+    Mirror.Editor.dll:
+    - Mirror.NetworkBehaviourInspector
     Mirror.dll:
     - Mirror.NetworkIdentity
     - Mirror.NetworkManager
@@ -121,53 +123,53 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1466}
     - Class: 114
-      Script: {instanceID: 1622}
+      Script: {instanceID: 2442}
     - Class: 114
-      Script: {instanceID: 2118}
+      Script: {instanceID: 2936}
     - Class: 114
-      Script: {instanceID: 2238}
+      Script: {instanceID: 3056}
     - Class: 114
-      Script: {instanceID: 2354}
+      Script: {instanceID: 3170}
     - Class: 114
-      Script: {instanceID: 2510}
+      Script: {instanceID: 3326}
     - Class: 114
-      Script: {instanceID: 2650}
+      Script: {instanceID: 3466}
     - Class: 114
-      Script: {instanceID: 2700}
+      Script: {instanceID: 3516}
     - Class: 114
-      Script: {instanceID: 2738}
+      Script: {instanceID: 3554}
     - Class: 114
-      Script: {instanceID: 2812}
+      Script: {instanceID: 3628}
     - Class: 114
-      Script: {instanceID: 2888}
+      Script: {instanceID: 3704}
     - Class: 114
-      Script: {instanceID: 2964}
+      Script: {instanceID: 3780}
     - Class: 114
-      Script: {instanceID: 2980}
+      Script: {instanceID: 3796}
     - Class: 114
-      Script: {instanceID: 3260}
+      Script: {instanceID: 4074}
     - Class: 114
-      Script: {instanceID: 3340}
+      Script: {instanceID: 4154}
     - Class: 114
-      Script: {instanceID: 3474}
+      Script: {instanceID: 4288}
     - Class: 114
-      Script: {instanceID: 3562}
+      Script: {instanceID: 4376}
     - Class: 114
-      Script: {instanceID: 3678}
+      Script: {instanceID: 4490}
     - Class: 114
-      Script: {instanceID: 4066}
+      Script: {instanceID: 4878}
     - Class: 114
-      Script: {instanceID: 4076}
+      Script: {instanceID: 4888}
     - Class: 114
-      Script: {instanceID: 4864}
+      Script: {instanceID: 5674}
     - Class: 114
-      Script: {instanceID: 5048}
+      Script: {instanceID: 5858}
     - Class: 114
-      Script: {instanceID: 5192}
+      Script: {instanceID: 6002}
     - Class: 114
-      Script: {instanceID: 5202}
+      Script: {instanceID: 6010}
     - Class: 114
-      Script: {instanceID: 5508}
+      Script: {instanceID: 6316}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 119
@@ -228,17 +230,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1466}
     - Class: 114
-      Script: {instanceID: 2354}
+      Script: {instanceID: 3170}
     - Class: 114
-      Script: {instanceID: 2738}
+      Script: {instanceID: 3554}
     - Class: 114
-      Script: {instanceID: 2888}
+      Script: {instanceID: 3704}
     - Class: 114
-      Script: {instanceID: 3340}
+      Script: {instanceID: 4154}
     - Class: 114
-      Script: {instanceID: 3454}
+      Script: {instanceID: 4268}
     - Class: 114
-      Script: {instanceID: 5642}
+      Script: {instanceID: 6450}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1629,4 +1631,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Menu.unity
   - Assets/Scenes/Game.unity
   - Assets/Scenes/EndSession.unity
-  playerPath: C:/Users/Luca24/VR_Project/VR_Project/Build/VR_Project.exe
+  playerPath: C:/Users/PIERPY/Documents/GitHub/VR_Project/Build/VR_Project.exe
