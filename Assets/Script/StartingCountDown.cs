@@ -9,6 +9,8 @@ public class StartingCountDown : NetworkBehaviour
     public float timeLeft;
     public bool timerOn = false;
     [SerializeField] Text countDown;
+    public AudioSource audioCountDown;
+    public bool oneTime = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,11 +29,20 @@ public class StartingCountDown : NetworkBehaviour
         {
             if (timeLeft > 0)
             {
+                if (oneTime)
+                {
+                    playAudioCountDown();
+                    oneTime = false;
+                }
+                
                 countDown.enabled = true;
                 GetComponent<Timer>().timerIsRunning = false;
                 if (timeLeft < 0.99)
                 {
-                    countDown.text = "VIA";
+                    if(timeLeft < 0.20)
+                    {
+                        countDown.text = "VIA";
+                    }    
                 }
                 else
                 {
@@ -50,5 +61,10 @@ public class StartingCountDown : NetworkBehaviour
             }
         }
         //} 
+    }
+
+    public void playAudioCountDown()
+    {
+        audioCountDown.Play();
     }
 }

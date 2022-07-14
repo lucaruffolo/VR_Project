@@ -40,6 +40,7 @@ public class gameControl : MonoBehaviour
             {
                 GetComponent<Timer>().lapTime = 0f;
                 GetComponent<VehicleControl>().enabledMovement = false;
+                GetComponent<StartingCountDown>().oneTime = true;
                 GetComponent<StartingCountDown>().timerOn = true;
                 GetComponent<StartingCountDown>().timeLeft = 3.0f;
             }
@@ -68,6 +69,7 @@ public class gameControl : MonoBehaviour
 
         GetComponent<Timer>().lapTime = 0f;//reset timer
         GetComponent<VehicleControl>().enabledMovement = false;
+        GetComponent<StartingCountDown>().oneTime = true;
         GetComponent<StartingCountDown>().timerOn = true;
         GetComponent<StartingCountDown>().timeLeft = 3.0f;
         cpTaken = 0;
@@ -81,6 +83,7 @@ public class gameControl : MonoBehaviour
         rb.Sleep();
         rb.velocity.Set(0.0f, 0.0f, 0.0f);//reset velocità
         GetComponent<VehicleControl>().enabledMovement = false;
+        GetComponent<StartingCountDown>().oneTime = true;
         GetComponent<StartingCountDown>().timerOn = true;
         GetComponent<StartingCountDown>().timeLeft = 3.0f;
         Reset();
