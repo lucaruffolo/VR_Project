@@ -7,7 +7,7 @@ public class TimeOnCheckPoint : MonoBehaviour
 {
     public float timeLeftCp;
     public bool timerOnCp = false;
-    [SerializeField] Text timeOnCp;
+    public Text timeOnCp;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +24,6 @@ public class TimeOnCheckPoint : MonoBehaviour
             if (timeLeftCp > 0)
             {
                 timeOnCp.enabled = true;
-                //timeOnCp.text = GetComponent<Timer>().TimeShowCp; da impl in timer
                 timeLeftCp -= Time.deltaTime;
             }
             else

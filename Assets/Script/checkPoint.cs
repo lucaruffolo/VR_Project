@@ -37,6 +37,7 @@ public class checkPoint : MonoBehaviour
             {
                 player.GetComponent<gameControl>().cpTaken += 1;
                 player.GetComponent<gameControl>().addCpList(name);
+                player.GetComponent<TimeOnCheckPoint>().timeOnCp.text = player.GetComponent<Timer>().TimeShowCp;
                 oneclick = true;
             }
         }
