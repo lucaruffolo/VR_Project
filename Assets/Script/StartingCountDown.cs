@@ -11,9 +11,11 @@ public class StartingCountDown : NetworkBehaviour
     [SerializeField] Text countDown;
     public AudioSource audioCountDown;
     public bool oneTime = true;
+    private Rigidbody rb;
     // Start is called before the first frame update
     void Start()
     {
+        rb = GetComponent<Rigidbody>();
         timeLeft = 3.0f;
         timerOn = true;
         countDown.enabled = true;
@@ -29,6 +31,7 @@ public class StartingCountDown : NetworkBehaviour
         {
             if (timeLeft > 0)
             {
+                rb.constraints = RigidbodyConstraints.FreezeAll;
                 if (oneTime)
                 {
                     playAudioCountDown();
@@ -52,6 +55,7 @@ public class StartingCountDown : NetworkBehaviour
             }
             else
             {
+                rb.constraints = RigidbodyConstraints.None;
                 Debug.Log("Fine tempo");
                 timeLeft = 0;
                 timerOn = false;
