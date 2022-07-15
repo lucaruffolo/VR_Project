@@ -62,6 +62,7 @@
     <Compile Include="Assets\RCK 2.3\Scripts\VehicleDamage.cs" />
     <Compile Include="Assets\Script\Timer.cs" />
     <Compile Include="Assets\RCK 2.3\Scripts\CarSwitch.cs" />
+    <Compile Include="Assets\Script\CharacterSelection.cs" />
     <Compile Include="Assets\Script\StartingCountDown.cs" />
     <Compile Include="Assets\Script\Cycle.cs" />
     <Compile Include="Assets\Script\FinishLine.cs" />
@@ -75,7 +76,6 @@
     <Compile Include="Assets\RCK 2.3\Skidmarks\Skidmarks Essentials\Skidmarks.cs" />
     <Compile Include="Assets\RCK 2.3\Scripts\VehicleCamera.cs" />
     <Compile Include="Assets\Script\Menu.cs" />
-    <Compile Include="Assets\Script\CharacterSelection.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Mirror\Plugins\Mono.Cecil\Mono.CecilX.dll" />
@@ -94,6 +94,7 @@
     <None Include="Assets\ScriptTemplates\55-Mirror__Network Room Player-NewNetworkRoomPlayer.cs.txt" />
     <None Include="Assets\RCK 2.3\Standard Assets\Projectors\Sources\Shaders\Projector Multiply.shader" />
     <None Include="Assets\ScriptTemplates\53-Mirror__Custom Interest Management-CustomInterestManagement.cs.txt" />
+    <None Include="Assets\POLYGON city pack\Read_me.txt" />
     <None Include="Assets\ScriptTemplates\50-Mirror__Network Manager-NewNetworkManager.cs.txt" />
     <None Include="Assets\ScriptTemplates\54-Mirror__Network Room Manager-NewNetworkRoomManager.cs.txt" />
   </ItemGroup>
