@@ -9,7 +9,7 @@ public enum ControlMode { simple = 1, touch = 2 }
 
 public class VehicleControl : NetworkBehaviour
 {
-
+    public GameObject playerCollision;
 
     public ControlMode controlMode = ControlMode.simple;
 
@@ -463,6 +463,10 @@ public class VehicleControl : NetworkBehaviour
                     }
                 }
             } 
+        }
+        else
+        {
+            playerCollision.SetActive(false);
         }
     }
 
@@ -1040,6 +1044,10 @@ public class VehicleControl : NetworkBehaviour
                     PitchDelay = Pitch;
                 }
             } 
+        }
+        else
+        {
+            playerCollision.SetActive(false);
         }
     }
 
