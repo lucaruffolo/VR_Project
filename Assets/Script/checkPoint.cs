@@ -14,7 +14,6 @@ public class checkPoint : MonoBehaviour
     {
         GameObject player = other.gameObject.transform.parent.transform.parent.gameObject;
 
-
         //riposizionamento
         Vector3 cp = transform.position;
         Vector3 posRespawn = new Vector3(cp.x, cp.y - 2, cp.z);
@@ -40,10 +39,11 @@ public class checkPoint : MonoBehaviour
                 player.GetComponent<TimeOnCheckPoint>().timeOnCp.text = player.GetComponent<Timer>().TimeShowCp;
                 oneclick = true;
             }
+            //timerOnCp
+            player.GetComponent<TimeOnCheckPoint>().timerOnCp = true;
+            player.GetComponent<TimeOnCheckPoint>().timeLeftCp = 3.0f;
         }
 
-        //timerOnCp
-        player.GetComponent<TimeOnCheckPoint>().timerOnCp = true;
-        player.GetComponent<TimeOnCheckPoint>().timeLeftCp = 3.0f;
+        
     }
 }

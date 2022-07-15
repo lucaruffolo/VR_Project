@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Mirror;
 
-public class gameControl : MonoBehaviour
+public class gameControl : NetworkBehaviour
 {
 
     private Vector3 replay;
@@ -36,15 +37,19 @@ public class gameControl : MonoBehaviour
             transform.rotation = rotation;
             rb.Sleep();
             rb.velocity.Set(0.0f, 0.0f, 0.0f); //reset velocità
-            if (listOfCpTaken.Count == 0)
+            GetComponent<TimeOnCheckPoint>().timeOnCp.enabled = false;
+            GetComponent<TimeOnCheckPoint>().timerOnCp = false;
+            if (this.isLocalPlayer)
             {
-                GetComponent<Timer>().lapTime = 0f;
-                GetComponent<VehicleControl>().enabledMovement = false;
-                GetComponent<StartingCountDown>().oneTime = true;
-                GetComponent<StartingCountDown>().timerOn = true;
-                GetComponent<StartingCountDown>().timeLeft = 3.0f;
+                if (listOfCpTaken.Count == 0)
+                {
+                    GetComponent<Timer>().lapTime = 0f;
+                    GetComponent<VehicleControl>().enabledMovement = false;
+                    GetComponent<StartingCountDown>().oneTime = true;
+                    GetComponent<StartingCountDown>().timerOn = true;
+                    GetComponent<StartingCountDown>().timeLeft = 3.0f;
+                }
             }
-                
         }
         if (Input.GetKeyDown(KeyCode.Return))
         {
@@ -68,6 +73,8 @@ public class gameControl : MonoBehaviour
         rotation = replayRotation;
 
         GetComponent<Timer>().lapTime = 0f;//reset timer
+        GetComponent<TimeOnCheckPoint>().timeOnCp.enabled = false;
+        GetComponent<TimeOnCheckPoint>().timerOnCp = false;
         GetComponent<VehicleControl>().enabledMovement = false;
         GetComponent<StartingCountDown>().oneTime = true;
         GetComponent<StartingCountDown>().timerOn = true;
@@ -83,6 +90,8 @@ public class gameControl : MonoBehaviour
         rb.Sleep();
         rb.velocity.Set(0.0f, 0.0f, 0.0f);//reset velocità
         GetComponent<VehicleControl>().enabledMovement = false;
+        GetComponent<TimeOnCheckPoint>().timeOnCp.enabled = false;
+        GetComponent<TimeOnCheckPoint>().timerOnCp = false;
         GetComponent<StartingCountDown>().oneTime = true;
         GetComponent<StartingCountDown>().timerOn = true;
         GetComponent<StartingCountDown>().timeLeft = 3.0f;
