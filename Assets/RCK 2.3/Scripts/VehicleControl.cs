@@ -487,6 +487,7 @@ public class VehicleControl : NetworkBehaviour
         {
             playerCollision.SetActive(false);
         }
+
     }
 
 

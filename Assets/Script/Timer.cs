@@ -8,6 +8,7 @@ public class Timer : NetworkBehaviour
 {
     public float lapTime = 0.0f;
     public bool timerIsRunning = false;
+    public float best;
 
     [SerializeField] public Text timeRacePlayer;
     public string TimeShowCp;
@@ -19,8 +20,8 @@ public class Timer : NetworkBehaviour
     }
     void Update()
     {
-        if (this.isLocalPlayer)
-        {
+      //  if (this.isLocalPlayer)
+      //  {
             timeRacePlayer.enabled = true;
             if (timerIsRunning)
             {
@@ -31,6 +32,6 @@ public class Timer : NetworkBehaviour
 
                 TimeShowCp = minutes + ":" + seconds;
             }
-        }
+       // }
     }
 }

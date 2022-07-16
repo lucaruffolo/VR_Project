@@ -5868,7 +5868,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 155394}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 270.65, y: 32.59999, z: 53.00743}
+  m_LocalPosition: {x: 270.65, y: 33.59999, z: 53.00743}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8254361322143268342}
@@ -6137,6 +6137,7 @@ MonoBehaviour:
   syncInterval: 0.1
   lapTime: 0
   timerIsRunning: 0
+  best: 0
   timeRacePlayer: {fileID: 7207763686070138200}
   TimeShowCp: 
 --- !u!114 &6151495922376543501
