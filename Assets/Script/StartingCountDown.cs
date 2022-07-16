@@ -18,15 +18,13 @@ public class StartingCountDown : NetworkBehaviour
         rb = GetComponent<Rigidbody>();
         timeLeft = 3.0f;
         timerOn = true;
-        countDown.enabled = true;
+        countDown.enabled = false;
         GetComponent<VehicleControl>().enabledMovement = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        //if (this.isLocalPlayer)
-        //{
         if (timerOn)
         {
             if (timeLeft > 0)
@@ -37,8 +35,13 @@ public class StartingCountDown : NetworkBehaviour
                     playAudioCountDown();
                     oneTime = false;
                 }
-                
+
                 countDown.enabled = true;
+                if (!this.isLocalPlayer)
+                {
+                    audioCountDown.GetComponent<AudioSource>().enabled = false;
+                    countDown.GetComponent<Text>().enabled = false;
+                }
                 GetComponent<Timer>().timerIsRunning = false;
                 if (timeLeft < 0.99)
                 {
@@ -62,9 +65,16 @@ public class StartingCountDown : NetworkBehaviour
                 GetComponent<VehicleControl>().enabledMovement = true;
                 countDown.enabled = false;
                 GetComponent<Timer>().timerIsRunning = true;
+
+                //riattivo suoni
+                GetComponent<VehicleControl>().carSounds.HighEngine.GetComponent<AudioSource>().Play();
+                GetComponent<VehicleControl>().carSounds.IdleEngine.GetComponent<AudioSource>().Play();
+                GetComponent<VehicleControl>().carSounds.LowEngine.GetComponent<AudioSource>().Play();
+                GetComponent<VehicleControl>().carSounds.switchGear.GetComponent<AudioSource>().Play();
+                GetComponent<VehicleControl>().carSounds.nitro.GetComponent<AudioSource>().Play();
             }
         }
-        //} 
+
     }
 
     public void playAudioCountDown()

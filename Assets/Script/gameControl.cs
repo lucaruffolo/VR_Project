@@ -48,6 +48,11 @@ public class gameControl : NetworkBehaviour
                     GetComponent<StartingCountDown>().oneTime = true;
                     GetComponent<StartingCountDown>().timerOn = true;
                     GetComponent<StartingCountDown>().timeLeft = 3.0f;
+                    GetComponent<VehicleControl>().carSounds.HighEngine.GetComponent<AudioSource>().Stop();
+                    GetComponent<VehicleControl>().carSounds.IdleEngine.GetComponent<AudioSource>().Stop();
+                    GetComponent<VehicleControl>().carSounds.LowEngine.GetComponent<AudioSource>().Stop();
+                    GetComponent<VehicleControl>().carSounds.switchGear.GetComponent<AudioSource>().Stop();
+                    GetComponent<VehicleControl>().carSounds.nitro.GetComponent<AudioSource>().Stop();
                 }
             }
         }
@@ -79,6 +84,11 @@ public class gameControl : NetworkBehaviour
         GetComponent<StartingCountDown>().oneTime = true;
         GetComponent<StartingCountDown>().timerOn = true;
         GetComponent<StartingCountDown>().timeLeft = 3.0f;
+        GetComponent<VehicleControl>().carSounds.HighEngine.GetComponent<AudioSource>().Stop();
+        GetComponent<VehicleControl>().carSounds.IdleEngine.GetComponent<AudioSource>().Stop();
+        GetComponent<VehicleControl>().carSounds.LowEngine.GetComponent<AudioSource>().Stop();
+        GetComponent<VehicleControl>().carSounds.switchGear.GetComponent<AudioSource>().Stop();
+        GetComponent<VehicleControl>().carSounds.nitro.GetComponent<AudioSource>().Stop();
         cpTaken = 0;
         listOfCpTaken.Clear();
     }
@@ -95,6 +105,11 @@ public class gameControl : NetworkBehaviour
         GetComponent<StartingCountDown>().oneTime = true;
         GetComponent<StartingCountDown>().timerOn = true;
         GetComponent<StartingCountDown>().timeLeft = 3.0f;
+        GetComponent<VehicleControl>().carSounds.HighEngine.GetComponent<AudioSource>().Stop();
+        GetComponent<VehicleControl>().carSounds.IdleEngine.GetComponent<AudioSource>().Stop();
+        GetComponent<VehicleControl>().carSounds.LowEngine.GetComponent<AudioSource>().Stop();
+        GetComponent<VehicleControl>().carSounds.switchGear.GetComponent<AudioSource>().Stop();
+        GetComponent<VehicleControl>().carSounds.nitro.GetComponent<AudioSource>().Stop();
         Reset();
         arrived = false;
     }
