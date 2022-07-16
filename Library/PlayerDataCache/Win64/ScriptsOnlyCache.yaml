@@ -171,13 +171,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3922}
     - Class: 114
-      Script: {instanceID: 4720}
+      Script: {instanceID: 4722}
     - Class: 114
-      Script: {instanceID: 4806}
+      Script: {instanceID: 4808}
     - Class: 114
-      Script: {instanceID: 4904}
+      Script: {instanceID: 4906}
     - Class: 114
-      Script: {instanceID: 5058}
+      Script: {instanceID: 5060}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 119
@@ -304,19 +304,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3932}
     - Class: 114
-      Script: {instanceID: 4720}
+      Script: {instanceID: 4142}
     - Class: 114
-      Script: {instanceID: 4806}
+      Script: {instanceID: 4722}
     - Class: 114
-      Script: {instanceID: 4904}
+      Script: {instanceID: 4808}
     - Class: 114
-      Script: {instanceID: 5048}
+      Script: {instanceID: 4906}
     - Class: 114
-      Script: {instanceID: 5058}
+      Script: {instanceID: 5050}
     - Class: 114
-      Script: {instanceID: 5364}
+      Script: {instanceID: 5060}
     - Class: 114
-      Script: {instanceID: 22030}
+      Script: {instanceID: 5366}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 119
@@ -389,7 +389,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3306}
     - Class: 114
-      Script: {instanceID: 5498}
+      Script: {instanceID: 5500}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1381,6 +1381,12 @@ ScriptsOnlyBuild:
     className: CinemachineIndependentImpulseListener
   - hash:
       serializedVersion: 2
+      Hash: 6ea8ac653567968928317aec194e5652
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TimeSession
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -1805,16 +1811,10 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Menu
-  - hash:
-      serializedVersion: 2
-      Hash: 6ea8ac653567968928317aec194e5652
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: TimeSession
   platform: 19
   scenePathNames:
   - Assets/Scenes/Menu.unity
   - Assets/Scenes/ChoosePlayer.unity
   - Assets/Scenes/Game.unity
   - Assets/Scenes/EndSession.unity
-  playerPath: C:/Users/PIERPY/Documents/GitHub/VR_Project/Build/VR_Project.exe
+  playerPath: C:/Users/Luca24/VR_Project/VR_Project/Build/VR_Project.exe
