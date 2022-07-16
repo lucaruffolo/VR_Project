@@ -14,6 +14,7 @@ public class Scoreboard : NetworkBehaviour
     public Text tp2;
     public Text p3;
     public Text tp3;
+    public GameObject line;
 
     void Update()
     {
@@ -25,7 +26,7 @@ public class Scoreboard : NetworkBehaviour
         {
             p1.GetComponent<Text>().enabled = true; 
             tp1.GetComponent<Text>().enabled = true;
-            if (GetComponent<StartLine>().listPlayer.Count != 0)
+            if (line.GetComponent<StartLine>().listPlayer.Count != 0)
             {
                 //if (GetComponent<StartLine>().listPlayer[0].GetComponent<Timer>().best == 99999.9f)
                 //    p1.text = "DNF";
