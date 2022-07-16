@@ -21,8 +21,6 @@ public class StartLine : MonoBehaviour
         {
             listPlayer.Add(player);
             player.GetComponent<gameControl>().PlayerName = PlayerPrefs.GetString("namePlayer");
-
-            
         }
            
 

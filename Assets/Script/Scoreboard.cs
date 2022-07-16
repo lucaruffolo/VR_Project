@@ -28,8 +28,9 @@ public class Scoreboard : NetworkBehaviour
             tp1.GetComponent<Text>().enabled = true;
             if (line.GetComponent<StartLine>().listPlayer.Count != 0)
             {
-                //if (GetComponent<StartLine>().listPlayer[0].GetComponent<Timer>().best == 99999.9f)
-                //    p1.text = "DNF";
+                p1.text = line.GetComponent<StartLine>().listPlayer[0].GetComponent<gameControl>().PlayerName;
+                if (line.GetComponent<StartLine>().listPlayer[0].GetComponent<Timer>().best == 99999.9f)
+                    tp1.text = "DNF";
             }
         }
         if (playersConnected == 2)
@@ -38,6 +39,12 @@ public class Scoreboard : NetworkBehaviour
             tp1.GetComponent<Text>().enabled = true;
             p2.GetComponent<Text>().enabled = true;
             tp2.GetComponent<Text>().enabled = true;
+            if (line.GetComponent<StartLine>().listPlayer.Count != 0)
+            {
+                p2.text = line.GetComponent<StartLine>().listPlayer[1].GetComponent<gameControl>().PlayerName;
+                if (line.GetComponent<StartLine>().listPlayer[1].GetComponent<Timer>().best == 99999.9f)
+                    tp2.text = "DNF";
+            }
         }
         if (playersConnected == 3)
         {
@@ -47,6 +54,12 @@ public class Scoreboard : NetworkBehaviour
             tp2.GetComponent<Text>().enabled = true;
             p3.GetComponent<Text>().enabled = true;
             tp3.GetComponent<Text>().enabled = true;
+            if (line.GetComponent<StartLine>().listPlayer.Count != 0)
+            {
+                p3.text = line.GetComponent<StartLine>().listPlayer[2].GetComponent<gameControl>().PlayerName;
+                if (line.GetComponent<StartLine>().listPlayer[2].GetComponent<Timer>().best == 99999.9f)
+                    tp3.text = "DNF";
+            }
         }
     }
 }
