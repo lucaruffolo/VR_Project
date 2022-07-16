@@ -469,13 +469,13 @@ public class VehicleControl : NetworkBehaviour
 
                 if (!carSetting.automaticGear && activeControl)
                 {
-                    if (Input.GetKeyDown("page up"))
+                    if (Input.GetKeyDown("page up") && !PauseMenu.GameIsPaused)
                     {
                         ShiftUp();
 
 
                     }
-                    if (Input.GetKeyDown("page down"))
+                    if (Input.GetKeyDown("page down") && !PauseMenu.GameIsPaused)
                     {
                         ShiftDown();
 
@@ -536,7 +536,7 @@ public class VehicleControl : NetworkBehaviour
                         brake = false;
                         shift = false;
 
-                        if (carWheels.wheels.frontWheelDrive || carWheels.wheels.backWheelDrive)
+                        if ((carWheels.wheels.frontWheelDrive || carWheels.wheels.backWheelDrive) && !PauseMenu.GameIsPaused)
                         {
                             steer = Mathf.MoveTowards(steer, Input.GetAxis("Horizontal"), 0.2f);
                             accel = Input.GetAxis("Vertical");

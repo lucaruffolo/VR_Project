@@ -31,7 +31,7 @@ public class gameControl : NetworkBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Backspace))
+        if (Input.GetKeyDown(KeyCode.Backspace) && !PauseMenu.GameIsPaused)
         {
             transform.position = restart;
             transform.rotation = rotation;
@@ -56,7 +56,7 @@ public class gameControl : NetworkBehaviour
                 }
             }
         }
-        if (Input.GetKeyDown(KeyCode.Return))
+        if (Input.GetKeyDown(KeyCode.Return) && !PauseMenu.GameIsPaused)
         {
             transform.position = replay;
             transform.rotation = replayRotation;
