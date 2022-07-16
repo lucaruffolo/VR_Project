@@ -14,7 +14,11 @@ public class Scoreboard : NetworkBehaviour
     public Text tp2;
     public Text p3;
     public Text tp3;
+    public RawImage one;
+    public RawImage two;
+    public Text warmup;
     public GameObject line;
+    public GameObject session;
 
     void Update()
     {
@@ -24,8 +28,9 @@ public class Scoreboard : NetworkBehaviour
         }
         if(playersConnected == 1)
         {
-            p1.GetComponent<Text>().enabled = true; 
-            tp1.GetComponent<Text>().enabled = true;
+            //p1.GetComponent<Text>().enabled = true; 
+            //tp1.GetComponent<Text>().enabled = true;
+            warmup.text = "WARMUP";
             if (line.GetComponent<StartLine>().listPlayer.Count != 0)
             {
                 p1.text = line.GetComponent<StartLine>().listPlayer[0].GetComponent<gameControl>().PlayerName;
@@ -45,6 +50,12 @@ public class Scoreboard : NetworkBehaviour
                 if (line.GetComponent<StartLine>().listPlayer[1].GetComponent<Timer>().best == 99999.9f)
                     tp2.text = "DNF";
             }
+
+            line.GetComponent<StartLine>().listPlayer[0].GetComponent<Timer>().sessionReady = true; 
+            line.GetComponent<StartLine>().listPlayer[1].GetComponent<Timer>().sessionReady = true;
+            session.GetComponent<TimeSession>().sessionReady = true;
+            one.GetComponent<RawImage>().enabled = true;
+            two.GetComponent<RawImage>().enabled = true;
         }
         if (playersConnected == 3)
         {

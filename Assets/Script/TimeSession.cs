@@ -8,27 +8,32 @@ public class TimeSession : MonoBehaviour
 {
     public float sessionTime;
     public bool timerIsRunning = false;
+    public bool sessionReady;
 
     [SerializeField] public Text timeSession;
 
     private void Start()
     {
+        sessionReady = false;
         timerIsRunning = true;
         timeSession.enabled = true;
         sessionTime = 100.0f;
     }
     void Update()
     {
-        if (timerIsRunning)
+        if (sessionReady)
         {
-            sessionTime -= Time.deltaTime;
-            string minutes = ((int)sessionTime / 60).ToString();
-            string seconds = (sessionTime % 60).ToString("f2");
-            timeSession.text = minutes + ":" + seconds;
-        }
-        if(sessionTime < 0)
-        {
-            SceneManager.LoadScene(sceneName: "EndSession");
+            if (timerIsRunning)
+            {
+                sessionTime -= Time.deltaTime;
+                string minutes = ((int)sessionTime / 60).ToString();
+                string seconds = (sessionTime % 60).ToString("f2");
+                timeSession.text = minutes + ":" + seconds;
+            }
+            if (sessionTime < 0)
+            {
+                SceneManager.LoadScene(sceneName: "EndSession");
+            }
         }
     }
 }

@@ -261,6 +261,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 83
       Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
@@ -876,7 +878,7 @@ ScriptsOnlyBuild:
     className: CinemachineVirtualCamera
   - hash:
       serializedVersion: 2
-      Hash: 3177497a3a856c04c7b6673677cb5e05
+      Hash: 155336c473941dcd24159b887a9cafe3
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Timer
@@ -1452,7 +1454,7 @@ ScriptsOnlyBuild:
     className: CinemachineIndependentImpulseListener
   - hash:
       serializedVersion: 2
-      Hash: 6ea8ac653567968928317aec194e5652
+      Hash: 8beac40e4fac2b8f587b724e0272e218
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: TimeSession
@@ -1662,7 +1664,7 @@ ScriptsOnlyBuild:
     className: PhysicsCollision
   - hash:
       serializedVersion: 2
-      Hash: 4ff4d9ab877dc38ee85adbe80f4140d3
+      Hash: 12df849a29a0877f42c47d3bfc93da4a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Scoreboard
