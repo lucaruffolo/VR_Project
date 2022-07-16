@@ -448,6 +448,25 @@ public class VehicleControl : NetworkBehaviour
         {
             if (enabledMovement)
             {
+                if (PauseMenu.GameIsPaused)
+                {
+                    carSounds.HighEngine.GetComponent<AudioSource>().Pause();
+                    carSounds.IdleEngine.GetComponent<AudioSource>().Pause();
+                    carSounds.LowEngine.GetComponent<AudioSource>().Pause();
+                    carSounds.switchGear.GetComponent<AudioSource>().Pause();
+                    carSounds.nitro.GetComponent<AudioSource>().Pause();
+                }
+                else
+                {
+                    
+                    carSounds.HighEngine.GetComponent<AudioSource>().UnPause();
+                    carSounds.IdleEngine.GetComponent<AudioSource>().UnPause();
+                    carSounds.LowEngine.GetComponent<AudioSource>().UnPause();
+                    carSounds.switchGear.GetComponent<AudioSource>().UnPause();
+                    carSounds.nitro.GetComponent<AudioSource>().UnPause();
+                }
+
+
                 if (!carSetting.automaticGear && activeControl)
                 {
                     if (Input.GetKeyDown("page up"))
