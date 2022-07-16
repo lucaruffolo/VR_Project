@@ -20,18 +20,20 @@ public class Timer : NetworkBehaviour
     }
     void Update()
     {
-      //  if (this.isLocalPlayer)
-      //  {
-            timeRacePlayer.enabled = true;
-            if (timerIsRunning)
-            {
-                lapTime += Time.deltaTime;
-                string minutes = ((int)lapTime / 60).ToString();
-                string seconds = (lapTime % 60).ToString("f2");
-                timeRacePlayer.text = minutes + ":" + seconds;
+        timeRacePlayer.enabled = true;
 
-                TimeShowCp = minutes + ":" + seconds;
-            }
-       // }
+        if (!this.isLocalPlayer)
+        {
+            timeRacePlayer.GetComponent<Text>().enabled = false;
+        }
+
+        if (timerIsRunning)
+        {
+            lapTime += Time.deltaTime;
+            string minutes = ((int)lapTime / 60).ToString();
+            string seconds = (lapTime % 60).ToString("f2");            
+            timeRacePlayer.text = minutes + ":" + seconds;            
+            TimeShowCp = minutes + ":" + seconds;
+        }
     }
 }

@@ -3294,6 +3294,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1965138444}
     m_Modifications:
+    - target: {fileID: 3413284388968241566, guid: 8847284cbc5938b4ca6c6b0ae2788591, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8803439204391338384, guid: 8847284cbc5938b4ca6c6b0ae2788591, type: 3}
       propertyPath: m_Name
       value: Lights

@@ -485,7 +485,7 @@ public class VehicleControl : NetworkBehaviour
         }
         else
         {
-            playerCollision.SetActive(false);
+            playerCollision.GetComponent<MeshCollider>().isTrigger = true;
         }
 
     }
@@ -1067,7 +1067,7 @@ public class VehicleControl : NetworkBehaviour
         }
         else
         {
-            playerCollision.SetActive(false);
+            playerCollision.GetComponent<MeshCollider>().isTrigger = true;
         }
     }
 
