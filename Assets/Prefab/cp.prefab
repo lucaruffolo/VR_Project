@@ -108,7 +108,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01853044b0fd3a24487b85423cf41688, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  timeCheck: {fileID: 0}
-  counter: {fileID: 0}
   oneclick: 0

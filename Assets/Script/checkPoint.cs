@@ -6,10 +6,14 @@ using UnityEngine.UI;
 public class checkPoint : MonoBehaviour
 { 
     public bool oneclick = false;
+    public AudioSource audioCp;
     //public GameObject timeCheck; 
     //private Color visibile = new Color(0, 0, 0, 200);
     //private Color invisibile = new Color(0, 0, 0, 0);
-
+    private void Start()
+    {
+        audioCp.mute = true;
+    }
     private void OnTriggerEnter(Collider other)
     {
         GameObject player = other.gameObject.transform.parent.transform.parent.gameObject;
@@ -34,6 +38,8 @@ public class checkPoint : MonoBehaviour
             oneclick = false;
             if (oneclick == false)
             {
+                audioCp.mute = false;
+                playAudioCp();
                 player.GetComponent<gameControl>().cpTaken += 1;
                 player.GetComponent<gameControl>().addCpList(name);
                 player.GetComponent<TimeOnCheckPoint>().timeOnCp.text = player.GetComponent<Timer>().TimeShowCp;
@@ -45,5 +51,10 @@ public class checkPoint : MonoBehaviour
         }
 
         
+    }
+
+    public void playAudioCp()
+    {
+        audioCp.Play();
     }
 }

@@ -10,6 +10,7 @@ ScriptsOnlyBuild:
     - PathCamera
     - StartingCountDown
     - TimeOnCheckPoint
+    - TimeSession
     - Timer
     - VehicleControl
     - checkPoint
@@ -314,6 +315,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 5058}
     - Class: 114
       Script: {instanceID: 5364}
+    - Class: 114
+      Script: {instanceID: 22030}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 119
@@ -1306,7 +1309,7 @@ ScriptsOnlyBuild:
     className: CanvasUI
   - hash:
       serializedVersion: 2
-      Hash: ad8f20b1cccd3097f0319f81b104f65d
+      Hash: 2c717b48471000836799a986c8ff1ac7
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: checkPoint
@@ -1802,6 +1805,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Menu
+  - hash:
+      serializedVersion: 2
+      Hash: 6ea8ac653567968928317aec194e5652
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TimeSession
   platform: 19
   scenePathNames:
   - Assets/Scenes/Menu.unity
