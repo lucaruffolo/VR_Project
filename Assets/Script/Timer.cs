@@ -15,6 +15,7 @@ public class Timer : NetworkBehaviour
 
     private void Start()
     {
+        best = 99999.9f;
         timerIsRunning = false;
         timeRacePlayer.enabled = false;
     }
