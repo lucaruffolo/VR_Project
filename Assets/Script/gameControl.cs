@@ -15,6 +15,7 @@ public class gameControl : NetworkBehaviour
     public bool arrived = false;
     public int cpTaken = 0;
     public List<string> listOfCpTaken;
+    public string PlayerName;
     //public GameObject checkPoint;
 
     void Start()
