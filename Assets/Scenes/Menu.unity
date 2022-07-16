@@ -194,7 +194,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: EXIT
+  m_Text: ESCI
 --- !u!222 &372763792
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -630,7 +630,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: PLAY
+  m_Text: GIOCA
 --- !u!222 &1323366179
 CanvasRenderer:
   m_ObjectHideFlags: 0
