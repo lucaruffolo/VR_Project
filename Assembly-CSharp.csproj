@@ -59,9 +59,7 @@
     <Compile Include="Assets\RCK 2.3\Skidmarks\WheelSkidmarks.cs" />
     <Compile Include="Assets\Script\CounterCp.cs" />
     <Compile Include="Assets\Script\TimerScript.cs" />
-    <Compile Include="Assets\RCK 2.3\Scripts\VehicleDamage.cs" />
     <Compile Include="Assets\Script\Timer.cs" />
-    <Compile Include="Assets\RCK 2.3\Scripts\CarSwitch.cs" />
     <Compile Include="Assets\Script\CharacterSelection.cs" />
     <Compile Include="Assets\Script\StartingCountDown.cs" />
     <Compile Include="Assets\Script\Cycle.cs" />
@@ -77,9 +75,7 @@
     <Compile Include="Assets\Script\LoadScreen.cs" />
     <Compile Include="Assets\Script\Scoreboard.cs" />
     <Compile Include="Assets\Script\speedometer.cs" />
-    <Compile Include="Assets\RCK 2.3\Scripts\PoliceLights.cs" />
     <Compile Include="Assets\RCK 2.3\Skidmarks\Skidmarks Essentials\Skidmarks.cs" />
-    <Compile Include="Assets\RCK 2.3\Scripts\VehicleCamera.cs" />
     <Compile Include="Assets\Script\Menu.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -14,9 +14,7 @@ public class VehicleControl : NetworkBehaviour
     public GameObject lights2;
     private bool faroacceso = false;
     public ControlMode controlMode = ControlMode.simple;
-
     public bool activeControl = false;
-
     public bool enabledMovement = false;
       
 
@@ -73,7 +71,6 @@ public class VehicleControl : NetworkBehaviour
     {
         public AudioSource IdleEngine, LowEngine, HighEngine;
 
-        public AudioSource nitro;
         public AudioSource switchGear;
     }
 
@@ -85,7 +82,6 @@ public class VehicleControl : NetworkBehaviour
     public class CarParticles
     {
         public GameObject brakeParticlePerfab;
-        public ParticleSystem shiftParticle1, shiftParticle2;
         private GameObject[] wheelParticle = new GameObject[4];
     }
 
@@ -100,8 +96,7 @@ public class VehicleControl : NetworkBehaviour
         public bool showNormalGizmos = false;
         public Transform carSteer;
         public HitGround[] hitGround;
-
-        public List<Transform> cameraSwitchView;
+         
 
         public float springs = 25000.0f;
         public float dampers = 1500.0f;
@@ -456,7 +451,6 @@ public class VehicleControl : NetworkBehaviour
                     carSounds.IdleEngine.GetComponent<AudioSource>().Pause();
                     carSounds.LowEngine.GetComponent<AudioSource>().Pause();
                     carSounds.switchGear.GetComponent<AudioSource>().Pause();
-                    carSounds.nitro.GetComponent<AudioSource>().Pause();
                 }
                 else
                 {
@@ -465,7 +459,6 @@ public class VehicleControl : NetworkBehaviour
                     carSounds.IdleEngine.GetComponent<AudioSource>().UnPause();
                     carSounds.LowEngine.GetComponent<AudioSource>().UnPause();
                     carSounds.switchGear.GetComponent<AudioSource>().UnPause();
-                    carSounds.nitro.GetComponent<AudioSource>().UnPause();
                 }
 
                 if (Input.GetKeyDown(KeyCode.L) && !PauseMenu.GameIsPaused)
@@ -809,18 +802,10 @@ public class VehicleControl : NetworkBehaviour
 
                         powerShift = Mathf.MoveTowards(powerShift, 0.0f, Time.deltaTime * 10.0f);
 
-                        carSounds.nitro.volume = Mathf.Lerp(carSounds.nitro.volume, 1.0f, Time.deltaTime * 10.0f);
-
-                        if (!carSounds.nitro.isPlaying)
-                        {
-                            carSounds.nitro.GetComponent<AudioSource>().Play();
-
-                        }
 
 
                         curTorque = powerShift > 0 ? carSetting.shiftPower : carSetting.carPower;
-                        carParticles.shiftParticle1.emissionRate = Mathf.Lerp(carParticles.shiftParticle1.emissionRate, powerShift > 0 ? 50 : 0, Time.deltaTime * 10.0f);
-                        carParticles.shiftParticle2.emissionRate = Mathf.Lerp(carParticles.shiftParticle2.emissionRate, powerShift > 0 ? 50 : 0, Time.deltaTime * 10.0f);
+        
                     }
                     else
                     {
@@ -830,15 +815,10 @@ public class VehicleControl : NetworkBehaviour
                             shifmotor = true;
                         }
 
-                        carSounds.nitro.volume = Mathf.MoveTowards(carSounds.nitro.volume, 0.0f, Time.deltaTime * 2.0f);
-
-                        if (carSounds.nitro.volume == 0)
-                            carSounds.nitro.Stop();
 
                         powerShift = Mathf.MoveTowards(powerShift, 100.0f, Time.deltaTime * 5.0f);
                         curTorque = carSetting.carPower;
-                        carParticles.shiftParticle1.emissionRate = Mathf.Lerp(carParticles.shiftParticle1.emissionRate, 0, Time.deltaTime * 10.0f);
-                        carParticles.shiftParticle2.emissionRate = Mathf.Lerp(carParticles.shiftParticle2.emissionRate, 0, Time.deltaTime * 10.0f);
+        
                     }
 
 

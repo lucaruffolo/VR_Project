@@ -71,7 +71,6 @@ public class StartingCountDown : NetworkBehaviour
                 GetComponent<VehicleControl>().carSounds.IdleEngine.GetComponent<AudioSource>().Play();
                 GetComponent<VehicleControl>().carSounds.LowEngine.GetComponent<AudioSource>().Play();
                 GetComponent<VehicleControl>().carSounds.switchGear.GetComponent<AudioSource>().Play();
-                GetComponent<VehicleControl>().carSounds.nitro.GetComponent<AudioSource>().Play();
             }
         }
 

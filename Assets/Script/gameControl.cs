@@ -53,7 +53,6 @@ public class gameControl : NetworkBehaviour
                     GetComponent<VehicleControl>().carSounds.IdleEngine.GetComponent<AudioSource>().Stop();
                     GetComponent<VehicleControl>().carSounds.LowEngine.GetComponent<AudioSource>().Stop();
                     GetComponent<VehicleControl>().carSounds.switchGear.GetComponent<AudioSource>().Stop();
-                    GetComponent<VehicleControl>().carSounds.nitro.GetComponent<AudioSource>().Stop();
                 }
             }
         }
@@ -89,7 +88,6 @@ public class gameControl : NetworkBehaviour
         GetComponent<VehicleControl>().carSounds.IdleEngine.GetComponent<AudioSource>().Stop();
         GetComponent<VehicleControl>().carSounds.LowEngine.GetComponent<AudioSource>().Stop();
         GetComponent<VehicleControl>().carSounds.switchGear.GetComponent<AudioSource>().Stop();
-        GetComponent<VehicleControl>().carSounds.nitro.GetComponent<AudioSource>().Stop();
         cpTaken = 0;
         listOfCpTaken.Clear();
     }
@@ -110,7 +108,6 @@ public class gameControl : NetworkBehaviour
         GetComponent<VehicleControl>().carSounds.IdleEngine.GetComponent<AudioSource>().Stop();
         GetComponent<VehicleControl>().carSounds.LowEngine.GetComponent<AudioSource>().Stop();
         GetComponent<VehicleControl>().carSounds.switchGear.GetComponent<AudioSource>().Stop();
-        GetComponent<VehicleControl>().carSounds.nitro.GetComponent<AudioSource>().Stop();
         Reset();
         arrived = false;
     }
