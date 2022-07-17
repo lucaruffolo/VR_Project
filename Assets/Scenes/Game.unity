@@ -4615,6 +4615,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  playersConnected: 0
+  warmup: {fileID: 1062098549}
+  line: {fileID: 0}
+  session: {fileID: 1519738222}
+  dayNight: {fileID: 1746665192}
 --- !u!4 &2055027942
 Transform:
   m_ObjectHideFlags: 0
