@@ -19,6 +19,7 @@ public class Scoreboard : NetworkBehaviour
     public Text warmup;
     public GameObject line;
     public GameObject session;
+    public GameObject dayNight;
 
     void Update()
     {
@@ -56,6 +57,7 @@ public class Scoreboard : NetworkBehaviour
             session.GetComponent<TimeSession>().sessionReady = true;
             one.GetComponent<RawImage>().enabled = true;
             two.GetComponent<RawImage>().enabled = true;
+            dayNight.GetComponent<Cycle>().startDay = true;
         }
         if (playersConnected == 3)
         {

@@ -14,9 +14,12 @@ public class Cycle : MonoBehaviour
     private float sunsetHour = 20.5f;
     private TimeSpan sunrise;
     private TimeSpan sunset;
+
+    public bool startDay;
     // Start is called before the first frame update
     void Start()
     {
+        startDay = false;
         currentTime = DateTime.Now.Date + TimeSpan.FromHours(startHour);
 
         sunrise = TimeSpan.FromHours(sunriseHour);
@@ -26,8 +29,11 @@ public class Cycle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        UpdateTimeOfDay();
-        RotateSun();
+        if(startDay)
+        {
+            UpdateTimeOfDay();
+            RotateSun();
+        }
     }
     void UpdateTimeOfDay()
     {
