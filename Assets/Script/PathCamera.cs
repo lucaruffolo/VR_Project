@@ -23,6 +23,7 @@ public class PathCamera : MonoBehaviour
 	}
 	void Start()
 	{
+		speed = 80f;
 		index = 0;
 		targetPoint = pathParent.GetChild(index);
 	}
