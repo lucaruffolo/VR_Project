@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LangVersion>7.3</LangVersion>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -53,6 +53,9 @@
     <UnityVersion>2020.3.32f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup>
     <Compile Include="Assets\Script\StartLine.cs" />
     <Compile Include="Assets\Script\VehicleControl.cs" />
     <Compile Include="Assets\Script\FollowCamera.cs" />
@@ -63,7 +66,7 @@
     <Compile Include="Assets\Script\CharacterSelection.cs" />
     <Compile Include="Assets\Script\StartingCountDown.cs" />
     <Compile Include="Assets\Script\Cycle.cs" />
-    <Compile Include="Assets\Director.cs" />
+    <Compile Include="Assets\Script\Director.cs" />
     <Compile Include="Assets\Script\FinishLine.cs" />
     <Compile Include="Assets\Script\carController.cs" />
     <Compile Include="Assets\Script\PathCamera.cs" />

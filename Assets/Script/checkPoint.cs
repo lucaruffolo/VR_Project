@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Mirror;
 
-public class checkPoint : MonoBehaviour
+public class checkPoint : NetworkBehaviour
 { 
     public bool oneclick = false;
     public AudioSource audioCp;
@@ -40,6 +41,10 @@ public class checkPoint : MonoBehaviour
             {
                 audioCp.mute = false;
                 playAudioCp();
+                if (!this.isLocalPlayer)
+                {
+                    audioCp.GetComponent<AudioSource>().enabled = false;
+                }
                 player.GetComponent<gameControl>().cpTaken += 1;
                 player.GetComponent<gameControl>().addCpList(name);
                 player.GetComponent<TimeOnCheckPoint>().timeOnCp.text = player.GetComponent<Timer>().TimeShowCp;
