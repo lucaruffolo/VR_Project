@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Mirror;
 
-public class TimeOnCheckPoint : MonoBehaviour
+public class TimeOnCheckPoint : NetworkBehaviour
 {
     public float timeLeftCp;
     public bool timerOnCp = false;
@@ -19,19 +20,22 @@ public class TimeOnCheckPoint : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (timerOnCp)
+        if (this.isLocalPlayer)
         {
-            if (timeLeftCp > 0)
+            if (timerOnCp)
             {
-                timeOnCp.enabled = true;
-                timeLeftCp -= Time.deltaTime;
-            }
-            else
-            {
-                Debug.Log("Fine tempo cp");
-                timeLeftCp = 0;
-                timerOnCp = false;
-                timeOnCp.enabled = false;
+                if (timeLeftCp > 0)
+                {
+                    timeOnCp.enabled = true;
+                    timeLeftCp -= Time.deltaTime;
+                }
+                else
+                {
+                    Debug.Log("Fine tempo cp");
+                    timeLeftCp = 0;
+                    timerOnCp = false;
+                    timeOnCp.enabled = false;
+                }
             }
         }
     }
