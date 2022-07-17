@@ -2934,6 +2934,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1965138444}
     m_Modifications:
+    - target: {fileID: 867756272226435078, guid: e901e7d2f9303f14fa2366e4d6b8f37a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 867756272387793064, guid: e901e7d2f9303f14fa2366e4d6b8f37a, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -4633,7 +4637,7 @@ MonoBehaviour:
   warmup: {fileID: 1062098549}
   line: {fileID: 106809613}
   session: {fileID: 1519738222}
-  dayNight: {fileID: 0}
+  dayNight: {fileID: 1746665192}
 --- !u!4 &2055027942
 Transform:
   m_ObjectHideFlags: 0
