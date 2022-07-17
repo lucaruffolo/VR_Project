@@ -5912,6 +5912,8 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   playerCollision: {fileID: 5859902769487195268}
+  lights1: {fileID: 606180861003109003}
+  lights2: {fileID: 6818390066077321125}
   controlMode: 1
   activeControl: 1
   enabledMovement: 0
@@ -6106,6 +6108,7 @@ MonoBehaviour:
   arrived: 0
   cpTaken: 0
   listOfCpTaken: []
+  PlayerName: 
 --- !u!114 &4313181341122509309
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6138,6 +6141,7 @@ MonoBehaviour:
   lapTime: 0
   timerIsRunning: 0
   best: 0
+  sessionReady: 0
   timeRacePlayer: {fileID: 7207763686070138200}
   TimeShowCp: 
 --- !u!114 &6151495922376543501
@@ -11857,7 +11861,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &9157063301802830
 Transform:
   m_ObjectHideFlags: 0
@@ -11885,8 +11889,8 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 4
-  m_Range: 35
-  m_SpotAngle: 42
+  m_Range: 55
+  m_SpotAngle: 55
   m_InnerSpotAngle: 4
   m_CookieSize: 10
   m_Shadows:
@@ -12896,7 +12900,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6869037292000395945
 Transform:
   m_ObjectHideFlags: 0
@@ -12924,9 +12928,9 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 4
-  m_Range: 35
-  m_SpotAngle: 42.6
-  m_InnerSpotAngle: 21.80208
+  m_Range: 55
+  m_SpotAngle: 55
+  m_InnerSpotAngle: 5
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0

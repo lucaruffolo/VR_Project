@@ -10,13 +10,15 @@ public enum ControlMode { simple = 1, touch = 2 }
 public class VehicleControl : NetworkBehaviour
 {
     public GameObject playerCollision;
-
+    public GameObject lights1;
+    public GameObject lights2;
+    private bool faroacceso = false;
     public ControlMode controlMode = ControlMode.simple;
 
     public bool activeControl = false;
 
     public bool enabledMovement = false;
-
+      
 
     // Wheels Setting /////////////////////////////////
 
@@ -466,6 +468,10 @@ public class VehicleControl : NetworkBehaviour
                     carSounds.nitro.GetComponent<AudioSource>().UnPause();
                 }
 
+                if (Input.GetKeyDown(KeyCode.L) && !PauseMenu.GameIsPaused)
+                {
+                    faroOnOff();
+                }
 
                 if (!carSetting.automaticGear && activeControl)
                 {
@@ -491,7 +497,22 @@ public class VehicleControl : NetworkBehaviour
     }
 
 
-
+    void faroOnOff()
+    {
+        if (!faroacceso)
+        {
+            faroacceso = true;
+            lights1.SetActive(true);
+            lights2.SetActive(true);
+        }
+        else
+        {
+            faroacceso = false;
+            lights1.SetActive(false);
+            lights2.SetActive(false);
+        }
+    
+    }
 
     void FixedUpdate()
     {
