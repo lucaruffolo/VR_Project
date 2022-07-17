@@ -4,6 +4,7 @@ ScriptsOnlyBuild:
     - CharacterSelection
     - CounterCp
     - Cycle
+    - Director
     - FinishLine
     - FollowCamera
     - LoadScreen
@@ -90,15 +91,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2584}
     - Class: 114
-      Script: {instanceID: 2736}
+      Script: {instanceID: 2734}
     - Class: 114
-      Script: {instanceID: 2976}
+      Script: {instanceID: 2972}
     - Class: 114
-      Script: {instanceID: 3012}
+      Script: {instanceID: 3008}
     - Class: 114
-      Script: {instanceID: 3190}
+      Script: {instanceID: 3186}
     - Class: 114
-      Script: {instanceID: 3306}
+      Script: {instanceID: 3302}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 119
@@ -159,6 +160,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1456}
     - Class: 114
+      Script: {instanceID: 1458}
+    - Class: 114
       Script: {instanceID: 1964}
     - Class: 114
       Script: {instanceID: 2084}
@@ -167,27 +170,29 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2584}
     - Class: 114
-      Script: {instanceID: 2670}
+      Script: {instanceID: 2668}
     - Class: 114
-      Script: {instanceID: 2736}
+      Script: {instanceID: 2734}
     - Class: 114
-      Script: {instanceID: 3190}
+      Script: {instanceID: 3186}
     - Class: 114
-      Script: {instanceID: 3210}
+      Script: {instanceID: 3206}
     - Class: 114
-      Script: {instanceID: 3746}
+      Script: {instanceID: 3478}
     - Class: 114
-      Script: {instanceID: 3880}
+      Script: {instanceID: 3744}
     - Class: 114
-      Script: {instanceID: 3924}
+      Script: {instanceID: 3878}
     - Class: 114
-      Script: {instanceID: 4726}
+      Script: {instanceID: 3922}
     - Class: 114
-      Script: {instanceID: 4814}
+      Script: {instanceID: 4724}
     - Class: 114
-      Script: {instanceID: 4912}
+      Script: {instanceID: 4812}
     - Class: 114
-      Script: {instanceID: 5066}
+      Script: {instanceID: 4910}
+    - Class: 114
+      Script: {instanceID: 5064}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 119
@@ -227,8 +232,6 @@ ScriptsOnlyBuild:
     - Class: 243
       Script: {instanceID: 0}
     - Class: 245
-      Script: {instanceID: 0}
-    - Class: 1953259897
       Script: {instanceID: 0}
     Assets/Scenes/Game.unity:
     - Class: 1
@@ -290,53 +293,53 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2584}
     - Class: 114
-      Script: {instanceID: 2658}
+      Script: {instanceID: 2656}
     - Class: 114
-      Script: {instanceID: 2670}
+      Script: {instanceID: 2668}
     - Class: 114
-      Script: {instanceID: 2736}
+      Script: {instanceID: 2734}
     - Class: 114
-      Script: {instanceID: 2812}
+      Script: {instanceID: 2810}
     - Class: 114
-      Script: {instanceID: 2828}
+      Script: {instanceID: 2826}
     - Class: 114
-      Script: {instanceID: 3110}
+      Script: {instanceID: 3106}
     - Class: 114
-      Script: {instanceID: 3190}
+      Script: {instanceID: 3186}
     - Class: 114
-      Script: {instanceID: 3210}
+      Script: {instanceID: 3206}
     - Class: 114
-      Script: {instanceID: 3306}
+      Script: {instanceID: 3302}
     - Class: 114
-      Script: {instanceID: 3326}
+      Script: {instanceID: 3322}
     - Class: 114
-      Script: {instanceID: 3414}
+      Script: {instanceID: 3410}
     - Class: 114
-      Script: {instanceID: 3530}
+      Script: {instanceID: 3528}
+    - Class: 114
+      Script: {instanceID: 3876}
     - Class: 114
       Script: {instanceID: 3878}
     - Class: 114
-      Script: {instanceID: 3880}
+      Script: {instanceID: 3922}
     - Class: 114
-      Script: {instanceID: 3924}
+      Script: {instanceID: 3932}
     - Class: 114
-      Script: {instanceID: 3934}
+      Script: {instanceID: 4142}
     - Class: 114
-      Script: {instanceID: 4144}
+      Script: {instanceID: 4724}
     - Class: 114
-      Script: {instanceID: 4726}
+      Script: {instanceID: 4778}
     - Class: 114
-      Script: {instanceID: 4780}
+      Script: {instanceID: 4812}
     - Class: 114
-      Script: {instanceID: 4814}
+      Script: {instanceID: 4910}
     - Class: 114
-      Script: {instanceID: 4912}
+      Script: {instanceID: 5054}
     - Class: 114
-      Script: {instanceID: 5056}
+      Script: {instanceID: 5064}
     - Class: 114
-      Script: {instanceID: 5066}
-    - Class: 114
-      Script: {instanceID: 5372}
+      Script: {instanceID: 5368}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 119
@@ -377,8 +380,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 245
       Script: {instanceID: 0}
-    - Class: 1953259897
-      Script: {instanceID: 0}
     Assets/Scenes/Keyboard.unity:
     - Class: 1
       Script: {instanceID: 0}
@@ -405,11 +406,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2584}
     - Class: 114
-      Script: {instanceID: 2736}
+      Script: {instanceID: 2734}
     - Class: 114
-      Script: {instanceID: 3190}
+      Script: {instanceID: 3186}
     - Class: 114
-      Script: {instanceID: 4606}
+      Script: {instanceID: 4604}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -450,13 +451,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2584}
     - Class: 114
-      Script: {instanceID: 2736}
+      Script: {instanceID: 2734}
     - Class: 114
-      Script: {instanceID: 3190}
+      Script: {instanceID: 3186}
     - Class: 114
-      Script: {instanceID: 3306}
+      Script: {instanceID: 3302}
     - Class: 114
-      Script: {instanceID: 5506}
+      Script: {instanceID: 5500}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -698,7 +699,7 @@ ScriptsOnlyBuild:
     className: NetworkStatistics
   - hash:
       serializedVersion: 2
-      Hash: 53d62677bde9406b1fd8fbec5ada6f71
+      Hash: 13754c04866c54a4221bf75a89b00af6
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: VehicleControl
@@ -860,12 +861,6 @@ ScriptsOnlyBuild:
     className: CinemachineSameAsFollowTarget
   - hash:
       serializedVersion: 2
-      Hash: 2d095d8ae80971ab504e9c03cbabab05
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: VehicleDamage
-  - hash:
-      serializedVersion: 2
       Hash: f5763415ffcb37f6278091eb8b77a954
     assemblyName: SimpleWebTransport.dll
     namespaceName: Mirror.SimpleWeb
@@ -954,12 +949,6 @@ ScriptsOnlyBuild:
     assemblyName: Mirror.dll
     namespaceName: Mirror
     className: NetworkStartPosition
-  - hash:
-      serializedVersion: 2
-      Hash: 01652848e47dbe259d8d34ca4af9fd7d
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: CarSwitch
   - hash:
       serializedVersion: 2
       Hash: b3e36dea1bfde86a244b7fa99de2b5d2
@@ -1200,6 +1189,12 @@ ScriptsOnlyBuild:
     assemblyName: Mirror.dll
     namespaceName: Mirror
     className: NetworkManager
+  - hash:
+      serializedVersion: 2
+      Hash: 2d912503f5b639918d53dc8d2b47318f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Director
   - hash:
       serializedVersion: 2
       Hash: 8aa3d6ccbcb54ee8db6c1229854adaaa
@@ -1694,7 +1689,7 @@ ScriptsOnlyBuild:
     className: TMP_SubMeshUI
   - hash:
       serializedVersion: 2
-      Hash: 1ad3a67497f9d4e32e1af1a8f223f4d8
+      Hash: 476503eb51a7d51137bf694fdfcc9e25
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: speedometer
@@ -1796,12 +1791,6 @@ ScriptsOnlyBuild:
     className: CinemachineBasicMultiChannelPerlin
   - hash:
       serializedVersion: 2
-      Hash: 6c4ad08b99dc97aa3ca504aafcd96fe5
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: PoliceLights
-  - hash:
-      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Mirror.Examples.dll
     namespaceName: Mirror.Examples.MultipleAdditiveScenes
@@ -1868,12 +1857,6 @@ ScriptsOnlyBuild:
     className: CinemachineBlendListCamera
   - hash:
       serializedVersion: 2
-      Hash: f15be9b3a32ba9ac9b0c4a11b1034826
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: VehicleCamera
-  - hash:
-      serializedVersion: 2
       Hash: 0e68c7511d0bb7746e68316200e21bb0
     assemblyName: Mirror.Components.dll
     namespaceName: Mirror
@@ -1903,4 +1886,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Keyboard.unity
   - Assets/Scenes/Game.unity
   - Assets/Scenes/EndSession.unity
-  playerPath: C:/Users/PIERPY/Documents/GitHub/VR_Project/Build/VR_Project.exe
+  playerPath: C:/Users/Luca24/VR_Project/VR_Project/Build/VR_Project.exe

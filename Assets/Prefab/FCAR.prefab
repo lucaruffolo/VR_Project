@@ -1293,7 +1293,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 49.97
+      scalar: 20
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -5192,7 +5192,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 19bb6f056a3b4a44bac21c7a4339c467, type: 2}
+  - {fileID: 2100000, guid: 3c98c150d6196ef419f666d71cf7d13f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5836,7 +5836,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 155394}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 270.65, y: 33.59999, z: 53.00743}
+  m_LocalPosition: {x: 270.65, y: 35.59999, z: 53.00743}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8254361322143268342}
@@ -5908,12 +5908,9 @@ MonoBehaviour:
     IdleEngine: {fileID: 8257272}
     LowEngine: {fileID: 8259354}
     HighEngine: {fileID: 8244934}
-    nitro: {fileID: 8271244}
     switchGear: {fileID: 8228222}
   carParticles:
     brakeParticlePerfab: {fileID: 100000, guid: 7688b4d44a0c11a43b20da32baad8732, type: 3}
-    shiftParticle1: {fileID: 19819312}
-    shiftParticle2: {fileID: 19824878}
   carSetting:
     showNormalGizmos: 0
     carSteer: {fileID: 5414950984741924448}
@@ -5933,9 +5930,6 @@ MonoBehaviour:
       brakeSound: {fileID: 8300000, guid: 334cc9dcd313b2f48bda705e3eefc2df, type: 3}
       groundSound: {fileID: 8300000, guid: e74738166dc243747b9979b0cd3b6875, type: 3}
       brakeColor: {r: 0.1432894, g: 0.80222005, b: 0.8679245, a: 0.78431374}
-    cameraSwitchView:
-    - {fileID: 0}
-    - {fileID: 0}
     springs: 25000
     dampers: 1500
     carPower: 120
@@ -7713,7 +7707,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 49.97
+      scalar: 20
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -11612,7 +11606,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 19bb6f056a3b4a44bac21c7a4339c467, type: 2}
+  - {fileID: 2100000, guid: 3c98c150d6196ef419f666d71cf7d13f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -12787,8 +12781,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5859902769487195268}
   m_LocalRotation: {x: 0.000000021855701, y: -0, z: -4.440892e-15, w: 1}
-  m_LocalPosition: {x: -0.050003044, y: 0.75500107, z: -0.018005379}
-  m_LocalScale: {x: 1.1999997, y: 0.9, z: 1}
+  m_LocalPosition: {x: 0, y: 0.808, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 8254361322143268342}
   m_RootOrder: 1
@@ -12854,8 +12848,8 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 4
   m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300016, guid: 52f8a9226e9a0fd459fbbf5d5106632f, type: 3}
+  m_CookingOptions: -1
+  m_Mesh: {fileID: 4300000, guid: 89f9cf75fc3ec8a4db1bf568c8bac2dd, type: 3}
 --- !u!1 &6314187405705199415
 GameObject:
   m_ObjectHideFlags: 0
