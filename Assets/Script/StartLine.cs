@@ -22,8 +22,8 @@ public class StartLine : MonoBehaviour
             listPlayer.Add(player);
             player.GetComponent<gameControl>().PlayerName = PlayerPrefs.GetString("namePlayer");
         }
-           
 
+        //player.GetComponent<Timer>().lapTime = 0.0f;
         /*foreach (GameObject i in listPlayer)
         {
             Debug.Log(player.GetComponent<gameControl>().PlayerName);

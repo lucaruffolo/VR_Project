@@ -10,7 +10,7 @@ public class FinishLine : MonoBehaviour
     {
         GameObject player = other.gameObject.transform.parent.transform.parent.gameObject;
         //Debug.Log(player.GetComponent<TimerScript>().delta);
-        if (player.GetComponent<gameControl>().cpTaken == cp.GetComponent<CounterCp>().numCp)
+        if (player.GetComponent<gameControl>().cpTaken > cp.GetComponent<CounterCp>().numCp || player.GetComponent<gameControl>().cpTaken == cp.GetComponent<CounterCp>().numCp)
         {
             if (player.GetComponent<Timer>().lapTime < player.GetComponent<Timer>().best)
             {
@@ -23,10 +23,5 @@ public class FinishLine : MonoBehaviour
            
             player.GetComponent<gameControl>().arrived = true;
         }
-    }
-
-    void AggiornaClassifica()
-    {
-
     }
 }

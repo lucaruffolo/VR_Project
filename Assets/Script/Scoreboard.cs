@@ -24,24 +24,27 @@ public class Scoreboard : NetworkBehaviour
 
     void Update()
     {
-        for (int i = 0; i < line.GetComponent<StartLine>().listPlayer.Count; i++)
+        /*if(oneClick == false && oneClick2 == false)
         {
-            if (line.GetComponent<StartLine>().listPlayer[i].GetComponent<gameControl>().position == 1)
+            if (line.GetComponent<StartLine>().listPlayer[0].GetComponent<gameControl>().position == 1 && line.GetComponent<StartLine>().listPlayer[0].GetComponent<Timer>().best != 99999.9f)
             {
-                int time = (int)line.GetComponent<StartLine>().listPlayer[i].GetComponent<Timer>().best;
+                int time = (int)line.GetComponent<StartLine>().listPlayer[0].GetComponent<Timer>().best;
                 string minutes = ((int)time / 60).ToString();
                 string seconds = (time % 60).ToString("f2");
                 tp1.text = minutes + ":" + seconds;
             }
-                
-            if (line.GetComponent<StartLine>().listPlayer[i].GetComponent<gameControl>().position == 2)
+
+            if (line.GetComponent<StartLine>().listPlayer[1].GetComponent<gameControl>().position == 2 && line.GetComponent<StartLine>().listPlayer[1].GetComponent<Timer>().best != 99999.9f)
             {
-                int time = (int)line.GetComponent<StartLine>().listPlayer[i].GetComponent<Timer>().best;
+                Debug.Log("entro 2");
+                //Debug.Log(line.GetComponent<StartLine>().listPlayer[i].GetComponent<Timer>().lapTime);
+                int time = (int)line.GetComponent<StartLine>().listPlayer[1].GetComponent<Timer>().best;
                 string minutes = ((int)time / 60).ToString();
                 string seconds = (time % 60).ToString("f2");
                 tp2.text = minutes + ":" + seconds;
             }
-        }
+        }*/
+        
 
 
 
@@ -75,10 +78,10 @@ public class Scoreboard : NetworkBehaviour
         }
         if(playersConnected == 1)
         {
-            p1.GetComponent<Text>().enabled = true; 
-            tp1.GetComponent<Text>().enabled = true;
+            //p1.GetComponent<Text>().enabled = true; 
+            //tp1.GetComponent<Text>().enabled = true;
             warmup.text = "WARMUP";
-            if (line.GetComponent<StartLine>().listPlayer.Count != 0)
+            /*if (line.GetComponent<StartLine>().listPlayer.Count != 0)
             {
                 if (oneClick)
                 {
@@ -86,39 +89,35 @@ public class Scoreboard : NetworkBehaviour
                     oneClick = false;
                 }
                     
-                /*p1.text = line.GetComponent<StartLine>().listPlayer[0].GetComponent<gameControl>().PlayerName;
+                p1.text = line.GetComponent<StartLine>().listPlayer[0].GetComponent<gameControl>().PlayerName;
                 if (line.GetComponent<StartLine>().listPlayer[0].GetComponent<Timer>().best == 99999.9f)
                 {
-                    //tp1.text = "DNF";
-                    line.GetComponent<StartLine>().listPlayer[0].GetComponent<gameControl>().position = 1;
-                }   */
-            }
+                    tp1.text = "DNF";
+                }   
+            }*/
         }
         if (playersConnected == 2)
         {
-            p1.GetComponent<Text>().enabled = true;
+            /*p1.GetComponent<Text>().enabled = true;
             tp1.GetComponent<Text>().enabled = true;
             p2.GetComponent<Text>().enabled = true;
-            tp2.GetComponent<Text>().enabled = true;
+            tp2.GetComponent<Text>().enabled = true;*/
             if (line.GetComponent<StartLine>().listPlayer.Count != 0)
             {
                 for (int i= 0; i<line.GetComponent<StartLine>().listPlayer.Count; i++)
                 {
                     line.GetComponent<StartLine>().listPlayer[i].GetComponent<Timer>().sessionReady = true;
-                    if(i == 1)
+                    /*if (oneClick2)
                     {
-                        if (oneClick2)
+                        line.GetComponent<StartLine>().listPlayer[1].GetComponent<gameControl>().position = 2;
+                        p2.text = line.GetComponent<StartLine>().listPlayer[1].GetComponent<gameControl>().PlayerName;
+                        if (line.GetComponent<StartLine>().listPlayer[i].GetComponent<Timer>().best == 99999.9f)
                         {
-                            line.GetComponent<StartLine>().listPlayer[1].GetComponent<gameControl>().position = 2;
-                            oneClick2 = false;
-                        }
-                        /*p2.text = line.GetComponent<StartLine>().listPlayer[1].GetComponent<gameControl>().PlayerName;
-                        if (line.GetComponent<StartLine>().listPlayer[1].GetComponent<Timer>().best == 99999.9f)
-                        {
+                            tp1.text = "DNF";
                             tp2.text = "DNF";
-                            line.GetComponent<StartLine>().listPlayer[1].GetComponent<gameControl>().position = 2;
-                        } */  
-                    }
+                        }
+                        oneClick2 = false;
+                    }*/
                 }
                 
             }
@@ -126,28 +125,5 @@ public class Scoreboard : NetworkBehaviour
             session.GetComponent<TimeSession>().sessionReady = true; //fa partire timer sessione
             dayNight.GetComponent<Cycle>().startDay = true; //fa partire ciclo giorno notte
         }
-       /* if (playersConnected == 3)
-        {
-            p1.GetComponent<Text>().enabled = true;
-            tp1.GetComponent<Text>().enabled = true;
-            p2.GetComponent<Text>().enabled = true;
-            tp2.GetComponent<Text>().enabled = true;
-            p3.GetComponent<Text>().enabled = true;
-            tp3.GetComponent<Text>().enabled = true;
-            if (line.GetComponent<StartLine>().listPlayer.Count != 0)
-            {
-                for (int i = 0; i < line.GetComponent<StartLine>().listPlayer.Count; i++)
-                {
-                    line.GetComponent<StartLine>().listPlayer[i].GetComponent<Timer>().sessionReady = true;
-                    if (i == 2)
-                    {
-                        p3.text = line.GetComponent<StartLine>().listPlayer[2].GetComponent<gameControl>().PlayerName;
-                        if (line.GetComponent<StartLine>().listPlayer[2].GetComponent<Timer>().best == 99999.9f)
-                            tp3.text = "DNF";
-                    }
-                }
-                
-            }
-        }*/
     }
 }

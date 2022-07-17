@@ -22,8 +22,8 @@ public class gameControl : NetworkBehaviour
         listOfCpTaken = new List<string>();
         cpTaken = 0;
         rb = GetComponent<Rigidbody>();
-        replay = new Vector3(264.26f, 32.6f, 61.45f);
-        restart = new Vector3(264.26f, 32.6f, 61.45f);
+        replay = new Vector3(270.65f, 33.59f, 53.0f);
+        restart = new Vector3(270.65f, 33.59f, 53.0f);
         rotation = new Quaternion(0f, 0f, 0f, 1);
         replayRotation = new Quaternion(0f, 0f, 0f, 1);
     }

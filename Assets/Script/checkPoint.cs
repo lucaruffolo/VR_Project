@@ -2,9 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using Mirror;
 
-public class checkPoint : NetworkBehaviour
+public class checkPoint : MonoBehaviour
 { 
     public bool oneclick = false;
     //public AudioSource audioCp;
