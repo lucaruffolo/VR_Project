@@ -17,7 +17,7 @@ public class TimeSession : MonoBehaviour
         sessionReady = false;
         timerIsRunning = true;
         timeSession.enabled = true;
-        sessionTime = 100.0f;
+        sessionTime = 500.0f;
     }
     void Update()
     {
@@ -26,6 +26,10 @@ public class TimeSession : MonoBehaviour
             if (timerIsRunning)
             {
                 sessionTime -= Time.deltaTime;
+                if (sessionTime < 120)
+                {
+                    timeSession.color = Color.red;
+                }
                 string minutes = ((int)sessionTime / 60).ToString();
                 string seconds = (sessionTime % 60).ToString("f2");
                 timeSession.text = minutes + ":" + seconds;

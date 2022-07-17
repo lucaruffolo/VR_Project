@@ -12,14 +12,10 @@ public class FinishLine : MonoBehaviour
         //Debug.Log(player.GetComponent<TimerScript>().delta);
         if (player.GetComponent<gameControl>().cpTaken == cp.GetComponent<CounterCp>().numCp)
         {
-            player.GetComponent<Timer>().best = player.GetComponent<Timer>().lapTime;
-            /*
-            if (player.GetComponent<TimerScript>().delta < player.GetComponent<TimerScript>().finishTime)
+            if (player.GetComponent<Timer>().lapTime < player.GetComponent<Timer>().best)
             {
-                player.GetComponent<TimerScript>().finishTime = player.GetComponent<TimerScript>().delta;
+                player.GetComponent<Timer>().best = player.GetComponent<Timer>().lapTime;
             }
-            */
-            AggiornaClassifica();
 
             
             player.GetComponent<gameControl>().cpTaken = 0;
