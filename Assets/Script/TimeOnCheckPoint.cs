@@ -20,7 +20,7 @@ public class TimeOnCheckPoint : NetworkBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (this.isLocalPlayer)
+        if (this.isLocalPlayer) //in caso disabilitare
         {
             if (timerOnCp)
             {

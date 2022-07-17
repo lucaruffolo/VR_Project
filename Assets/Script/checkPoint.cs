@@ -34,10 +34,10 @@ public class checkPoint : MonoBehaviour
             {
                 //audioCp.mute = false;
                 //playAudioCp();
-                player.GetComponent<AudioCp>().playAudioCp();
                 player.GetComponent<gameControl>().cpTaken += 1;
                 player.GetComponent<gameControl>().addCpList(name);
                 player.GetComponent<TimeOnCheckPoint>().timeOnCp.text = player.GetComponent<Timer>().TimeShowCp;
+                player.GetComponent<AudioCp>().playAudioCp();
                 oneclick = true;
             }
             //timerOnCp

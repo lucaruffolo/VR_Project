@@ -23,8 +23,8 @@ public class Timer : NetworkBehaviour
     }
     void Update()
     {
-        if (sessionReady)
-        {
+        //if (sessionReady)
+        //{
             timeRacePlayer.enabled = true;
 
             if (!this.isLocalPlayer)
@@ -40,6 +40,6 @@ public class Timer : NetworkBehaviour
                 timeRacePlayer.text = minutes + ":" + seconds;
                 TimeShowCp = minutes + ":" + seconds;
             }
-        }
+        //}
     }
 }
