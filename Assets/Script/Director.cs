@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
+using UnityEngine.UI;
 
 public class Director : NetworkBehaviour
 {
@@ -9,17 +10,16 @@ public class Director : NetworkBehaviour
     public int playersConnected;
     public GameObject c2;
     public GameObject c3;
+    public GameObject first;
+    public GameObject second;
 
     void Update()
     {
-        int vincitoretpm = 0;
-        float minimotmp = TimeSession.timing[0];
-        for(int i=0; i<TimeSession.timing.Count; i++)
+        if (this.isLocalPlayer)
         {
-            if(TimeSession.timing[i] < minimotmp)
+            if (FinishLine.timing[0] <= FinishLine.timing[1])
             {
-                vincitoretpm = i;
-                minimotmp = TimeSession.timing[i];
+                first.active = true;
             }
         }
 

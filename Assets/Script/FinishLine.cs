@@ -5,6 +5,7 @@ using UnityEngine;
 public class FinishLine : MonoBehaviour
 {
     public GameObject cp;
+    public static float[] timing = new float[2];
 
     private void OnTriggerEnter(Collider other)
     {
@@ -15,6 +16,14 @@ public class FinishLine : MonoBehaviour
             if (player.GetComponent<Timer>().lapTime < player.GetComponent<Timer>().best)
             {
                 player.GetComponent<Timer>().best = player.GetComponent<Timer>().lapTime;
+                if(player.GetComponent<gameControl>().position == 0)
+                {
+                    timing[0] = player.GetComponent<Timer>().best;
+                }
+                else if(player.GetComponent<gameControl>().position == 1)
+                {
+                    timing[1] = player.GetComponent<Timer>().best;
+                }
             }
 
             

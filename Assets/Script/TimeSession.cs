@@ -9,7 +9,6 @@ public class TimeSession : MonoBehaviour
     public float sessionTime;
     public bool timerIsRunning = false;
     public bool sessionReady;
-    public static List<float> timing;
 
     [SerializeField] public Text timeSession;
 
@@ -39,12 +38,6 @@ public class TimeSession : MonoBehaviour
             }
             if (sessionTime < 0)
             {
-                /*if (GetComponent<StartLine>().listPlayer.Count != 0) {
-                    for (int i = 0; i < GetComponent<StartLine>().listPlayer.Count; i++)
-                    {
-                        timing.Add(GetComponent<StartLine>().listPlayer[i].GetComponent<Timer>().best);
-                    }
-                }*/
                 SceneManager.LoadScene(sceneName: "EndSession");
                 GameAudio.instance.GetComponent<AudioSource>().Play();
             }

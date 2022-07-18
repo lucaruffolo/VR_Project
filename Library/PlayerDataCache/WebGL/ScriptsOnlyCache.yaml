@@ -8,6 +8,7 @@ ScriptsOnlyBuild:
     - Director
     - FinishLine
     - FollowCamera
+    - GameAudio
     - LoadScreen
     - Menu
     - PathCamera
@@ -412,6 +413,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 1458}
     - Class: 114
       Script: {instanceID: 2204}
+    - Class: 114
+      Script: {instanceID: 2230}
     - Class: 114
       Script: {instanceID: 2590}
     - Class: 114

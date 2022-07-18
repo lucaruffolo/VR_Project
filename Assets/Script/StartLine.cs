@@ -5,8 +5,8 @@ using UnityEngine;
 public class StartLine : MonoBehaviour
 {
     public List<GameObject> listPlayer;
-    public static List<GameObject> playerEnd;
     private bool yetInGame = false;
+    private int cont = 0;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -22,7 +22,8 @@ public class StartLine : MonoBehaviour
         {
             //playerEnd.Add(player);
             listPlayer.Add(player);
-            player.GetComponent<gameControl>().PlayerName = PlayerPrefs.GetString("namePlayer");
+            player.GetComponent<gameControl>().position = cont;
+            cont++;
         }
 
         //player.GetComponent<Timer>().lapTime = 0.0f;
