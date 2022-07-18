@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Director : NetworkBehaviour
 {

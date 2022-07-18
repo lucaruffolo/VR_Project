@@ -80,6 +80,7 @@
     <Compile Include="Assets\Script\speedometer.cs" />
     <Compile Include="Assets\FCAR\Skidmarks\Skidmarks Essentials\Skidmarks.cs" />
     <Compile Include="Assets\Script\Menu.cs" />
+    <Compile Include="Assets\Script\endGame.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Mirror\Plugins\Mono.Cecil\Mono.CecilX.dll" />
