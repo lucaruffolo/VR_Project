@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
+using UnityEngine.SceneManagement;
 
 public class gameControl : NetworkBehaviour
 {
@@ -16,6 +17,7 @@ public class gameControl : NetworkBehaviour
     public int cpTaken = 0;
     public List<string> listOfCpTaken;
     public string PlayerName;
+    public GameObject winner;
 
     void Start()
     {
@@ -30,6 +32,40 @@ public class gameControl : NetworkBehaviour
 
     void Update()
     {
+        DontDestroyOnLoad(transform.gameObject);
+        if(SceneManager.GetActiveScene().name == "EndSession")
+        {
+            if (this.isLocalPlayer)
+            {
+                if(position == 0)
+                {
+                    winner.SetActive(true);
+                    transform.position = new Vector3(329.7f, 194.79f, 803.5f);
+                    transform.rotation = new Quaternion(0f, 180f, 0f, 1);
+                }
+
+                if(position == 1)
+                {
+                    winner.SetActive(true);
+                    transform.position = new Vector3(326.5f, 193.4f, 803.5f);
+                    transform.rotation = new Quaternion(0f, 180f, 0f, 1);
+                }
+            }
+            else
+            {
+                if (position == 0)
+                {
+                    transform.position = new Vector3(329.7f, 194.79f, 803.5f);
+                    transform.rotation = new Quaternion(0f, 180f, 0f, 1);
+                }
+                if (position == 1)
+                {
+                    transform.position = new Vector3(326.5f, 193.4f, 803.5f);
+                    transform.rotation = new Quaternion(0f, 180f, 0f, 1);
+                }
+            }
+        }
+
         if (Input.GetKeyDown(KeyCode.Backspace) && !PauseMenu.GameIsPaused)
         {
             transform.position = replay;

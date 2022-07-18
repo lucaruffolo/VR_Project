@@ -21,8 +21,8 @@ public class StartLine : MonoBehaviour
         if (!yetInGame)
         {
             listPlayer.Add(player);
-            /*player.GetComponent<gameControl>().position = cont;
-            cont++;*/
+            player.GetComponent<gameControl>().position = cont;
+            cont++;
         }
     }
 }

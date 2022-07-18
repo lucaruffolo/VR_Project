@@ -29,12 +29,12 @@ public class Director : NetworkBehaviour
         }
         if (playersConnected == 2)
         {
-            c2.active = true;
+            //c2.active = true;
         }
         if (playersConnected == 3)
         {
-            c2.active = true;
-            c3.active = true;
+            //c2.active = true;
+            //c3.active = true;
         }
     }
 }
