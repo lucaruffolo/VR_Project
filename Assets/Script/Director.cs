@@ -15,13 +15,13 @@ public class Director : NetworkBehaviour
 
     void Update()
     {
-        if (this.isLocalPlayer)
+        /*if (this.isLocalPlayer)
         {
             if (FinishLine.timing[0] <= FinishLine.timing[1])
             {
                 first.active = true;
             }
-        }
+        }*/
 
         if (this.isServer)
         {

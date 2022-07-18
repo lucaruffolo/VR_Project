@@ -20,17 +20,9 @@ public class StartLine : MonoBehaviour
 
         if (!yetInGame)
         {
-            //playerEnd.Add(player);
             listPlayer.Add(player);
-            player.GetComponent<gameControl>().position = cont;
-            cont++;
+            /*player.GetComponent<gameControl>().position = cont;
+            cont++;*/
         }
-
-        //player.GetComponent<Timer>().lapTime = 0.0f;
-        /*foreach (GameObject i in listPlayer)
-        {
-            Debug.Log(player.GetComponent<gameControl>().PlayerName);
-            Debug.Log(PlayerPrefs.GetString("namePlayer"));
-        }*/
     }
 }
