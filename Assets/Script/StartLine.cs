@@ -5,6 +5,7 @@ using UnityEngine;
 public class StartLine : MonoBehaviour
 {
     public List<GameObject> listPlayer;
+    public static List<GameObject> playerEnd;
     private bool yetInGame = false;
 
     private void OnTriggerEnter(Collider other)
@@ -19,6 +20,7 @@ public class StartLine : MonoBehaviour
 
         if (!yetInGame)
         {
+            //playerEnd.Add(player);
             listPlayer.Add(player);
             player.GetComponent<gameControl>().PlayerName = PlayerPrefs.GetString("namePlayer");
         }

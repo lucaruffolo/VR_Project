@@ -22,6 +22,7 @@ public class Scoreboard : NetworkBehaviour
         if (playersConnected == 1)
         {
             warmup.text = "WARMUP";
+            warmup.color = Color.blue;
         }
         if (playersConnected == 2)
         {

@@ -11,6 +11,7 @@ public class LoadScreen : MonoBehaviour
     {
         if (Input.anyKeyDown)
         {
+            GameAudio.instance.GetComponent<AudioSource>().Stop();
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }

@@ -32,6 +32,15 @@ public class gameControl : NetworkBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Backspace) && !PauseMenu.GameIsPaused)
         {
+            transform.position = replay;
+            transform.rotation = replayRotation;
+            rb.Sleep();
+            rb.velocity.Set(0.0f, 0.0f, 0.0f);//reset velocità
+            Reset();
+        }
+        
+        if (Input.GetKeyDown(KeyCode.Return) && !PauseMenu.GameIsPaused)
+        {
             transform.position = restart;
             transform.rotation = rotation;
             rb.Sleep();
@@ -53,14 +62,6 @@ public class gameControl : NetworkBehaviour
                     GetComponent<VehicleControl>().carSounds.switchGear.GetComponent<AudioSource>().Stop();
                 }
             }
-        }
-        if (Input.GetKeyDown(KeyCode.Return) && !PauseMenu.GameIsPaused)
-        {
-            transform.position = replay;
-            transform.rotation = replayRotation;
-            rb.Sleep();
-            rb.velocity.Set(0.0f, 0.0f, 0.0f);//reset velocità
-            Reset();
         }
 
         if (arrived == true)

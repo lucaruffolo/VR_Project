@@ -5,6 +5,7 @@ ScriptsOnlyBuild:
     - CharacterSelection
     - CounterCp
     - Cycle
+    - Director
     - FinishLine
     - FollowCamera
     - LoadScreen
@@ -158,6 +159,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 3190}
     - Class: 114
       Script: {instanceID: 3746}
+    - Class: 114
+      Script: {instanceID: 4912}
+    - Class: 114
+      Script: {instanceID: 92044}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 119
@@ -1844,6 +1849,18 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Menu
+  - hash:
+      serializedVersion: 2
+      Hash: 8cd8bc3485aff606b2a56f7ba091e777
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Director
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Winner
   platform: 19
   scenePathNames:
   - Assets/Scenes/Menu.unity

@@ -25,21 +25,21 @@ public class Timer : NetworkBehaviour
     {
         //if (sessionReady)
         //{
-            timeRacePlayer.enabled = true;
+        timeRacePlayer.enabled = true;
 
-            if (!this.isLocalPlayer)
-            {
-                timeRacePlayer.GetComponent<Text>().enabled = false;
-            }
+        if (!this.isLocalPlayer)
+        {
+            timeRacePlayer.GetComponent<Text>().enabled = false;
+        }
 
-            if (timerIsRunning)
-            {
-                lapTime += Time.deltaTime;
-                string minutes = ((int)lapTime / 60).ToString();
-                string seconds = (lapTime % 60).ToString("f2");
-                timeRacePlayer.text = minutes + ":" + seconds;
-                TimeShowCp = minutes + ":" + seconds;
-            }
+        if (timerIsRunning)
+        {
+            lapTime += Time.deltaTime;
+            string minutes = ((int)lapTime / 60).ToString();
+            string seconds = (lapTime % 60).ToString("f2");
+            timeRacePlayer.text = minutes + ":" + seconds;
+            TimeShowCp = minutes + ":" + seconds;
+        }
         //}
     }
 }

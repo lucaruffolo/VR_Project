@@ -132,6 +132,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 12647340}
+  - component: {fileID: 12647339}
+  - component: {fileID: 12647341}
   m_Layer: 0
   m_Name: Director
   m_TagString: Untagged
@@ -139,6 +141,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &12647339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 12647338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 030a7b9ab78cd89498120e1b8df32999, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  playersConnected: 0
+  c2: {fileID: 1341526417}
+  c3: {fileID: 2060530564}
 --- !u!4 &12647340
 Transform:
   m_ObjectHideFlags: 0
@@ -153,6 +172,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &12647341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 12647338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 205957876
+  serverOnly: 0
+  visible: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!1001 &107785797
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2264,6 +2300,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RedCar (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 439140530867628013, guid: a3a834f9c625a194c99803cc288929be, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8263936877929302929, guid: a3a834f9c625a194c99803cc288929be, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -2310,6 +2350,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3a834f9c625a194c99803cc288929be, type: 3}
+--- !u!1 &1341526417 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 439140530867628013, guid: a3a834f9c625a194c99803cc288929be, type: 3}
+  m_PrefabInstance: {fileID: 1341526416}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1347938239
 GameObject:
   m_ObjectHideFlags: 0
@@ -2942,6 +2987,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RedCar (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 439140530867628013, guid: a3a834f9c625a194c99803cc288929be, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8263936877929302929, guid: a3a834f9c625a194c99803cc288929be, type: 3}
       propertyPath: m_RootOrder
       value: 13
@@ -2988,3 +3037,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3a834f9c625a194c99803cc288929be, type: 3}
+--- !u!1 &2060530564 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 439140530867628013, guid: a3a834f9c625a194c99803cc288929be, type: 3}
+  m_PrefabInstance: {fileID: 2060530563}
+  m_PrefabAsset: {fileID: 0}
