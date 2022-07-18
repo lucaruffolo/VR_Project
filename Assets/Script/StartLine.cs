@@ -25,4 +25,24 @@ public class StartLine : MonoBehaviour
             cont++;
         }
     }
+
+    /*
+
+    void Update()
+    {
+        if (listPlayer.Count > 1)
+        {
+            if (listPlayer[1].GetComponent<Timer>().best < listPlayer[0].GetComponent<Timer>().best)
+            {
+                listPlayer[0].GetComponent<gameControl>().position = 1;
+                listPlayer[1].GetComponent<gameControl>().position = 0;
+            }
+            else
+            {
+                listPlayer[1].GetComponent<gameControl>().position = 0;
+                listPlayer[0].GetComponent<gameControl>().position = 1;
+            }
+        }
+    }
+    */
 }

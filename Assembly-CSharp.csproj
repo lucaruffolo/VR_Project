@@ -70,6 +70,7 @@
     <Compile Include="Assets\Script\FinishLine.cs" />
     <Compile Include="Assets\Script\carController.cs" />
     <Compile Include="Assets\Script\PathCamera.cs" />
+    <Compile Include="Assets\Script\endGame.cs" />
     <Compile Include="Assets\Script\PauseMenu.cs" />
     <Compile Include="Assets\Script\TimeOnCheckPoint.cs" />
     <Compile Include="Assets\Script\gameControl.cs" />
@@ -80,7 +81,6 @@
     <Compile Include="Assets\Script\speedometer.cs" />
     <Compile Include="Assets\FCAR\Skidmarks\Skidmarks Essentials\Skidmarks.cs" />
     <Compile Include="Assets\Script\Menu.cs" />
-    <Compile Include="Assets\Script\endGame.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Mirror\Plugins\Mono.Cecil\Mono.CecilX.dll" />
