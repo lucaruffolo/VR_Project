@@ -37,8 +37,10 @@ public class gameControl : NetworkBehaviour
         {
             if (this.isLocalPlayer)
             {
-                if(position == 0)
+                string namePlayer = PlayerPrefs.GetString("namePlayer");
+                if (position == 0)
                 {
+                    winner.GetComponent<TextMesh>().text = namePlayer;
                     winner.SetActive(true);
                     transform.position = new Vector3(329.7f, 194.79f, 803.5f);
                     transform.rotation = new Quaternion(0f, 180f, 0f, 1);
@@ -46,6 +48,7 @@ public class gameControl : NetworkBehaviour
 
                 if(position == 1)
                 {
+                    winner.GetComponent<TextMesh>().text = namePlayer;
                     winner.SetActive(true);
                     transform.position = new Vector3(326.5f, 193.4f, 803.5f);
                     transform.rotation = new Quaternion(0f, 180f, 0f, 1);
