@@ -32,9 +32,16 @@ public class CharacterSelection : MonoBehaviour
 
 
     public void StartGame()
-    {        
-        PlayerPrefs.SetString("namePlayer", namePlayer.text);
-        PlayerPrefs.SetInt("selectedPlayer", selectedPlayer);
-        SceneManager.LoadScene(2, LoadSceneMode.Single);
+    {
+        if (namePlayer.text.Length > 0)
+        {
+            PlayerPrefs.SetString("namePlayer", namePlayer.text);
+            PlayerPrefs.SetInt("selectedPlayer", selectedPlayer);
+            SceneManager.LoadScene(2, LoadSceneMode.Single);
+        }
+        else
+        {
+            Debug.Log("Nome non inserito!");
+        }
     }
 }
