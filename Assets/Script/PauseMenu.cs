@@ -2,16 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
     public static bool GameIsPaused = false;
     public GameObject pauseMenuUI;
-
+    public AudioListener audio;
+    public GameObject slider;
 
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(slider.GetComponent<Slider>().value);
+        AudioListener.volume = slider.GetComponent<Slider>().value;
         if (Input.GetKeyDown(KeyCode.Escape)) {
             if (GameIsPaused)
             {
