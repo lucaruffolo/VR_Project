@@ -5,7 +5,6 @@ ScriptsOnlyBuild:
     - CharacterSelection
     - CounterCp
     - Cycle
-    - Director
     - FinishLine
     - FollowCamera
     - GameAudio
@@ -94,17 +93,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2204}
     - Class: 114
-      Script: {instanceID: 2590}
+      Script: {instanceID: 2588}
     - Class: 114
-      Script: {instanceID: 2742}
+      Script: {instanceID: 2740}
     - Class: 114
-      Script: {instanceID: 2980}
+      Script: {instanceID: 2978}
     - Class: 114
-      Script: {instanceID: 3016}
+      Script: {instanceID: 3014}
     - Class: 114
-      Script: {instanceID: 3194}
+      Script: {instanceID: 3192}
     - Class: 114
-      Script: {instanceID: 3310}
+      Script: {instanceID: 3308}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 119
@@ -161,17 +160,15 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1882}
+      Script: {instanceID: 2740}
     - Class: 114
-      Script: {instanceID: 2742}
+      Script: {instanceID: 3192}
     - Class: 114
-      Script: {instanceID: 3194}
+      Script: {instanceID: 3748}
     - Class: 114
-      Script: {instanceID: 3750}
+      Script: {instanceID: 3872}
     - Class: 114
-      Script: {instanceID: 3874}
-    - Class: 114
-      Script: {instanceID: 4918}
+      Script: {instanceID: 4916}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 119
@@ -235,8 +232,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 83
       Script: {instanceID: 0}
-    - Class: 89
-      Script: {instanceID: 0}
     - Class: 102
       Script: {instanceID: 0}
     - Class: 104
@@ -248,13 +243,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1458}
     - Class: 114
-      Script: {instanceID: 1468}
+      Script: {instanceID: 1470}
     - Class: 114
-      Script: {instanceID: 1548}
+      Script: {instanceID: 1550}
     - Class: 114
-      Script: {instanceID: 1726}
+      Script: {instanceID: 1728}
     - Class: 114
-      Script: {instanceID: 1852}
+      Script: {instanceID: 1854}
     - Class: 114
       Script: {instanceID: 1968}
     - Class: 114
@@ -266,59 +261,59 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2502}
     - Class: 114
-      Script: {instanceID: 2552}
+      Script: {instanceID: 2550}
     - Class: 114
-      Script: {instanceID: 2590}
+      Script: {instanceID: 2588}
     - Class: 114
-      Script: {instanceID: 2662}
+      Script: {instanceID: 2660}
     - Class: 114
-      Script: {instanceID: 2674}
+      Script: {instanceID: 2672}
     - Class: 114
-      Script: {instanceID: 2694}
+      Script: {instanceID: 2692}
     - Class: 114
-      Script: {instanceID: 2742}
+      Script: {instanceID: 2740}
     - Class: 114
-      Script: {instanceID: 2818}
+      Script: {instanceID: 2816}
     - Class: 114
-      Script: {instanceID: 2834}
+      Script: {instanceID: 2832}
     - Class: 114
-      Script: {instanceID: 3114}
+      Script: {instanceID: 3112}
     - Class: 114
-      Script: {instanceID: 3194}
+      Script: {instanceID: 3192}
     - Class: 114
-      Script: {instanceID: 3214}
+      Script: {instanceID: 3212}
     - Class: 114
-      Script: {instanceID: 3310}
+      Script: {instanceID: 3308}
     - Class: 114
-      Script: {instanceID: 3330}
+      Script: {instanceID: 3328}
     - Class: 114
-      Script: {instanceID: 3418}
+      Script: {instanceID: 3416}
     - Class: 114
-      Script: {instanceID: 3534}
+      Script: {instanceID: 3532}
+    - Class: 114
+      Script: {instanceID: 3882}
     - Class: 114
       Script: {instanceID: 3884}
     - Class: 114
-      Script: {instanceID: 3886}
+      Script: {instanceID: 3928}
     - Class: 114
-      Script: {instanceID: 3930}
+      Script: {instanceID: 3938}
     - Class: 114
-      Script: {instanceID: 3940}
+      Script: {instanceID: 4148}
     - Class: 114
-      Script: {instanceID: 4150}
+      Script: {instanceID: 4730}
     - Class: 114
-      Script: {instanceID: 4732}
+      Script: {instanceID: 4784}
     - Class: 114
-      Script: {instanceID: 4786}
+      Script: {instanceID: 4818}
     - Class: 114
-      Script: {instanceID: 4820}
+      Script: {instanceID: 4916}
     - Class: 114
-      Script: {instanceID: 4918}
+      Script: {instanceID: 5060}
     - Class: 114
-      Script: {instanceID: 5062}
+      Script: {instanceID: 5070}
     - Class: 114
-      Script: {instanceID: 5072}
-    - Class: 114
-      Script: {instanceID: 5376}
+      Script: {instanceID: 5374}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 119
@@ -385,13 +380,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1458}
     - Class: 114
-      Script: {instanceID: 2590}
+      Script: {instanceID: 2588}
     - Class: 114
-      Script: {instanceID: 2742}
+      Script: {instanceID: 2740}
     - Class: 114
-      Script: {instanceID: 3194}
+      Script: {instanceID: 3192}
     - Class: 114
-      Script: {instanceID: 4612}
+      Script: {instanceID: 4610}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -442,15 +437,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2230}
     - Class: 114
-      Script: {instanceID: 2590}
+      Script: {instanceID: 2588}
     - Class: 114
-      Script: {instanceID: 2742}
+      Script: {instanceID: 2740}
     - Class: 114
-      Script: {instanceID: 3194}
+      Script: {instanceID: 3192}
     - Class: 114
-      Script: {instanceID: 3310}
+      Script: {instanceID: 3308}
     - Class: 114
-      Script: {instanceID: 5508}
+      Script: {instanceID: 5506}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -686,12 +681,6 @@ ScriptsOnlyBuild:
     className: CinemachineCameraOffset
   - hash:
       serializedVersion: 2
-      Hash: 6f6ba85fb9a2ca00825f6b57f970731f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Director
-  - hash:
-      serializedVersion: 2
       Hash: 192ca9716d03752ea1d90a78bc2daac9
     assemblyName: Mirror.Examples.dll
     namespaceName: Mirror.Examples.NetworkRoom
@@ -828,12 +817,6 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CounterCp
-  - hash:
-      serializedVersion: 2
-      Hash: 6436fce71101ef99c9effe0d88cef0d8
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: TimerScript
   - hash:
       serializedVersion: 2
       Hash: ae48b67c38be529ea16d3337a260354b
@@ -1382,7 +1365,7 @@ ScriptsOnlyBuild:
     className: AudioPlayableAsset
   - hash:
       serializedVersion: 2
-      Hash: a52785e2ca45629fda577d785cfeea90
+      Hash: ac445017b29cb0b1183b6898d0abf31c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: gameControl

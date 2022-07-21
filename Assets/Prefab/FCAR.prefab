@@ -6073,8 +6073,9 @@ MonoBehaviour:
   arrived: 0
   cpTaken: 0
   listOfCpTaken: []
-  PlayerName: 
   winner: {fileID: 6080296427477092215}
+  km: {fileID: 4755749296805723352}
+  timeRace: {fileID: 4249720310447888314}
 --- !u!114 &4313181341122509309
 MonoBehaviour:
   m_ObjectHideFlags: 0

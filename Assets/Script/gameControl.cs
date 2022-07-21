@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class gameControl : NetworkBehaviour
 {
@@ -17,6 +18,9 @@ public class gameControl : NetworkBehaviour
     public int cpTaken = 0;
     public List<string> listOfCpTaken;
     public GameObject winner;
+    public GameObject km;
+    public GameObject timeRace;
+
 
     void Start()
     {
@@ -34,15 +38,16 @@ public class gameControl : NetworkBehaviour
         DontDestroyOnLoad(transform.gameObject);
         if(SceneManager.GetActiveScene().name == "EndSession")
         {
+            km.active = false;
+            timeRace.active = false;
             string namePlayer = PlayerPrefs.GetString("namePlayer");
             if (this.isLocalPlayer)
             {
-                Debug.Log(position);
                 if (position == 0)
                 {
                     winner.GetComponent<TextMesh>().text = namePlayer;
                     winner.SetActive(true);
-                    transform.position = new Vector3(329.7f, 194.79f, 803.5f);
+                    transform.position = new Vector3(329.7f, 194.5f, 803.5f);
                     transform.rotation = new Quaternion(0f, 180f, 0f, 1);
                 }
 
@@ -50,24 +55,28 @@ public class gameControl : NetworkBehaviour
                 {
                     winner.GetComponent<TextMesh>().text = namePlayer;
                     winner.SetActive(true);
-                    transform.position = new Vector3(326.5f, 193.4f, 803.5f);
+                    transform.position = new Vector3(326.5f, 193.2f, 803.5f);
                     transform.rotation = new Quaternion(0f, 180f, 0f, 1);
                 }
             }
             else
             {
-                Debug.Log("c"+position);
                 if (position == 0)
                 {
-                    transform.position = new Vector3(329.7f, 194.79f, 803.5f);
+                    transform.position = new Vector3(329.7f, 194.5f, 803.5f);
                     transform.rotation = new Quaternion(0f, 180f, 0f, 1);
                 }
                 if (position == 1)
                 {
-                    transform.position = new Vector3(326.5f, 193.4f, 803.5f);
+                    transform.position = new Vector3(326.5f, 193.2f, 803.5f);
                     transform.rotation = new Quaternion(0f, 180f, 0f, 1);
                 }
             }
+        }
+        else
+        {
+            km.active = true;
+            timeRace.active = true;
         }
 
         if (Input.GetKeyDown(KeyCode.Backspace) && !PauseMenu.GameIsPaused)
