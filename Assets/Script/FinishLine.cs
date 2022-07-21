@@ -1,38 +1,60 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Mirror;
 
-public class FinishLine : MonoBehaviour
+public class FinishLine : NetworkBehaviour
 {
     public GameObject cp;
     public static float[] timing = new float[2];
 
     private void OnTriggerEnter(Collider other)
     {
-        GameObject player = other.gameObject.transform.parent.transform.parent.gameObject;
-        Debug.Log(player);
-        Debug.Log(player.GetComponent<Timer>().lapTime);
-        Debug.Log(player.GetComponent<Timer>().best);
-
-        if (player.GetComponent<gameControl>().cpTaken > cp.GetComponent<CounterCp>().numCp || player.GetComponent<gameControl>().cpTaken == cp.GetComponent<CounterCp>().numCp)
+        if (this.isLocalPlayer)
         {
-            Debug.Log("1");
-            if (player.GetComponent<Timer>().lapTime < player.GetComponent<Timer>().best)
-            {
-                Debug.Log("2");
-                for(int i=0; i<GetComponent<StartLine>().listPlayer.Count; i++)
-                {
-                    if (GetComponent<StartLine>().listPlayer[i] == player)
-                        Debug.Log("miagolo");
-                }
-                player.GetComponent<Timer>().best = player.GetComponent<Timer>().lapTime;
-            }
+            GameObject player = other.gameObject.transform.parent.transform.parent.gameObject;
+            Debug.Log(player);
+            Debug.Log(player.GetComponent<Timer>().lapTime);
+            Debug.Log(player.GetComponent<Timer>().best);
 
-            
-            player.GetComponent<gameControl>().cpTaken = 0;
-            player.GetComponent<gameControl>().listOfCpTaken.Clear();
-           
-            player.GetComponent<gameControl>().arrived = true;
+            if (player.GetComponent<gameControl>().cpTaken > cp.GetComponent<CounterCp>().numCp || player.GetComponent<gameControl>().cpTaken == cp.GetComponent<CounterCp>().numCp)
+            {
+                Debug.Log("1");
+                if (player.GetComponent<Timer>().lapTime < player.GetComponent<Timer>().best)
+                {
+                    Debug.Log("2");
+                    player.GetComponent<Timer>().best = player.GetComponent<Timer>().lapTime;
+                }
+
+
+                player.GetComponent<gameControl>().cpTaken = 0;
+                player.GetComponent<gameControl>().listOfCpTaken.Clear();
+
+                player.GetComponent<gameControl>().arrived = true;
+            }
+        }
+        else
+        {
+            GameObject player = other.gameObject.transform.parent.transform.parent.gameObject;
+            Debug.Log(player);
+            Debug.Log(player.GetComponent<Timer>().lapTime);
+            Debug.Log(player.GetComponent<Timer>().best);
+
+            if (player.GetComponent<gameControl>().cpTaken > cp.GetComponent<CounterCp>().numCp || player.GetComponent<gameControl>().cpTaken == cp.GetComponent<CounterCp>().numCp)
+            {
+                Debug.Log("1");
+                if (player.GetComponent<Timer>().lapTime < player.GetComponent<Timer>().best)
+                {
+                    Debug.Log("2");
+                    player.GetComponent<Timer>().best = player.GetComponent<Timer>().lapTime;
+                }
+
+
+                player.GetComponent<gameControl>().cpTaken = 0;
+                player.GetComponent<gameControl>().listOfCpTaken.Clear();
+
+                player.GetComponent<gameControl>().arrived = true;
+            }
         }
     }
 }
