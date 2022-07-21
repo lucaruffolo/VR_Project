@@ -8,6 +8,7 @@ public class StartLine : MonoBehaviour
     private bool yetInGame = false;
     private int cont = 0;
     public bool multi;
+    public bool oneClick = false;
 
     private void Start()
     {
@@ -42,6 +43,13 @@ public class StartLine : MonoBehaviour
     {
         if (multi)
         {
+            if (oneClick)
+            {
+                listPlayer[0].transform.position = new Vector3(270.65f, 33.59f, 53.0f);
+                listPlayer[0].transform.rotation = new Quaternion(0f, 0f, 0f, 1);
+                listPlayer[1].transform.position = new Vector3(270.65f, 33.59f, 53.0f);
+                listPlayer[1].transform.rotation = new Quaternion(0f, 0f, 0f, 1);
+            }
             if (listPlayer[1].GetComponent<Timer>().best < listPlayer[0].GetComponent<Timer>().best)
             {
                 Debug.Log("scambio");
