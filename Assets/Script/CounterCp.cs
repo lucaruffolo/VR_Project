@@ -17,8 +17,5 @@ public class CounterCp : MonoBehaviour
             childsG[i] = child.gameObject;
             i++;
         }
-
-
-
     }
 }

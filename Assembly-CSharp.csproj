@@ -58,13 +58,11 @@
   <ItemGroup>
     <Compile Include="Assets\Script\AudioCp.cs" />
     <Compile Include="Assets\Script\StartLine.cs" />
-    <Compile Include="Assets\Script\Director.cs" />
     <Compile Include="Assets\Script\VehicleControl.cs" />
     <Compile Include="Assets\Script\FollowCamera.cs" />
     <Compile Include="Assets\FCAR\Skidmarks\WheelSkidmarks.cs" />
     <Compile Include="Assets\Script\GameAudio.cs" />
     <Compile Include="Assets\Script\CounterCp.cs" />
-    <Compile Include="Assets\Script\TimerScript.cs" />
     <Compile Include="Assets\Script\Timer.cs" />
     <Compile Include="Assets\Script\ResetTimer.cs" />
     <Compile Include="Assets\Script\CharacterSelection.cs" />

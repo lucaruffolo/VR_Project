@@ -48,8 +48,14 @@ public class StartLine : MonoBehaviour
             {
                 listPlayer[0].transform.position = new Vector3(270.65f, 33.59f, 53.0f);
                 listPlayer[0].transform.rotation = new Quaternion(0f, 0f, 0f, 1);
+                listPlayer[0].GetComponent<StartingCountDown>().oneTime = true;
+                listPlayer[0].GetComponent<StartingCountDown>().timerOn = true;
+                listPlayer[0].GetComponent<StartingCountDown>().timeLeft = 3.0f;
                 listPlayer[1].transform.position = new Vector3(270.65f, 33.59f, 53.0f);
                 listPlayer[1].transform.rotation = new Quaternion(0f, 0f, 0f, 1);
+                listPlayer[1].GetComponent<StartingCountDown>().oneTime = true;
+                listPlayer[1].GetComponent<StartingCountDown>().timerOn = true;
+                listPlayer[1].GetComponent<StartingCountDown>().timeLeft = 3.0f;
                 oneClick = false;
             } 
             if (listPlayer[1].GetComponent<Timer>().best < listPlayer[0].GetComponent<Timer>().best)

@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class checkPoint : MonoBehaviour
 { 
     public bool oneclick = false;
-    //public AudioSource audioCp;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -47,9 +46,4 @@ public class checkPoint : MonoBehaviour
 
         
     }
-
-    /*public void playAudioCp()
-    {
-        audioCp.Play();
-    }*/
 }

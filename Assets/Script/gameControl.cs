@@ -16,7 +16,6 @@ public class gameControl : NetworkBehaviour
     public bool arrived = false;
     public int cpTaken = 0;
     public List<string> listOfCpTaken;
-    //  public string PlayerName;
     public GameObject winner;
 
     void Start()
@@ -139,16 +138,6 @@ public class gameControl : NetworkBehaviour
         transform.rotation = replayRotation;
         rb.Sleep();
         rb.velocity.Set(0.0f, 0.0f, 0.0f);//reset velocità  //sotto abilitato
-        /*GetComponent<VehicleControl>().enabledMovement = false;
-        GetComponent<TimeOnCheckPoint>().timeOnCp.enabled = false;
-        GetComponent<TimeOnCheckPoint>().timerOnCp = false;
-        GetComponent<StartingCountDown>().oneTime = true;
-        GetComponent<StartingCountDown>().timerOn = true;
-        GetComponent<StartingCountDown>().timeLeft = 3.0f;
-        GetComponent<VehicleControl>().carSounds.HighEngine.GetComponent<AudioSource>().Stop();
-        GetComponent<VehicleControl>().carSounds.IdleEngine.GetComponent<AudioSource>().Stop();
-        GetComponent<VehicleControl>().carSounds.LowEngine.GetComponent<AudioSource>().Stop();
-        GetComponent<VehicleControl>().carSounds.switchGear.GetComponent<AudioSource>().Stop();*/
         Reset();
         arrived = false;
     }

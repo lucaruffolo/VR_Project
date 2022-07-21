@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PathCamera : MonoBehaviour
 {
-	public float speed = 30f;
+	public float speed = 35f;
 	public Transform pathParent;
 	Transform targetPoint;
 	int index;
@@ -23,7 +23,7 @@ public class PathCamera : MonoBehaviour
 	}
 	void Start()
 	{
-		speed = 80f;
+		speed = 35f;
 		index = 0;
 		targetPoint = pathParent.GetChild(index);
 	}
