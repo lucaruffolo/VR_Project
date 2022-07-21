@@ -7,6 +7,12 @@ public class StartLine : MonoBehaviour
     public List<GameObject> listPlayer;
     private bool yetInGame = false;
     private int cont = 0;
+    public bool multi;
+
+    private void Start()
+    {
+        multi = false;
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -22,27 +28,33 @@ public class StartLine : MonoBehaviour
         {
             listPlayer.Add(player);
             player.GetComponent<gameControl>().position = cont;
-            cont++;
+            cont += 1;
+            if(cont == 2)
+            {
+                multi = true;
+            }
         }
     }
 
-    /*
+    
 
     void Update()
     {
-        if (listPlayer.Count > 1)
+        if (multi)
         {
             if (listPlayer[1].GetComponent<Timer>().best < listPlayer[0].GetComponent<Timer>().best)
             {
+                Debug.Log("scambio");
                 listPlayer[0].GetComponent<gameControl>().position = 1;
                 listPlayer[1].GetComponent<gameControl>().position = 0;
             }
-            else
+            else if(listPlayer[1].GetComponent<Timer>().best > listPlayer[0].GetComponent<Timer>().best)
             {
-                listPlayer[1].GetComponent<gameControl>().position = 0;
-                listPlayer[0].GetComponent<gameControl>().position = 1;
+                Debug.Log("MAX");
+                listPlayer[1].GetComponent<gameControl>().position = 1;
+                listPlayer[0].GetComponent<gameControl>().position = 0;
             }
         }
     }
-    */
+   
 }

@@ -16,7 +16,7 @@ public class gameControl : NetworkBehaviour
     public bool arrived = false;
     public int cpTaken = 0;
     public List<string> listOfCpTaken;
-    public string PlayerName;
+    //  public string PlayerName;
     public GameObject winner;
 
     void Start()
@@ -35,9 +35,10 @@ public class gameControl : NetworkBehaviour
         DontDestroyOnLoad(transform.gameObject);
         if(SceneManager.GetActiveScene().name == "EndSession")
         {
+            string namePlayer = PlayerPrefs.GetString("namePlayer");
             if (this.isLocalPlayer)
             {
-                string namePlayer = PlayerPrefs.GetString("namePlayer");
+                Debug.Log(position);
                 if (position == 0)
                 {
                     winner.GetComponent<TextMesh>().text = namePlayer;
@@ -56,6 +57,7 @@ public class gameControl : NetworkBehaviour
             }
             else
             {
+                Debug.Log("c"+position);
                 if (position == 0)
                 {
                     transform.position = new Vector3(329.7f, 194.79f, 803.5f);
