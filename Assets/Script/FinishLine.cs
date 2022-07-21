@@ -20,6 +20,11 @@ public class FinishLine : MonoBehaviour
             if (player.GetComponent<Timer>().lapTime < player.GetComponent<Timer>().best)
             {
                 Debug.Log("2");
+                for(int i=0; i<GetComponent<StartLine>().listPlayer.Count; i++)
+                {
+                    if (GetComponent<StartLine>().listPlayer[i] == player)
+                        Debug.Log("miagolo");
+                }
                 player.GetComponent<Timer>().best = player.GetComponent<Timer>().lapTime;
             }
 

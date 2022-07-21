@@ -17,7 +17,7 @@ public class TimeSession : MonoBehaviour
         sessionReady = false;
         timerIsRunning = true;
         timeSession.enabled = true;
-        sessionTime = (1)*30.0f;
+        sessionTime = (3)*60.0f;
     }
     void Update()
     {
