@@ -20,20 +20,6 @@ public class FinishLine : NetworkBehaviour
             if (player.GetComponent<Timer>().lapTime < player.GetComponent<Timer>().best)
             {
                 player.GetComponent<Timer>().best = player.GetComponent<Timer>().lapTime;
-                if(GetComponent<StartLine>().listPlayer[0] == player)
-                {
-                    Debug.Log("ciao");
-                    GetComponent<StartLine>().listPlayer[0].GetComponent<Timer>().best = player.GetComponent<Timer>().best;
-                    GetComponent<StartLine>().listPlayer[0].GetComponent<gameControl>().arrived = true;
-                    player.GetComponent<gameControl>().arrived = true;
-                }
-                if (GetComponent<StartLine>().listPlayer[1] == player)
-                {
-                    Debug.Log("ciao2");
-                    GetComponent<StartLine>().listPlayer[1].GetComponent<Timer>().best = player.GetComponent<Timer>().best;
-                    GetComponent<StartLine>().listPlayer[1].GetComponent<gameControl>().arrived = true;
-                    player.GetComponent<gameControl>().arrived = true;
-                }
             }
 
 
