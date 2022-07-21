@@ -25,10 +25,14 @@ public class FinishLine : NetworkBehaviour
                 if(GetComponent<StartLine>().listPlayer[0] == player)
                 {
                     GetComponent<StartLine>().listPlayer[0].GetComponent<Timer>().best = player.GetComponent<Timer>().best;
+                    GetComponent<StartLine>().listPlayer[0].GetComponent<gameControl>().arrived = true;
+                    player.GetComponent<gameControl>().arrived = true;
                 }
                 if (GetComponent<StartLine>().listPlayer[1] == player)
                 {
                     GetComponent<StartLine>().listPlayer[1].GetComponent<Timer>().best = player.GetComponent<Timer>().best;
+                    GetComponent<StartLine>().listPlayer[1].GetComponent<gameControl>().arrived = true;
+                    player.GetComponent<gameControl>().arrived = true;
                 }
             }
 
