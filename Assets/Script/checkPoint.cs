@@ -33,17 +33,22 @@ public class checkPoint : MonoBehaviour
             {
                 //audioCp.mute = false;
                 //playAudioCp();
+                //Debug.Log(name);
                 player.GetComponent<gameControl>().cpTaken += 1;
                 player.GetComponent<gameControl>().addCpList(name);
-                player.GetComponent<TimeOnCheckPoint>().timeOnCp.text = player.GetComponent<Timer>().TimeShowCp;
-                player.GetComponent<AudioCp>().playAudioCp();
+                if(name != "takeTime")
+                {
+                    player.GetComponent<TimeOnCheckPoint>().timeOnCp.text = player.GetComponent<Timer>().TimeShowCp;
+                    player.GetComponent<AudioCp>().playAudioCp();
+                }
                 oneclick = true;
             }
             //timerOnCp
-            player.GetComponent<TimeOnCheckPoint>().timerOnCp = true;
-            player.GetComponent<TimeOnCheckPoint>().timeLeftCp = 3.0f;
+            if (name != "takeTime")
+            {
+                player.GetComponent<TimeOnCheckPoint>().timerOnCp = true;
+                player.GetComponent<TimeOnCheckPoint>().timeLeftCp = 3.0f;
+            }
         }
-
-        
     }
 }
