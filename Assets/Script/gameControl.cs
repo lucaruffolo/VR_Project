@@ -36,8 +36,8 @@ public class gameControl : NetworkBehaviour
         DontDestroyOnLoad(transform.gameObject);
         if(SceneManager.GetActiveScene().name == "EndSession")
         {
-            //timer.active = false;
-            //speed.active = false;
+            timer.active = false;
+            speed.active = false;
             string namePlayer = PlayerPrefs.GetString("namePlayer");
             if (this.isLocalPlayer)
             {

@@ -10,9 +10,9 @@ public class FinishLine : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         GameObject player = other.gameObject.transform.parent.transform.parent.gameObject;
-        Debug.Log(player);
-        Debug.Log(player.GetComponent<Timer>().lapTime);
-        Debug.Log(player.GetComponent<Timer>().best);
+        //Debug.Log(player);
+        //Debug.Log(player.GetComponent<Timer>().lapTime);
+        //Debug.Log(player.GetComponent<Timer>().best);
 
         if (player.GetComponent<gameControl>().cpTaken == cp.GetComponent<CounterCp>().numCp)
         {
