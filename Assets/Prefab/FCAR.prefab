@@ -6074,6 +6074,8 @@ MonoBehaviour:
   cpTaken: 0
   listOfCpTaken: []
   winner: {fileID: 6080296427477092215}
+  timer: {fileID: 4249720310447888314}
+  speed: {fileID: 4755749296805723352}
 --- !u!114 &4313181341122509309
 MonoBehaviour:
   m_ObjectHideFlags: 0

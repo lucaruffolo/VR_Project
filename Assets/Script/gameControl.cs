@@ -36,8 +36,8 @@ public class gameControl : NetworkBehaviour
         DontDestroyOnLoad(transform.gameObject);
         if(SceneManager.GetActiveScene().name == "EndSession")
         {
-            timer.active = false;
-            speed.active = false;
+            //timer.active = false;
+            //speed.active = false;
             string namePlayer = PlayerPrefs.GetString("namePlayer");
             if (this.isLocalPlayer)
             {
@@ -74,8 +74,8 @@ public class gameControl : NetworkBehaviour
         }
         else
         {
-            timer.active = true;
-            speed.active = true;
+            //timer.active = true;
+            //speed.active = true;
         }
 
         if (Input.GetKeyDown(KeyCode.Backspace) && !PauseMenu.GameIsPaused)
@@ -122,8 +122,8 @@ public class gameControl : NetworkBehaviour
     {
         restart = replay;
         rotation = replayRotation;
-        //if (this.isLocalPlayer)
-        //{
+        if (this.isLocalPlayer)
+        {
             GetComponent<Timer>().lapTime = 0f;//reset timer
             GetComponent<TimeOnCheckPoint>().timeOnCp.enabled = false;
             GetComponent<TimeOnCheckPoint>().timerOnCp = false;
@@ -137,7 +137,7 @@ public class gameControl : NetworkBehaviour
             GetComponent<VehicleControl>().carSounds.switchGear.GetComponent<AudioSource>().Stop();
             cpTaken = 0;
             listOfCpTaken.Clear();
-       // }
+        }
     }
 
     private void Restart()
@@ -153,5 +153,16 @@ public class gameControl : NetworkBehaviour
     public void addCpList(string cpName)
     {
         listOfCpTaken.Add(cpName);
+        if (!this.isLocalPlayer)
+        {
+            if (listOfCpTaken.Count == 8)
+            {
+                Debug.Log("si");
+                if (GetComponent<Timer>().lapTime < GetComponent<Timer>().best)
+                {
+                    GetComponent<Timer>().best = GetComponent<Timer>().lapTime;
+                }
+            }
+        }
     }
 }
