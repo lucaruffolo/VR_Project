@@ -31,7 +31,7 @@ public class TimeOnCheckPoint : NetworkBehaviour
                 }
                 else
                 {
-                    Debug.Log("Fine tempo cp");
+                    //Debug.Log("Fine tempo cp");
                     timeLeftCp = 0;
                     timerOnCp = false;
                     timeOnCp.enabled = false;

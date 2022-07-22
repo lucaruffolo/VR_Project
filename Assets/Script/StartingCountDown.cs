@@ -59,7 +59,7 @@ public class StartingCountDown : NetworkBehaviour
             else
             {
                 rb.constraints = RigidbodyConstraints.None;
-                Debug.Log("Fine tempo");
+                //Debug.Log("Fine tempo");
                 timeLeft = 0;
                 timerOn = false;
                 GetComponent<VehicleControl>().enabledMovement = true;

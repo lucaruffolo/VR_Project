@@ -1,9 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Mirror;
 
-public class FinishLine : NetworkBehaviour
+public class FinishLine : MonoBehaviour
 {
     public GameObject cp;
     public static float[] timing = new float[2];
@@ -15,7 +14,7 @@ public class FinishLine : NetworkBehaviour
         Debug.Log(player.GetComponent<Timer>().lapTime);
         Debug.Log(player.GetComponent<Timer>().best);
 
-        if (player.GetComponent<gameControl>().cpTaken > cp.GetComponent<CounterCp>().numCp || player.GetComponent<gameControl>().cpTaken == cp.GetComponent<CounterCp>().numCp)
+        if (player.GetComponent<gameControl>().cpTaken == cp.GetComponent<CounterCp>().numCp)
         {
             if (player.GetComponent<Timer>().lapTime < player.GetComponent<Timer>().best)
             {

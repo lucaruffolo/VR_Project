@@ -704,8 +704,8 @@ namespace Mirror
             NetworkClient.RegisterHandler<SceneMessage>(OnClientSceneInternal, false);
             int selectedPlayer = PlayerPrefs.GetInt("selectedPlayer");
             string namePlayer = PlayerPrefs.GetString("namePlayer");
-            Debug.Log(selectedPlayer);
-            Debug.Log(namePlayer);
+            //Debug.Log(selectedPlayer);
+            //Debug.Log(namePlayer);
 
             if (playerPrefab != null)
                 NetworkClient.RegisterPrefab(playerPrefab);

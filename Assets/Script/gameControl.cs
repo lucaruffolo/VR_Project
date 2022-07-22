@@ -56,7 +56,6 @@ public class gameControl : NetworkBehaviour
             }
             else
             {
-                Debug.Log("c"+position);
                 if (position == 0)
                 {
                     transform.position = new Vector3(329.7f, 194.79f, 803.5f);

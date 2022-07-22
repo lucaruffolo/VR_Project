@@ -44,6 +44,21 @@ public class StartLine : MonoBehaviour
     {
         if (multi)
         {
+            if (listPlayer[0].GetComponent<gameControl>().arrived == true)
+            {
+                if(listPlayer[0].GetComponent<Timer>().lapTime < listPlayer[0].GetComponent<Timer>().best)
+                {
+                    listPlayer[0].GetComponent<Timer>().best = listPlayer[0].GetComponent<Timer>().lapTime;
+                }
+            }
+
+            if (listPlayer[1].GetComponent<gameControl>().arrived == true)
+            {
+                if (listPlayer[1].GetComponent<Timer>().lapTime < listPlayer[1].GetComponent<Timer>().best)
+                {
+                    listPlayer[1].GetComponent<Timer>().best = listPlayer[1].GetComponent<Timer>().lapTime;
+                }
+            }
             if (oneClick)
             {
                 listPlayer[0].transform.position = new Vector3(270.65f, 33.59f, 53.0f);
