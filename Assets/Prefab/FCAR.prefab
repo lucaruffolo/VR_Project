@@ -6073,7 +6073,6 @@ MonoBehaviour:
   arrived: 0
   cpTaken: 0
   listOfCpTaken: []
-  PlayerName: 
   winner: {fileID: 6080296427477092215}
 --- !u!114 &4313181341122509309
 MonoBehaviour:

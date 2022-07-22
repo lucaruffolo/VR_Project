@@ -17,6 +17,8 @@ public class gameControl : NetworkBehaviour
     public int cpTaken = 0;
     public List<string> listOfCpTaken;
     public GameObject winner;
+    public GameObject timer;
+    public GameObject speed;
 
     void Start()
     {
@@ -34,10 +36,12 @@ public class gameControl : NetworkBehaviour
         DontDestroyOnLoad(transform.gameObject);
         if(SceneManager.GetActiveScene().name == "EndSession")
         {
+            timer.active = false;
+            speed.active = false;
             string namePlayer = PlayerPrefs.GetString("namePlayer");
             if (this.isLocalPlayer)
             {
-                Debug.Log(position);
+                //Debug.Log(position);
                 if (position == 0)
                 {
                     winner.GetComponent<TextMesh>().text = namePlayer;
@@ -67,6 +71,11 @@ public class gameControl : NetworkBehaviour
                     transform.rotation = new Quaternion(0f, 180f, 0f, 1);
                 }
             }
+        }
+        else
+        {
+            timer.active = true;
+            speed.active = true;
         }
 
         if (Input.GetKeyDown(KeyCode.Backspace) && !PauseMenu.GameIsPaused)
