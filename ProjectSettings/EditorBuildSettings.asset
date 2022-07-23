@@ -9,6 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
+    path: Assets/Scenes/ChoosePlayer.unity
+    guid: 5ba3cc680c3ca3a47b85b7a23f6da29e
+  - enabled: 1
+    path: Assets/Scenes/Keyboard.unity
+    guid: ca267a2c58ee6b64d9207e538115be1f
+  - enabled: 1
     path: Assets/Scenes/Game.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1

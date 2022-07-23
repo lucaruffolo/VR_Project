@@ -187,7 +187,7 @@ namespace Mirror
             // Don't allow collision-destroyed second instance to continue.
             if (!InitializeSingleton()) return;
 
-            Debug.Log("Mirror | mirror-networking.com | discord.gg/N9QVxbM");
+//            Debug.Log("Mirror | mirror-networking.com | discord.gg/N9QVxbM");
 
             // Set the networkSceneName to prevent a scene reload
             // if client connection to server fails.
@@ -702,6 +702,10 @@ namespace Mirror
             NetworkClient.OnErrorEvent = OnClientError;
             NetworkClient.RegisterHandler<NotReadyMessage>(OnClientNotReadyMessageInternal);
             NetworkClient.RegisterHandler<SceneMessage>(OnClientSceneInternal, false);
+            int selectedPlayer = PlayerPrefs.GetInt("selectedPlayer");
+            string namePlayer = PlayerPrefs.GetString("namePlayer");
+            //Debug.Log(selectedPlayer);
+            //Debug.Log(namePlayer);
 
             if (playerPrefab != null)
                 NetworkClient.RegisterPrefab(playerPrefab);

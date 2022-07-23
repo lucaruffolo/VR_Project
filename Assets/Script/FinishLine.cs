@@ -5,28 +5,27 @@ using UnityEngine;
 public class FinishLine : MonoBehaviour
 {
     public GameObject cp;
+    public static float[] timing = new float[2];
+
     private void OnTriggerEnter(Collider other)
     {
         GameObject player = other.gameObject.transform.parent.transform.parent.gameObject;
-        //fare i controlli che hai preso tutti i cp
-        Debug.Log(player.GetComponent<TimerScript>().delta);
+        //Debug.Log(player);
+        //Debug.Log(player.GetComponent<Timer>().lapTime);
+        //Debug.Log(player.GetComponent<Timer>().best);
+
         if (player.GetComponent<gameControl>().cpTaken == cp.GetComponent<CounterCp>().numCp)
         {
-            if (player.GetComponent<TimerScript>().delta < player.GetComponent<TimerScript>().finishTime)
+            if (player.GetComponent<Timer>().lapTime < player.GetComponent<Timer>().best)
             {
-                player.GetComponent<TimerScript>().finishTime = player.GetComponent<TimerScript>().delta;
+                player.GetComponent<Timer>().best = player.GetComponent<Timer>().lapTime;
             }
 
-            AggiornaClassifica();
 
             player.GetComponent<gameControl>().cpTaken = 0;
             player.GetComponent<gameControl>().listOfCpTaken.Clear();
+
             player.GetComponent<gameControl>().arrived = true;
         }
-    }
-
-    void AggiornaClassifica()
-    {
-
     }
 }

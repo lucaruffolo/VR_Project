@@ -6,7 +6,7 @@ public class CounterCp : MonoBehaviour
 {
     public GameObject[] childsG;
     public int numCp;
-    // Start is called before the first frame update
+
     void Start()
     {
         numCp = transform.childCount;
@@ -17,22 +17,5 @@ public class CounterCp : MonoBehaviour
             childsG[i] = child.gameObject;
             i++;
         }
-
-
-
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
-    /*public void resetOneClick()
-    {
-        for (int i = 0; i<numCp; i++)
-        {
-            childsG[i].GetComponent<checkPoint>().oneclick = false;
-        }
-    }*/
 }

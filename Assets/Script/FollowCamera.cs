@@ -22,7 +22,7 @@ public class FollowCamera : NetworkBehaviour
 
     void Update()
     {
-        if (this.isLocalPlayer)
+        if (this.isLocalPlayer && !PauseMenu.GameIsPaused)
         {
             if (Input.GetKeyDown(KeyCode.V) && thirdCamera == false)
             {
