@@ -2,16 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Mirror;
 
-public class StartLine : MonoBehaviour
+public class StartLine : NetworkBehaviour
 {
     public List<GameObject> listPlayer;
     private bool yetInGame = false;
     private int cont = 0;
     public bool multi;
     public bool oneClick;
-    public Text p1;
-    public Text tp1;
 
     private void Start()
     {
@@ -39,19 +38,6 @@ public class StartLine : MonoBehaviour
                 multi = true;
             }
         }
-
-        if(player.GetComponent<Timer>().best == 99999.9f)
-        {
-            tp1.text = "DNF";
-        }
-        else
-        {
-            float time = player.GetComponent<Timer>().best;
-            string minutes = ((int)time / 60).ToString();
-            string seconds = (time % 60).ToString("f2");
-            tp1.text = minutes + ":" + seconds;
-        }
-        p1.text = PlayerPrefs.GetString("namePlayer");
     }
 
     

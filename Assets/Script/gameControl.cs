@@ -157,7 +157,6 @@ public class gameControl : NetworkBehaviour
         {
             if (listOfCpTaken.Count == 8)
             {
-                Debug.Log("si");
                 if (GetComponent<Timer>().lapTime < GetComponent<Timer>().best)
                 {
                     GetComponent<Timer>().best = GetComponent<Timer>().lapTime;

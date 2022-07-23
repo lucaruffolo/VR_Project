@@ -33,10 +33,12 @@ public class Scoreboard : NetworkBehaviour
             dayNight.GetComponent<Cycle>().startDay = true; //fa partire ciclo giorno notte
             panel1.active = false;
             panel2.active = true;
-            p1.enabled = true;
-            tp1.enabled = true;
-            p1.color = Color.white;
-            tp1.color = Color.white;
+            //p1.enabled = true;
+            //tp1.enabled = true;
+            //p1.color = Color.white;
+            //tp1.color = Color.white;
         }
+
+        
     }
 }

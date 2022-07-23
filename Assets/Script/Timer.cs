@@ -10,6 +10,8 @@ public class Timer : NetworkBehaviour
     public bool timerIsRunning = false;
     public float best;
     public bool sessionReady;
+    public Text p1;
+    public Text tp1;
 
     [SerializeField] public Text timeRacePlayer;
     public string TimeShowCp;
@@ -41,5 +43,21 @@ public class Timer : NetworkBehaviour
             TimeShowCp = minutes + ":" + seconds;
         }
         //}
+
+        if (this.isLocalPlayer)
+        {
+            if (GetComponent<Timer>().best == 99999.9f)
+            {
+                tp1.text = "DNF";
+            }
+            else
+            {
+                float time = GetComponent<Timer>().best;
+                string minutes = ((int)time / 60).ToString();
+                string seconds = (time % 60).ToString("f2");
+                tp1.text = minutes + ":" + seconds;
+            }
+            p1.text = PlayerPrefs.GetString("namePlayer");
+        }
     }
 }
