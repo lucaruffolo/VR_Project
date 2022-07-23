@@ -59,5 +59,10 @@ public class Timer : NetworkBehaviour
             }
             p1.text = PlayerPrefs.GetString("namePlayer");
         }
+        else
+        {
+            p1.GetComponent<Text>().enabled = false;
+            tp1.GetComponent<Text>().enabled = false;
+        }
     }
 }
